@@ -143,16 +143,15 @@
   </url>
   
   <url>
-    <loc>https://nitthilan.github.io/entertainment/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://nitthilan.github.io/ai_resource/</loc>
   </url>
   
   <url>
     <loc>https://nitthilan.github.io/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://nitthilan.github.io/entertainment/</loc>
   </url>
   
   <url>
