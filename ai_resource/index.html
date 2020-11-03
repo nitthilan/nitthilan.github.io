@@ -280,7 +280,7 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
   
   <meta property="og:site_name" content="Nitthilan">
   <meta property="og:url" content="https://nitthilan.github.io/ai_resource/">
-  <meta property="og:title" content="AI Resources | Nitthilan">
+  <meta property="og:title" content="AI Resources (Under Development) | Nitthilan">
   <meta property="og:description" content="Sections About - Significant Areas-Current Task List - Tutorials - Applications - Prominent Papers
 About Inspired from Pixar, Dreamworks, Sony and other animation studios. The general time required to produce an animated feature from conception to final rendered version has a long production time."><meta property="og:image" content="https://nitthilan.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://nitthilan.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
@@ -305,7 +305,7 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
 
 
 
-  <title>AI Resources | Nitthilan</title>
+  <title>AI Resources (Under Development) | Nitthilan</title>
 
 </head>
 
@@ -696,7 +696,7 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
   
   
 <div class="article-container pt-3">
-  <h1>AI Resources</h1>
+  <h1>AI Resources (Under Development)</h1>
 
   
 
@@ -754,12 +754,42 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
 <h6 id="about">About</h6>
 <p>Inspired from Pixar, Dreamworks, Sony and other animation studios. The general time required to produce an animated feature from conception to final rendered version has a long production time.
 Can Artificial Intelligence based solutions help in reducing this time line?</p>
-<p>The current advancements in deep learning in the area of GAN, Neural Rendering</p>
+<p>The current advancements in deep learning in the area of GAN, Neural Rendering help to automate many processes like creating 3D models, animating 3d model motion.</p>
 <p>Project Ideas : <a href="#multi-view-based-3d-models">Multi view based 3D models</a> - Virtual Studio - Human Models</p>
 <h6 id="multi-view-based-3d-models">Multi view based 3D models</h6>
 <ul>
-<li>AI Sculptor:</li>
-<li>NeRF in Motion:</li>
+<li>AI Sculptor: Assuming the rays as a nail, we like to sculpt a 3D model based on multiple input views. We use the NSVF as our based code. The list of problems we are planning to attack:
+<ul>
+<li>Using PSNR or SSIM to identify areas in the learnt model which are not properly learnt and using this guide the rays to be used for learning.
+<ul>
+<li>Create a weigting map of the areas which are lacking detail</li>
+<li>Sample rays based on this weighting map within a picture</li>
+<li>Sample rays based on weighting map of all the pictures</li>
+<li>Split voxels adaptively based on the PSNR and SSIM distribution</li>
+</ul>
+</li>
+<li>Progressively learning model using smaller images and gradually increasing the image dimension as we increase the model accuracy. The aim is to reduce the training time of the 3D model.
+<ul>
+<li>Estimating the bounding box automatically based on the camera position</li>
+<li>Use images from smaller size along widthxheight probably rations 2,4,8</li>
+<li>Select a small subset of camera postions to start with and gradually increase with iterations</li>
+<li>Allocate initial voxel size based on all the camera postions and interpixel ray distance and then as the image dimensions increase the voxel size would decrease accordingly</li>
+</ul>
+</li>
+<li>Culling Voxels - This reduces the number voxels used for representing the object. This helps in reduction of the memory .Voxels in the bounding box which are not touched by the rays. Two major regions
+<ul>
+<li>Voxels inside the object which are not reached by the rays</li>
+<li>Voxels outside the object region which are not touched by the training rays</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>NeRF in Motion: Encoding motion for objects in a neural scene. There are diffferent ideas for it.
+<ul>
+<li>NSVF uses Hyper networks to encode every network encode for each time step. <a href="https://arxiv.org/pdf/1906.01618.pdf" target="_blank" rel="noopener">SRN</a></li>
+<li>Like mesh objects, can Bones, rigging and weighting be added for the objects thereby making it configurable <a href="https://www.peachpit.com/articles/article.aspx?p=483793" target="_blank" rel="noopener">Bone structure</a>, <a href="https://blog.machinimatrix.org/avastar/features/rigging-and-weighting/3/" target="_blank" rel="noopener">Blog</a>,</li>
+</ul>
+</li>
 <li>Few Shot Learning:
 <ul>
 <li>Understanding GPT3: <a href="https://arxiv.org/pdf/2005.14165.pdf" target="_blank" rel="noopener">Paper</a>, <a href="https://openai.com/blog/better-language-models/" target="_blank" rel="noopener">GPT2 Blog</a>, <a href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf" target="_blank" rel="noopener">GPT2 Paper</a>, <a href="https://www.youtube.com/watch?v=_8yVOC4ciXc&amp;ab_channel=Computerphile" target="_blank" rel="noopener">Youtube</a>, <a href="https://www.youtube.com/watch?v=SY5PvZrJhLE&amp;ab_channel=YannicKilcher" target="_blank" rel="noopener">Youtube2</a>,</li>
@@ -815,6 +845,7 @@ Can Artificial Intelligence based solutions help in reducing this time line?</p>
 <li>AlphaZero,</li>
 <li>CPISADGAN</li>
 <li>BO</li>
+<li><a href="https://github.com/DeepRobot2020/books/blob/master/Multiple%20View%20Geometry%20in%20Computer%20Vision%20%28Second%20Edition%29.pdf" target="_blank" rel="noopener">MultiView Geometry</a>, <a href="http://ksimek.github.io/2012/08/14/decompose/" target="_blank" rel="noopener">Camera Basics</a>, <a href="https://mathworld.wolfram.com/RotationMatrix.html" target="_blank" rel="noopener">Rotation Matrix</a>, <a href="http://robotics.stanford.edu/~birch/projective/node2.html" target="_blank" rel="noopener">Projective, Affine, Euclidean Geometry</a>, <a href="https://learnopengl.com/Getting-started/Coordinate-Systems" target="_blank" rel="noopener">NDC Co-ordinate Systems</a></li>
 </ul>
 <h6 id="applications">Applications</h6>
 <h3 id="sections-1">Sections</h3>
@@ -926,7 +957,7 @@ Can Artificial Intelligence based solutions help in reducing this time line?</p>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://nitthilan.github.io/ai_resource/&amp;text=AI%20Resources" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://nitthilan.github.io/ai_resource/&amp;text=AI%20Resources%20%28Under%20Development%29" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -939,7 +970,7 @@ Can Artificial Intelligence based solutions help in reducing this time line?</p>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://nitthilan.github.io/ai_resource/&amp;t=AI%20Resources" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://nitthilan.github.io/ai_resource/&amp;t=AI%20Resources%20%28Under%20Development%29" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -952,7 +983,7 @@ Can Artificial Intelligence based solutions help in reducing this time line?</p>
       
       
       <li>
-        <a href="mailto:?subject=AI%20Resources&amp;body=https://nitthilan.github.io/ai_resource/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=AI%20Resources%20%28Under%20Development%29&amp;body=https://nitthilan.github.io/ai_resource/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -965,7 +996,7 @@ Can Artificial Intelligence based solutions help in reducing this time line?</p>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://nitthilan.github.io/ai_resource/&amp;title=AI%20Resources" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://nitthilan.github.io/ai_resource/&amp;title=AI%20Resources%20%28Under%20Development%29" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -978,7 +1009,7 @@ Can Artificial Intelligence based solutions help in reducing this time line?</p>
       
       
       <li>
-        <a href="whatsapp://send?text=AI%20Resources%20https://nitthilan.github.io/ai_resource/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=AI%20Resources%20%28Under%20Development%29%20https://nitthilan.github.io/ai_resource/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -991,7 +1022,7 @@ Can Artificial Intelligence based solutions help in reducing this time line?</p>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://nitthilan.github.io/ai_resource/&amp;title=AI%20Resources" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://nitthilan.github.io/ai_resource/&amp;title=AI%20Resources%20%28Under%20Development%29" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>

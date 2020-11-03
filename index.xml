@@ -85,7 +85,7 @@
     </item>
     
     <item>
-      <title>AI Resources</title>
+      <title>AI Resources (Under Development)</title>
       <link>https://nitthilan.github.io/ai_resource/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://nitthilan.github.io/ai_resource/</guid>
@@ -94,12 +94,42 @@
 &lt;h6 id=&#34;about&#34;&gt;About&lt;/h6&gt;
 &lt;p&gt;Inspired from Pixar, Dreamworks, Sony and other animation studios. The general time required to produce an animated feature from conception to final rendered version has a long production time.
 Can Artificial Intelligence based solutions help in reducing this time line?&lt;/p&gt;
-&lt;p&gt;The current advancements in deep learning in the area of GAN, Neural Rendering&lt;/p&gt;
+&lt;p&gt;The current advancements in deep learning in the area of GAN, Neural Rendering help to automate many processes like creating 3D models, animating 3d model motion.&lt;/p&gt;
 &lt;p&gt;Project Ideas : &lt;a href=&#34;#multi-view-based-3d-models&#34;&gt;Multi view based 3D models&lt;/a&gt; - Virtual Studio - Human Models&lt;/p&gt;
 &lt;h6 id=&#34;multi-view-based-3d-models&#34;&gt;Multi view based 3D models&lt;/h6&gt;
 &lt;ul&gt;
-&lt;li&gt;AI Sculptor:&lt;/li&gt;
-&lt;li&gt;NeRF in Motion:&lt;/li&gt;
+&lt;li&gt;AI Sculptor: Assuming the rays as a nail, we like to sculpt a 3D model based on multiple input views. We use the NSVF as our based code. The list of problems we are planning to attack:
+&lt;ul&gt;
+&lt;li&gt;Using PSNR or SSIM to identify areas in the learnt model which are not properly learnt and using this guide the rays to be used for learning.
+&lt;ul&gt;
+&lt;li&gt;Create a weigting map of the areas which are lacking detail&lt;/li&gt;
+&lt;li&gt;Sample rays based on this weighting map within a picture&lt;/li&gt;
+&lt;li&gt;Sample rays based on weighting map of all the pictures&lt;/li&gt;
+&lt;li&gt;Split voxels adaptively based on the PSNR and SSIM distribution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Progressively learning model using smaller images and gradually increasing the image dimension as we increase the model accuracy. The aim is to reduce the training time of the 3D model.
+&lt;ul&gt;
+&lt;li&gt;Estimating the bounding box automatically based on the camera position&lt;/li&gt;
+&lt;li&gt;Use images from smaller size along widthxheight probably rations 2,4,8&lt;/li&gt;
+&lt;li&gt;Select a small subset of camera postions to start with and gradually increase with iterations&lt;/li&gt;
+&lt;li&gt;Allocate initial voxel size based on all the camera postions and interpixel ray distance and then as the image dimensions increase the voxel size would decrease accordingly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Culling Voxels - This reduces the number voxels used for representing the object. This helps in reduction of the memory .Voxels in the bounding box which are not touched by the rays. Two major regions
+&lt;ul&gt;
+&lt;li&gt;Voxels inside the object which are not reached by the rays&lt;/li&gt;
+&lt;li&gt;Voxels outside the object region which are not touched by the training rays&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;NeRF in Motion: Encoding motion for objects in a neural scene. There are diffferent ideas for it.
+&lt;ul&gt;
+&lt;li&gt;NSVF uses Hyper networks to encode every network encode for each time step. &lt;a href=&#34;https://arxiv.org/pdf/1906.01618.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SRN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Like mesh objects, can Bones, rigging and weighting be added for the objects thereby making it configurable &lt;a href=&#34;https://www.peachpit.com/articles/article.aspx?p=483793&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bone structure&lt;/a&gt;, &lt;a href=&#34;https://blog.machinimatrix.org/avastar/features/rigging-and-weighting/3/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Blog&lt;/a&gt;,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Few Shot Learning:
 &lt;ul&gt;
 &lt;li&gt;Understanding GPT3: &lt;a href=&#34;https://arxiv.org/pdf/2005.14165.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://openai.com/blog/better-language-models/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GPT2 Blog&lt;/a&gt;, &lt;a href=&#34;https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GPT2 Paper&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=_8yVOC4ciXc&amp;amp;ab_channel=Computerphile&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Youtube&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=SY5PvZrJhLE&amp;amp;ab_channel=YannicKilcher&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Youtube2&lt;/a&gt;,&lt;/li&gt;
@@ -155,6 +185,7 @@ Can Artificial Intelligence based solutions help in reducing this time line?&lt;
 &lt;li&gt;AlphaZero,&lt;/li&gt;
 &lt;li&gt;CPISADGAN&lt;/li&gt;
 &lt;li&gt;BO&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/DeepRobot2020/books/blob/master/Multiple%20View%20Geometry%20in%20Computer%20Vision%20%28Second%20Edition%29.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MultiView Geometry&lt;/a&gt;, &lt;a href=&#34;http://ksimek.github.io/2012/08/14/decompose/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Camera Basics&lt;/a&gt;, &lt;a href=&#34;https://mathworld.wolfram.com/RotationMatrix.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rotation Matrix&lt;/a&gt;, &lt;a href=&#34;http://robotics.stanford.edu/~birch/projective/node2.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Projective, Affine, Euclidean Geometry&lt;/a&gt;, &lt;a href=&#34;https://learnopengl.com/Getting-started/Coordinate-Systems&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NDC Co-ordinate Systems&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h6 id=&#34;applications&#34;&gt;Applications&lt;/h6&gt;
 &lt;h3 id=&#34;sections-1&#34;&gt;Sections&lt;/h3&gt;
