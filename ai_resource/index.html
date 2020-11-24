@@ -250,6 +250,8 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
 
   
 
+  
+
 
   
   
@@ -315,13 +317,9 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
   
   
   
-    <script>window.wcDarkLightEnabled = true;</script>
   
   
-    <script>const isSiteThemeDark = false;</script>
-  
-  
-  <script src="/js/load-theme.js"></script>
+  <script src="/js/wowchemy-init.js"></script>
 
   <aside class="search-results" id="search">
   <div class="container">
@@ -647,7 +645,7 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
       
       
       <li class="nav-item dropdown theme-dropdown">
-        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
           <i class="fas fa-moon" aria-hidden="true"></i>
         </a>
         <div class="dropdown-menu">
@@ -782,6 +780,14 @@ Can Artificial Intelligence based solutions help in reducing this time line?</p>
 <li>Voxels outside the object region which are not touched by the training rays</li>
 </ul>
 </li>
+<li>Marching cubes would fail to recover the surface since the function learns only the boundary and does not learn inside the object. So a different learning algorithm is required for learning the 3D mesh object. We need to find a better algorithm to extract the 3D mesh and surface information.
+<ul>
+<li>A soluttion would be to shoot rays from different directions and choose only those points which have normals which are parallel to the ray of intersection. Use these points as an input to creat a point cloud and then convert this point cloud to a mesh using <a href="https://towardsdatascience.com/5-step-guide-to-generate-3d-meshes-from-point-clouds-with-python-36bad397d8ba" target="_blank" rel="noopener">pointcloud2mesh</a> algorithms</li>
+</ul>
+</li>
+<li>Alternative representation: Signed Distance field representation has better representation of objects than transparency representation. Can we use SDF instead of transparency? Define a rendering function using SDF. Use this function instead of transparency based rendering function and then use it to represent Neural scene <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.pdf" target="_blank" rel="noopener">DeepSDF</a>, <a href="https://arxiv.org/pdf/2003.10983.pdf" target="_blank" rel="noopener">DeepLS</a>, <a href="https://arxiv.org/pdf/1802.05384.pdf" target="_blank" rel="noopener">Papier-Machˆe</a>, <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Mescheder_Occupancy_Networks_Learning_3D_Reconstruction_in_Function_Space_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Occupancy Networks</a></li>
+<li>Heirarchical representation: Nerf/DeepSDF use NN to represent the whole scene. NSVF/DeepLS use local embedding information to represent shapes in voxels. Can a heirarchchical representation of latent variables be used to represnet the whole shape to get consistent representation.</li>
+<li>Can the shape information used as code in DeepSDF be used in NERF/NSVF kind of setup to reduce the number of images to encode a scene directly from a siingle image</li>
 </ul>
 </li>
 <li>NeRF in Motion: Encoding motion for objects in a neural scene. There are diffferent ideas for it.
@@ -792,6 +798,7 @@ Can Artificial Intelligence based solutions help in reducing this time line?</p>
 </li>
 <li>Few Shot Learning:
 <ul>
+<li>Learning priors using bayesian neural networks: <a href="https://en.wikipedia.org/wiki/Uncertainty_quantification" target="_blank" rel="noopener">Uncertainity Quantification</a>, <a href="https://arxiv.org/abs/1505.05424" target="_blank" rel="noopener">Weight Uncertainity in NN</a>, <a href="http://krasserm.github.io/2019/03/14/bayesian-neural-networks/" target="_blank" rel="noopener">Variational Inference in Bayesian NN</a> - The idea is to train priors of shapes using neural networks and then try to learn the representation using a single image input. The prior stores range of uncertainity in the variance of the weights and tries to find the right instance value using a single image input. We try to replace a NN in NeRF to a Baysian NN and try to model the uncertainity in shape as the weights of the bayesian-neural-networks</li>
 <li>Understanding GPT3: <a href="https://arxiv.org/pdf/2005.14165.pdf" target="_blank" rel="noopener">Paper</a>, <a href="https://openai.com/blog/better-language-models/" target="_blank" rel="noopener">GPT2 Blog</a>, <a href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf" target="_blank" rel="noopener">GPT2 Paper</a>, <a href="https://www.youtube.com/watch?v=_8yVOC4ciXc&amp;ab_channel=Computerphile" target="_blank" rel="noopener">Youtube</a>, <a href="https://www.youtube.com/watch?v=SY5PvZrJhLE&amp;ab_channel=YannicKilcher" target="_blank" rel="noopener">Youtube2</a>,</li>
 <li>Transformers for 3d model - <a href="https://papers.nips.cc/paper/6206-perspective-transformer-nets-learning-single-view-3d-object-reconstruction-without-3d-supervision.pdf" target="_blank" rel="noopener">Perspective Transformer Nets</a>, <a href="http://proceedings.mlr.press/v97/lee19d/lee19d.pdf" target="_blank" rel="noopener">Set Transformer</a>, <a href="https://arxiv.org/pdf/1906.10887.pdf" target="_blank" rel="noopener">Spatial Transformer for 3D Point Clouds</a></li>
 </ul>
@@ -800,9 +807,10 @@ Can Artificial Intelligence based solutions help in reducing this time line?</p>
 <li>Structure from motion using deep learning: <a href="https://www.robots.ox.ac.uk/~vgg/publications/1998/Fitzgibbon98a/fitzgibbon98a.pdf" target="_blank" rel="noopener">Turntable</a>
 <ul>
 <li>Can NeRF be modeled to run without the camera parameters? Since we are modelling the neural network as a funtioin of x,y,z can we learn using SGD the model without the camera parameters?</li>
-<li>Fix one camera position. Model the 3D model as function of relative camera parrameter. Try minimising the error of images while we learn the error from different projections</li>
+<li>Fix one camera position. Model the 3D model as function of relative camera parrameter. Try minimising the error of images while we learn the error from different projections.</li>
 </ul>
 </li>
+<li>A algorithm to solve generic problems: <a href="https://xinyazhang.gitlab.io/puzzletunneldiscovery/" target="_blank" rel="noopener">C-Space Tunnel Discovery for Puzzle Path Planning</a>, <a href="https://gitlab.com/xinyazhang/puzzle-geometry/-/tree/master/" target="_blank" rel="noopener">More Puzzles</a>, <a href="https://xinyazhang.gitlab.io/puzzletunneldiscovery/assets/MainPaper.pdf" target="_blank" rel="noopener">paper</a> - Concentrate on the different planning algorithms. The baisc idea would be to find tunnels (i.e. narrow points which could possibly leead to a solution). Then have a duble tree starting from Start and reversely from goal. This could be done for every tunnel point. This stage is the blooming stage. You could approximate the value of the tree using neural networks. Try finding links from the bloomed tree and the successive tunnel paths. IF we find a route find the optimal route from start to end - <a href="http://www.cs.columbia.edu/~allen/F15/NOTES/Probabilisticpath.pdf" target="_blank" rel="noopener">PRM Planner</a>, <a href="http://planning.cs.uiuc.edu/node772.html" target="_blank" rel="noopener">RDT-Based Methods</a></li>
 </ul>
 <h6 id="significant-areas">Significant Areas</h6>
 <ul>
@@ -856,6 +864,7 @@ Can Artificial Intelligence based solutions help in reducing this time line?</p>
 <h6 id="graphics-related">Graphics related</h6>
 <ul>
 <li><a href="https://www.nvidia.com/en-us/design-visualization/omniverse/" target="_blank" rel="noopener">Omniverse</a>, <a href="https://mmacklin.com/sdfcontact.pdf" target="_blank" rel="noopener">Signed Distance Field Collision</a>, <a href="http://rgl.epfl.ch/publications/Zeltner2020Specular" target="_blank" rel="noopener">Specular Manifold Sampling</a>, <a href="https://matthias-research.github.io/pages/publications/PBDBodies.pdf" target="_blank" rel="noopener">Detailed Rigid Body Simulation</a></li>
+<li>Character creation: <a href="https://www.reallusion.com/" target="_blank" rel="noopener">Reallusion</a>, <a href="https://www.mixamo.com/fuse/1.3/eol" target="_blank" rel="noopener">Adobe Fuse/Mixamo</a></li>
 </ul>
 <h3 id="sections-1">Sections</h3>
 <p><a href="#children-resources">Children resources</a> - <a href="#videos">Videos</a> - <a href="#accelerators">Accelerators</a> - <a href="#channels-followed">Channels followed</a> - <a href="#gpu-and-cuda-resource">GPU and CUDA resource</a> - <a href="#projects">Projects</a></p>
@@ -1210,6 +1219,7 @@ Can Artificial Intelligence based solutions help in reducing this time line?</p>
 
     
     
+    
 
     
     
@@ -1231,7 +1241,7 @@ Can Artificial Intelligence based solutions help in reducing this time line?</p>
     
     
     
-    <script src="/js/wowchemy.min.d9d80f811e95b4b4f6df1eaaf297b05f.js"></script>
+    <script src="/js/wowchemy.min.300fee25bce46e2ad657245dc162c6ea.js"></script>
 
     
 
