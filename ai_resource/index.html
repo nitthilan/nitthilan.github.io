@@ -756,7 +756,54 @@ Can Artificial Intelligence based solutions help in reducing this time line?</p>
 <p>Project Ideas : <a href="#multi-view-based-3d-models">Multi view based 3D models</a> - Virtual Studio - Human Models</p>
 <h6 id="multi-view-based-3d-models">Multi view based 3D models</h6>
 <ul>
-<li>AI Sculptor: Assuming the rays as a nail, we like to sculpt a 3D model based on multiple input views. We use the NSVF as our based code. The list of problems we are planning to attack:
+<li>Neural Fields Rendering System:
+Requirements:
+<ul>
+<li>Store objects as neural network
+<ul>
+<li>It could be a single neural network for each object</li>
+<li>multiple obejcts encoded in the same network using embedding as input.</li>
+<li>Store embeedding for each voxel and a common neural network. A generalized marching cubes algorithm.</li>
+<li>A hybrid progressive representation
+<ul>
+<li>A global embedding for overall structure and progressive embedding for successive voxel breaking to refine the shape to increased quality</li>
+<li>DeepLS, SDF (It has a different embedding compared to NSVF). It tried to learn NN to learn smaller edges. Heirarchical NeRF -&gt; NSVF</li>
+</ul>
+</li>
+<li>Can transformer networks be used instead of NN?</li>
+</ul>
+</li>
+<li>Learning material properties: <a href="https://github.com/bmild/nerf/issues/23" target="_blank" rel="noopener">Nerf Issues</a>
+<ul>
+<li>Looks like there is a solution which uses Albedo and Illumination in CVPR. Environment maps are used to replicate theillumination problem</li>
+<li>Light could be used as a dot product i.e. a NN which takes the direction of light, direction of incident ray and material properties at that point and produces the output at that point</li>
+</ul>
+</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<p>List of ideas:</p>
+<ul>
+<li>SDF helps in physics based simulations i.e. they help in contact detection between objects and hence in object object touching etc - so may help in hair, cloth simulations
+<ul>
+<li>Experiment with Occupancy and SDF variations</li>
+</ul>
+</li>
+<li>Can we split objects into separate objects which and then join them together later [Graffe paper]. Create a system which can align objects as different poses and translation and camera pose</li>
+<li>Use Nerf++ to encode forground and background object</li>
+<li>NeRF for Human shapes: Fashion related human modeling design and animation.
+<ul>
+<li>Garment Hair 3D geometry and charater animation.</li>
+<li>Nerf setup for hair and cloth simulation. Interpreenetation of hair strands into head and sholder</li>
+</ul>
+</li>
+<li>Learn a prior using NeRF and learn embeddings using a single input image [PiFU].
+<ul>
+<li>Used trained NN and extract embeddings based on input image. Heirarchical NerF -&gt; NSVF</li>
+</ul>
+</li>
+<li>Can Embedding be learnt for different parts like face, hands clothers. Can we use Pose as input - CPIGAN
 <ul>
 <li>Using PSNR or SSIM to identify areas in the learnt model which are not properly learnt and using this guide the rays to be used for learning.
 <ul>
@@ -780,18 +827,17 @@ Can Artificial Intelligence based solutions help in reducing this time line?</p>
 <li>Voxels outside the object region which are not touched by the training rays</li>
 </ul>
 </li>
-<li>Marching cubes would fail to recover the surface since the function learns only the boundary and does not learn inside the object. So a different learning algorithm is required for learning the 3D mesh object. We need to find a better algorithm to extract the 3D mesh and surface information.
-<ul>
-<li>A soluttion would be to shoot rays from different directions and choose only those points which have normals which are parallel to the ray of intersection. Use these points as an input to creat a point cloud and then convert this point cloud to a mesh using <a href="https://towardsdatascience.com/5-step-guide-to-generate-3d-meshes-from-point-clouds-with-python-36bad397d8ba" target="_blank" rel="noopener">pointcloud2mesh</a> algorithms</li>
 </ul>
 </li>
-<li>Alternative representation: Signed Distance field representation has better representation of objects than transparency representation. Can we use SDF instead of transparency? Define a rendering function using SDF. Use this function instead of transparency based rendering function and then use it to represent Neural scene <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.pdf" target="_blank" rel="noopener">DeepSDF</a>, <a href="https://arxiv.org/pdf/2003.10983.pdf" target="_blank" rel="noopener">DeepLS</a>, <a href="https://arxiv.org/pdf/1802.05384.pdf" target="_blank" rel="noopener">Papier-Machˆe</a>, <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Mescheder_Occupancy_Networks_Learning_3D_Reconstruction_in_Function_Space_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Occupancy Networks</a></li>
-<li>Heirarchical representation: Nerf/DeepSDF use NN to represent the whole scene. NSVF/DeepLS use local embedding information to represent shapes in voxels. Can a heirarchchical representation of latent variables be used to represnet the whole shape to get consistent representation.</li>
-<li>Can the shape information used as code in DeepSDF be used in NERF/NSVF kind of setup to reduce the number of images to encode a scene directly from a siingle image</li>
-</ul>
-</li>
+<li></li>
 <li>NeRF in Motion: Encoding motion for objects in a neural scene. There are diffferent ideas for it.
 <ul>
+<li>Using normalized coordinate system i.e. map actual values to normalised value to then learn a warping function which adds on to it and then render it f(X(x), Y(y), Z(z)). Maps (x,y,z) for each time step. Learn how bones are mapped to mesh pixels. Find the transformation function) - Motion Capture based rendering system
+<ul>
+<li><a href="https://arxiv.org/pdf/2011.12948.pdf" target="_blank" rel="noopener">Deformable Neural Radiance Fields</a></li>
+<li><a href="https://arxiv.org/pdf/2011.12950.pdf" target="_blank" rel="noopener">Space-time Neural Irradiance Fields for Free-Viewpoint Video</a></li>
+</ul>
+</li>
 <li>NSVF uses Hyper networks to encode every network encode for each time step. <a href="https://arxiv.org/pdf/1906.01618.pdf" target="_blank" rel="noopener">SRN</a></li>
 <li>Like mesh objects, can Bones, rigging and weighting be added for the objects thereby making it configurable <a href="https://www.peachpit.com/articles/article.aspx?p=483793" target="_blank" rel="noopener">Bone structure</a>, <a href="https://blog.machinimatrix.org/avastar/features/rigging-and-weighting/3/" target="_blank" rel="noopener">Blog</a>,</li>
 </ul>
@@ -801,6 +847,7 @@ Can Artificial Intelligence based solutions help in reducing this time line?</p>
 <li>Learning priors using bayesian neural networks: <a href="https://en.wikipedia.org/wiki/Uncertainty_quantification" target="_blank" rel="noopener">Uncertainity Quantification</a>, <a href="https://arxiv.org/abs/1505.05424" target="_blank" rel="noopener">Weight Uncertainity in NN</a>, <a href="http://krasserm.github.io/2019/03/14/bayesian-neural-networks/" target="_blank" rel="noopener">Variational Inference in Bayesian NN</a> - The idea is to train priors of shapes using neural networks and then try to learn the representation using a single image input. The prior stores range of uncertainity in the variance of the weights and tries to find the right instance value using a single image input. We try to replace a NN in NeRF to a Baysian NN and try to model the uncertainity in shape as the weights of the bayesian-neural-networks</li>
 <li>Understanding GPT3: <a href="https://arxiv.org/pdf/2005.14165.pdf" target="_blank" rel="noopener">Paper</a>, <a href="https://openai.com/blog/better-language-models/" target="_blank" rel="noopener">GPT2 Blog</a>, <a href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf" target="_blank" rel="noopener">GPT2 Paper</a>, <a href="https://www.youtube.com/watch?v=_8yVOC4ciXc&amp;ab_channel=Computerphile" target="_blank" rel="noopener">Youtube</a>, <a href="https://www.youtube.com/watch?v=SY5PvZrJhLE&amp;ab_channel=YannicKilcher" target="_blank" rel="noopener">Youtube2</a>,</li>
 <li>Transformers for 3d model - <a href="https://papers.nips.cc/paper/6206-perspective-transformer-nets-learning-single-view-3d-object-reconstruction-without-3d-supervision.pdf" target="_blank" rel="noopener">Perspective Transformer Nets</a>, <a href="http://proceedings.mlr.press/v97/lee19d/lee19d.pdf" target="_blank" rel="noopener">Set Transformer</a>, <a href="https://arxiv.org/pdf/1906.10887.pdf" target="_blank" rel="noopener">Spatial Transformer for 3D Point Clouds</a></li>
+<li><a href="https://leggedrobotics.github.io/rl-blindloco/" target="_blank" rel="noopener">Possible continous learning</a></li>
 </ul>
 </li>
 <li>Active learning for 3d object reconstruction</li>
@@ -810,7 +857,90 @@ Can Artificial Intelligence based solutions help in reducing this time line?</p>
 <li>Fix one camera position. Model the 3D model as function of relative camera parrameter. Try minimising the error of images while we learn the error from different projections.</li>
 </ul>
 </li>
-<li>A algorithm to solve generic problems: <a href="https://xinyazhang.gitlab.io/puzzletunneldiscovery/" target="_blank" rel="noopener">C-Space Tunnel Discovery for Puzzle Path Planning</a>, <a href="https://gitlab.com/xinyazhang/puzzle-geometry/-/tree/master/" target="_blank" rel="noopener">More Puzzles</a>, <a href="https://xinyazhang.gitlab.io/puzzletunneldiscovery/assets/MainPaper.pdf" target="_blank" rel="noopener">paper</a> - Concentrate on the different planning algorithms. The baisc idea would be to find tunnels (i.e. narrow points which could possibly leead to a solution). Then have a duble tree starting from Start and reversely from goal. This could be done for every tunnel point. This stage is the blooming stage. You could approximate the value of the tree using neural networks. Try finding links from the bloomed tree and the successive tunnel paths. IF we find a route find the optimal route from start to end - <a href="http://www.cs.columbia.edu/~allen/F15/NOTES/Probabilisticpath.pdf" target="_blank" rel="noopener">PRM Planner</a>, <a href="http://planning.cs.uiuc.edu/node772.html" target="_blank" rel="noopener">RDT-Based Methods</a></li>
+</ul>
+<p>Code list:</p>
+<ul>
+<li><a href="https://github.com/shunsukesaito/PIFu">https://github.com/shunsukesaito/PIFu</a></li>
+<li><a href="https://github.com/facebookresearch/pifuhd">https://github.com/facebookresearch/pifuhd</a></li>
+<li><a href="https://github.com/kwea123/nerf_pl">https://github.com/kwea123/nerf_pl</a></li>
+<li><a href="https://github.com/facebookresearch/NSVF">https://github.com/facebookresearch/NSVF</a></li>
+</ul>
+<p>Paper list:</p>
+<ul>
+<li>
+<p><a href="https://arxiv.org/list/cs.CV/pastweek?show=490" target="_blank" rel="noopener">Arxiv - Computer Vision</a></p>
+</li>
+<li>
+<p><a href="https://scholar.google.com/scholar?cites=9378169911033868166&amp;as_sdt=5,48&amp;sciodt=0,48&amp;hl=en" target="_blank" rel="noopener">Nerf - citations</a></p>
+</li>
+<li>
+<p><a href="https://scholar.google.com/scholar?cites=8122086353742917335&amp;as_sdt=5,48&amp;sciodt=0,48&amp;hl=en" target="_blank" rel="noopener">NSVF - citations</a></p>
+</li>
+<li>
+<p><a href="https://research.fb.com/wp-content/uploads/2020/05/FroDO-From-Detections-to-3D-Objects.pdf" target="_blank" rel="noopener">FroDo</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2004.00452.pdf" target="_blank" rel="noopener">PIFuHD</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/1905.05172.pdf" target="_blank" rel="noopener">PIFu</a></p>
+</li>
+<li>
+<p><a href="https://storage.googleapis.com/nerfies-public/videos/nerfies_paper.pdf" target="_blank" rel="noopener">Deformable Neural Radiance Fields</a> - <a href="https://nerfies.github.io/" target="_blank" rel="noopener">project</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2011.12950.pdf" target="_blank" rel="noopener">Space-time Neural Irradiance Fields for Free-Viewpoint Video</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2011.13961.pdf" target="_blank" rel="noopener">D-NeRF: Neural Radiance Fields for Dynamic Scenes</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2011.12100.pdf" target="_blank" rel="noopener">GIRAFFE: Representing Scenes as Compositional Generative Neural Feature Fields</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2011.12490.pdf" target="_blank" rel="noopener">DeRF: Decomposed Radiance Fields</a></p>
+</li>
+<li>
+<p><a href="https://demuc.de/papers/schoenberger2016sfm.pdf" target="_blank" rel="noopener">SFM - Structure from motion</a></p>
+</li>
+<li>
+<p><a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.pdf" target="_blank" rel="noopener">DeepSDF</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2008.02268.pdf" target="_blank" rel="noopener">Nerf-W</a> - Nerf in the wild</p>
+</li>
+<li>
+<p><a href="https://github.com/Kai-46/nerfplusplus" target="_blank" rel="noopener">Nerf++</a> - <a href="https://arxiv.org/pdf/2010.07492.pdf" target="_blank" rel="noopener">paper</a></p>
+</li>
+<li>
+<p><a href="https://papers.nips.cc/paper/2019/file/b5dc4e5d9b495d0196f61d45b26ef33e-Paper.pdf" target="_blank" rel="noopener">Scene Representation Networks: Continuous 3D-Structure-Aware Neural Scene Representations</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2004.03805.pdf" target="_blank" rel="noopener">State of the Art on Neural Rendering</a></p>
+</li>
+<li>
+<p><a href="https://github.com/google/ldif" target="_blank" rel="noopener">Local Deep Implicit Functions for 3D Shape</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2011.13650.pdf" target="_blank" rel="noopener">Deformed Implicit Field: Modeling 3D Shapes with Learned Dense Correspondence</a></p>
+</li>
+<li>
+<p>AI Sculptor: Assuming the rays as a nail, we like to sculpt a 3D model based on multiple input views. We use the NSVF as our based code. The list of problems we are planning to attack:</p>
+<ul>
+<li>Marching cubes would fail to recover the surface since the function learns only the boundary and does not learn inside the object. So a different learning algorithm is required for learning the 3D mesh object. We need to find a better algorithm to extract the 3D mesh and surface information.
+<ul>
+<li>A soluttion would be to shoot rays from different directions and choose only those points which have normals which are parallel to the ray of intersection. Use these points as an input to creat a point cloud and then convert this point cloud to a mesh using <a href="https://towardsdatascience.com/5-step-guide-to-generate-3d-meshes-from-point-clouds-with-python-36bad397d8ba" target="_blank" rel="noopener">pointcloud2mesh</a> algorithms, <a href="https://www.cgal.org/" target="_blank" rel="noopener">Surface Reconstruction</a></li>
+</ul>
+</li>
+<li>Alternative representation: Signed Distance field representation has better representation of objects than transparency representation. Can we use SDF instead of transparency? Define a rendering function using SDF. Use this function instead of transparency based rendering function and then use it to represent Neural scene <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.pdf" target="_blank" rel="noopener">DeepSDF</a>, <a href="https://arxiv.org/pdf/2003.10983.pdf" target="_blank" rel="noopener">DeepLS</a>, <a href="https://arxiv.org/pdf/1802.05384.pdf" target="_blank" rel="noopener">Papier-Machˆe</a>, <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Mescheder_Occupancy_Networks_Learning_3D_Reconstruction_in_Function_Space_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Occupancy Networks</a></li>
+<li>Heirarchical representation: Nerf/DeepSDF use NN to represent the whole scene. NSVF/DeepLS use local embedding information to represent shapes in voxels. Can a heirarchchical representation of latent variables be used to represnet the whole shape to get consistent representation.</li>
+<li>Can the shape information used as code in DeepSDF be used in NERF/NSVF kind of setup to reduce the number of images to encode a scene directly from a siingle image</li>
+<li>Physics simulation using NeRF: <a href="https://users.cg.tuwien.ac.at/zsolnai/gfx/fluid_control_msc_thesis/" target="_blank" rel="noopener">Real Time Fluid simulation</a>, <a href="https://arxiv.org/pdf/2002.09405.pdf" target="_blank" rel="noopener">Learning to simulate</a></li>
+</ul>
+</li>
+<li>
+<p>A algorithm to solve generic problems: <a href="https://xinyazhang.gitlab.io/puzzletunneldiscovery/" target="_blank" rel="noopener">C-Space Tunnel Discovery for Puzzle Path Planning</a>, <a href="https://gitlab.com/xinyazhang/puzzle-geometry/-/tree/master/" target="_blank" rel="noopener">More Puzzles</a>, <a href="https://xinyazhang.gitlab.io/puzzletunneldiscovery/assets/MainPaper.pdf" target="_blank" rel="noopener">paper</a> - Concentrate on the different planning algorithms. The baisc idea would be to find tunnels (i.e. narrow points which could possibly leead to a solution). Then have a duble tree starting from Start and reversely from goal. This could be done for every tunnel point. This stage is the blooming stage. You could approximate the value of the tree using neural networks. Try finding links from the bloomed tree and the successive tunnel paths. IF we find a route find the optimal route from start to end - Probabilistic Roadmap Path Planning <a href="http://www.cs.columbia.edu/~allen/F15/NOTES/Probabilisticpath.pdf" target="_blank" rel="noopener">PRM Planner</a>, <a href="https://people.eecs.berkeley.edu/~pabbeel/cs287-fa11/slides/MotionPlanning-v1.pdf" target="_blank" rel="noopener">PRM1</a>, <a href="http://planning.cs.uiuc.edu/node772.html" target="_blank" rel="noopener">RDT-Based Methods</a> - dual-tree RDT algorithm</p>
+</li>
 </ul>
 <h6 id="significant-areas">Significant Areas</h6>
 <ul>
@@ -1241,7 +1371,7 @@ Can Artificial Intelligence based solutions help in reducing this time line?</p>
     
     
     
-    <script src="/js/wowchemy.min.300fee25bce46e2ad657245dc162c6ea.js"></script>
+    <script src="/js/wowchemy.min.2a700727d681d6c85e3f98647cc3de7b.js"></script>
 
     
 
