@@ -207,7 +207,7 @@ Requirements:
 &lt;li&gt;&lt;a href=&#34;https://github.com/kwea123/nerf_pl&#34;&gt;https://github.com/kwea123/nerf_pl&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/facebookresearch/NSVF&#34;&gt;https://github.com/facebookresearch/NSVF&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Paper list:&lt;/p&gt;
+&lt;h6 id=&#34;prominent-papers&#34;&gt;Prominent Papers&lt;/h6&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;https://arxiv.org/list/cs.CV/pastweek?show=490&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Arxiv - Computer Vision&lt;/a&gt;&lt;/p&gt;
@@ -217,6 +217,27 @@ Requirements:
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;https://scholar.google.com/scholar?cites=8122086353742917335&amp;amp;as_sdt=5,48&amp;amp;sciodt=0,48&amp;amp;hl=en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NSVF - citations&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis: &lt;a href=&#34;https://arxiv.org/pdf/2003.08934.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;, &lt;a href=&#34;https://github.com/kwea123/nerf_pl&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code&lt;/a&gt;, &lt;a href=&#34;https://github.com/kwea123/nerf_pl/blob/master/README_mesh.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mesh reconstruction&lt;/a&gt;, &lt;a href=&#34;https://github.com/bmild/nerf/issues/44&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;color reproduction&lt;/a&gt;, &lt;a href=&#34;https://github.com/pmneila/PyMCubes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyMcubes&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Neural Sparse Voxel Fields: &lt;a href=&#34;https://arxiv.org/pdf/2007.11571.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains: &lt;a href=&#34;https://arxiv.org/pdf/2006.10739.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Generating Diverse High-Fidelity Images with VQ-VAE-2: &lt;a href=&#34;https://arxiv.org/pdf/1906.00446.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;NeRF in the Wild: Neural Radiance Fields for Unconstrained Photo Collections: &lt;a href=&#34;https://arxiv.org/pdf/2008.02268.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Neural Rendering: &lt;a href=&#34;https://github.com/weihaox/awesome-neural-rendering&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;project&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Kai-46/nerfplusplus&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nerf++&lt;/a&gt; - &lt;a href=&#34;https://arxiv.org/pdf/2010.07492.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;https://research.fb.com/wp-content/uploads/2020/05/FroDO-From-Detections-to-3D-Objects.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FroDo&lt;/a&gt;&lt;/p&gt;
@@ -229,6 +250,9 @@ Requirements:
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;https://storage.googleapis.com/nerfies-public/videos/nerfies_paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Deformable Neural Radiance Fields&lt;/a&gt; - &lt;a href=&#34;https://nerfies.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;project&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://proceedings.mlr.press/v80/bojanowski18a/bojanowski18a.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Optimizing the Latent Space of Generative Networks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/2011.12950.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Space-time Neural Irradiance Fields for Free-Viewpoint Video&lt;/a&gt;&lt;/p&gt;
@@ -238,6 +262,9 @@ Requirements:
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/2011.12100.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GIRAFFE: Representing Scenes as Compositional Generative Neural Feature Fields&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cvlibs.net/publications/Schwarz2020NEURIPS.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GRAF&lt;/a&gt; - &lt;a href=&#34;https://avg.is.tuebingen.mpg.de/publications/schwarz2020neurips&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;project&lt;/a&gt; - &lt;a href=&#34;https://github.com/autonomousvision/graf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/2011.12490.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DeRF: Decomposed Radiance Fields&lt;/a&gt;&lt;/p&gt;
@@ -246,13 +273,10 @@ Requirements:
 &lt;p&gt;&lt;a href=&#34;https://demuc.de/papers/schoenberger2016sfm.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SFM - Structure from motion&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://openaccess.thecvf.com/content_CVPR_2019/papers/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DeepSDF&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://openaccess.thecvf.com/content_CVPR_2019/papers/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DeepSDF&lt;/a&gt; - &lt;a href=&#34;https://github.com/facebookresearch/DeepSDF&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt; - &lt;a href=&#34;https://openaccess.thecvf.com/content_CVPR_2019/supplemental/Park_DeepSDF_Learning_Continuous_CVPR_2019_supplemental.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Supp&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/2008.02268.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nerf-W&lt;/a&gt; - Nerf in the wild&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/Kai-46/nerfplusplus&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nerf++&lt;/a&gt; - &lt;a href=&#34;https://arxiv.org/pdf/2010.07492.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;https://papers.nips.cc/paper/2019/file/b5dc4e5d9b495d0196f61d45b26ef33e-Paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scene Representation Networks: Continuous 3D-Structure-Aware Neural Scene Representations&lt;/a&gt;&lt;/p&gt;
@@ -267,22 +291,21 @@ Requirements:
 &lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/2011.13650.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Deformed Implicit Field: Modeling 3D Shapes with Learned Dense Correspondence&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;AI Sculptor: Assuming the rays as a nail, we like to sculpt a 3D model based on multiple input views. We use the NSVF as our based code. The list of problems we are planning to attack:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Marching cubes would fail to recover the surface since the function learns only the boundary and does not learn inside the object. So a different learning algorithm is required for learning the 3D mesh object. We need to find a better algorithm to extract the 3D mesh and surface information.
-&lt;ul&gt;
-&lt;li&gt;A soluttion would be to shoot rays from different directions and choose only those points which have normals which are parallel to the ray of intersection. Use these points as an input to creat a point cloud and then convert this point cloud to a mesh using &lt;a href=&#34;https://towardsdatascience.com/5-step-guide-to-generate-3d-meshes-from-point-clouds-with-python-36bad397d8ba&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pointcloud2mesh&lt;/a&gt; algorithms, &lt;a href=&#34;https://www.cgal.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Surface Reconstruction&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Alternative representation: Signed Distance field representation has better representation of objects than transparency representation. Can we use SDF instead of transparency? Define a rendering function using SDF. Use this function instead of transparency based rendering function and then use it to represent Neural scene &lt;a href=&#34;https://openaccess.thecvf.com/content_CVPR_2019/papers/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DeepSDF&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/pdf/2003.10983.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DeepLS&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/pdf/1802.05384.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Papier-Machˆe&lt;/a&gt;, &lt;a href=&#34;https://openaccess.thecvf.com/content_CVPR_2019/papers/Mescheder_Occupancy_Networks_Learning_3D_Reconstruction_in_Function_Space_CVPR_2019_paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Occupancy Networks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Heirarchical representation: Nerf/DeepSDF use NN to represent the whole scene. NSVF/DeepLS use local embedding information to represent shapes in voxels. Can a heirarchchical representation of latent variables be used to represnet the whole shape to get consistent representation.&lt;/li&gt;
-&lt;li&gt;Can the shape information used as code in DeepSDF be used in NERF/NSVF kind of setup to reduce the number of images to encode a scene directly from a siingle image&lt;/li&gt;
-&lt;li&gt;Physics simulation using NeRF: &lt;a href=&#34;https://users.cg.tuwien.ac.at/zsolnai/gfx/fluid_control_msc_thesis/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Real Time Fluid simulation&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/pdf/2002.09405.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Learning to simulate&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;canonical coordinates 3d model, quaternion representation of rotation&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;A algorithm to solve generic problems: &lt;a href=&#34;https://xinyazhang.gitlab.io/puzzletunneldiscovery/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;C-Space Tunnel Discovery for Puzzle Path Planning&lt;/a&gt;, &lt;a href=&#34;https://gitlab.com/xinyazhang/puzzle-geometry/-/tree/master/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;More Puzzles&lt;/a&gt;, &lt;a href=&#34;https://xinyazhang.gitlab.io/puzzletunneldiscovery/assets/MainPaper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt; - Concentrate on the different planning algorithms. The baisc idea would be to find tunnels (i.e. narrow points which could possibly leead to a solution). Then have a duble tree starting from Start and reversely from goal. This could be done for every tunnel point. This stage is the blooming stage. You could approximate the value of the tree using neural networks. Try finding links from the bloomed tree and the successive tunnel paths. IF we find a route find the optimal route from start to end - Probabilistic Roadmap Path Planning &lt;a href=&#34;http://www.cs.columbia.edu/~allen/F15/NOTES/Probabilisticpath.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PRM Planner&lt;/a&gt;, &lt;a href=&#34;https://people.eecs.berkeley.edu/~pabbeel/cs287-fa11/slides/MotionPlanning-v1.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PRM1&lt;/a&gt;, &lt;a href=&#34;http://planning.cs.uiuc.edu/node772.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RDT-Based Methods&lt;/a&gt; - dual-tree RDT algorithm&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://jamie-wong.com/2016/07/15/ray-marching-signed-distance-functions/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ray marching and sdf&lt;/a&gt; - &lt;a href=&#34;https://www.cl.cam.ac.uk/teaching/1819/FGraphics/1.%20Ray%20Marching%20and%20Signed%20Distance%20Fields.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SDF renderiing&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;AI Sculptor: Assuming the rays as a nail, we like to sculpt a 3D model based on multiple input views. We use the NSVF as our based code. The list of problems we are planning to attack:
+- Marching cubes would fail to recover the surface since the function learns only the boundary and does not learn inside the object. So a different learning algorithm is required for learning the 3D mesh object. We need to find a better algorithm to extract the 3D mesh and surface information.
+- A soluttion would be to shoot rays from different directions and choose only those points which have normals which are parallel to the ray of intersection. Use these points as an input to creat a point cloud and then convert this point cloud to a mesh using &lt;a href=&#34;https://towardsdatascience.com/5-step-guide-to-generate-3d-meshes-from-point-clouds-with-python-36bad397d8ba&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pointcloud2mesh&lt;/a&gt; algorithms, &lt;a href=&#34;https://www.cgal.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Surface Reconstruction&lt;/a&gt;
+- Alternative representation: Signed Distance field representation has better representation of objects than transparency representation. Can we use SDF instead of transparency? Define a rendering function using SDF. Use this function instead of transparency based rendering function and then use it to represent Neural scene &lt;a href=&#34;https://openaccess.thecvf.com/content_CVPR_2019/papers/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DeepSDF&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/pdf/2003.10983.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DeepLS&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/pdf/1802.05384.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Papier-Machˆe&lt;/a&gt;, &lt;a href=&#34;https://openaccess.thecvf.com/content_CVPR_2019/papers/Mescheder_Occupancy_Networks_Learning_3D_Reconstruction_in_Function_Space_CVPR_2019_paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Occupancy Networks&lt;/a&gt;
+- Heirarchical representation: Nerf/DeepSDF use NN to represent the whole scene. NSVF/DeepLS use local embedding information to represent shapes in voxels. Can a heirarchchical representation of latent variables be used to represnet the whole shape to get consistent representation.
+- Can the shape information used as code in DeepSDF be used in NERF/NSVF kind of setup to reduce the number of images to encode a scene directly from a siingle image
+- Physics simulation using NeRF: &lt;a href=&#34;https://users.cg.tuwien.ac.at/zsolnai/gfx/fluid_control_msc_thesis/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Real Time Fluid simulation&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/pdf/2002.09405.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Learning to simulate&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A algorithm to solve generic problems: &lt;a href=&#34;https://xinyazhang.gitlab.io/puzzletunneldiscovery/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;C-Space Tunnel Discovery for Puzzle Path Planning&lt;/a&gt;, &lt;a href=&#34;https://gitlab.com/xinyazhang/puzzle-geometry/-/tree/master/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;More Puzzles&lt;/a&gt;, &lt;a href=&#34;https://xinyazhang.gitlab.io/puzzletunneldiscovery/assets/MainPaper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt; - Concentrate on the different planning algorithms. The baisc idea would be to find tunnels (i.e. narrow points which could possibly leead to a solution). Then have a duble tree starting from Start and reversely from goal. This could be done for every tunnel point. This stage is the blooming stage. You could approximate the value of the tree using neural networks. Try finding links from the bloomed tree and the successive tunnel paths. IF we find a route find the optimal route from start to end - Probabilistic Roadmap Path Planning &lt;a href=&#34;http://www.cs.columbia.edu/~allen/F15/NOTES/Probabilisticpath.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PRM Planner&lt;/a&gt;, &lt;a href=&#34;https://people.eecs.berkeley.edu/~pabbeel/cs287-fa11/slides/MotionPlanning-v1.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PRM1&lt;/a&gt;, &lt;a href=&#34;http://planning.cs.uiuc.edu/node772.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RDT-Based Methods&lt;/a&gt; - dual-tree RDT algorithm&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h6 id=&#34;significant-areas&#34;&gt;Significant Areas&lt;/h6&gt;
 &lt;ul&gt;
@@ -303,20 +326,11 @@ Requirements:
 &lt;li&gt;Continous Learning - &lt;a href=&#34;https://imirzadeh.me/#contact&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Iman&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/pdf/2006.06958.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;, &lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0893608019300231&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Review Paper&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/pdf/2007.00487.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tackling catastropic forgetting&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/pdf/2004.00713.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Incremental learning&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/timzhang642/3D-Machine-Learning&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;3D Machine Learning Github&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h6 id=&#34;prominent-papers&#34;&gt;Prominent Papers&lt;/h6&gt;
-&lt;ul&gt;
-&lt;li&gt;NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis: &lt;a href=&#34;https://arxiv.org/pdf/2003.08934.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;, &lt;a href=&#34;https://github.com/kwea123/nerf_pl&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code&lt;/a&gt;, &lt;a href=&#34;https://github.com/kwea123/nerf_pl/blob/master/README_mesh.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mesh reconstruction&lt;/a&gt;, &lt;a href=&#34;https://github.com/bmild/nerf/issues/44&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;color reproduction&lt;/a&gt;, &lt;a href=&#34;https://github.com/pmneila/PyMCubes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyMcubes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Neural Sparse Voxel Fields: &lt;a href=&#34;https://arxiv.org/pdf/2007.11571.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains: &lt;a href=&#34;https://arxiv.org/pdf/2006.10739.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Generating Diverse High-Fidelity Images with VQ-VAE-2: &lt;a href=&#34;https://arxiv.org/pdf/1906.00446.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;NeRF in the Wild: Neural Radiance Fields for Unconstrained Photo Collections: &lt;a href=&#34;https://arxiv.org/pdf/2008.02268.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Neural Rendering: &lt;a href=&#34;https://github.com/weihaox/awesome-neural-rendering&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;project&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Nerf++: &lt;a href=&#34;https://github.com/Kai-46/nerfplusplus&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h6 id=&#34;to-be-read-papers&#34;&gt;To Be Read Papers&lt;/h6&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://ondrejtexler.github.io/patch-based_training/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Interactive Video StylizationInteractive Video Stylization&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/pdf/2010.05334.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Resolution Dependent GAN&lt;/a&gt;, &lt;a href=&#34;http://chengao.vision/FGVC/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Video Completion&lt;/a&gt;,&lt;a href=&#34;https://arxiv.org/pdf/1707.05776.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Latent Space of Generative Networks&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/pdf/1703.04977.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bayesian Deep Learning for Computer Vision&lt;/a&gt;, &lt;a href=&#34;https://genforce.github.io/idinvert/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Real Image Editing GAN&lt;/a&gt;, &lt;a href=&#34;https://rewriting.csail.mit.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rewriting a Deep Generative Model&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Softwares: &lt;a href=&#34;https://www.synthesia.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AI Vdo&lt;/a&gt;, &lt;a href=&#34;https://www.cinetracer.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CineTracer&lt;/a&gt;,&lt;a href=&#34;https://vast.ai/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GPU Sharing&lt;/a&gt;,&lt;a href=&#34;https://www.spyfu.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SpyFU&lt;/a&gt;, &lt;a href=&#34;https://obsproject.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;OBS Studio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://research.fb.com/wp-content/uploads/2020/06/Neural-Supersampling-for-Real-time-Rendering.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Neural Sampling&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h6 id=&#34;current-task-list&#34;&gt;Current Task List&lt;/h6&gt;
 &lt;ul&gt;
