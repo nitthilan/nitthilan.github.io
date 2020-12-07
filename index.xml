@@ -125,7 +125,12 @@ Requirements:
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;List of ideas:&lt;/p&gt;
+&lt;h5 id=&#34;current-task-list&#34;&gt;Current Task List&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;Modify NSVF - embedding and voxel culling&lt;/li&gt;
+&lt;li&gt;Modify NeRF - to support SDF experiments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;list-of-ideas&#34;&gt;List of ideas:&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;SDF helps in physics based simulations i.e. they help in contact detection between objects and hence in object object touching etc - so may help in hair, cloth simulations
 &lt;ul&gt;
@@ -332,7 +337,7 @@ Requirements:
 &lt;li&gt;Softwares: &lt;a href=&#34;https://www.synthesia.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AI Vdo&lt;/a&gt;, &lt;a href=&#34;https://www.cinetracer.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CineTracer&lt;/a&gt;,&lt;a href=&#34;https://vast.ai/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GPU Sharing&lt;/a&gt;,&lt;a href=&#34;https://www.spyfu.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SpyFU&lt;/a&gt;, &lt;a href=&#34;https://obsproject.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;OBS Studio&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://research.fb.com/wp-content/uploads/2020/06/Neural-Supersampling-for-Real-time-Rendering.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Neural Sampling&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h6 id=&#34;current-task-list&#34;&gt;Current Task List&lt;/h6&gt;
+&lt;h6 id=&#34;current-task-list-1&#34;&gt;Current Task List&lt;/h6&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
