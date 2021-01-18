@@ -61,7 +61,7 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
   
   
   
-  <meta name="theme-color" content="#2962ff">
+  <meta name="theme-color" content="#1565c0">
   
 
   
@@ -76,7 +76,7 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
 
     
     
@@ -87,14 +87,14 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
         
       
     
 
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -232,8 +232,8 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
   
     
       
-      
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
     
   
 
@@ -241,7 +241,8 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.min.1c55e0a47f7e1b9753c5a31f7b7f455d.css">
+  
+  <link rel="stylesheet" href="/css/wowchemy.b6349447404092607cd06c6a9deb4c2c.css">
 
   
 
@@ -296,7 +297,10 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
 
   
 
+  
   <link rel="manifest" href="/index.webmanifest">
+  
+
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
@@ -357,9 +361,14 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
   
   
   
-  <script src="/js/wowchemy-init.js"></script>
+  
+  
+  
+  <script src="/js/wowchemy-init.min.bbeff657920a7d1a47b4bda8039119c5.js"></script>
 
-  <aside class="search-results" id="search">
+  
+
+<aside class="search-modal" id="search">
   <div class="container">
     <section class="search-header">
 
@@ -368,16 +377,22 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
           <h1>Search</h1>
         </div>
         <div class="col-6 col-search-close">
-          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
         </div>
       </div>
 
       <div id="search-box">
         
         <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
         
       </div>
+
+      
+      
+
+      
 
     </section>
     <section class="section-search-results">
@@ -389,6 +404,7 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
     </section>
   </div>
 </aside>
+
 
 
   <div class="page-header">
@@ -406,7 +422,7 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
 
 
 <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
-  <div class="container">
+  <div class="container-xl">
 
     
     <div class="d-none d-lg-inline-flex">
@@ -666,6 +682,36 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
         
         
 
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/mental_health"><span>Mental Health</span></a>
+        </li>
+
+        
+        
+
       
 
         
@@ -673,6 +719,12 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
     </div>
 
     <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
       
       
       <li class="nav-item">
@@ -768,15 +820,6 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
 
 
 
-
-
-
-
-
-
-
-
-
   
 </div>
 
@@ -824,7 +867,7 @@ Requirements:
 <h5 id="current-task-list">Current Task List</h5>
 <ul>
 <li>Modify NSVF - embedding and voxel culling</li>
-<li>Modify NeRF - to support SDF experiments</li>
+<li>Modify NeRF - to support SDF experiments, add support of embedding for individual shape using DeepSDF idea</li>
 </ul>
 <h5 id="list-of-ideas">List of ideas:</h5>
 <ul>
@@ -879,10 +922,16 @@ Requirements:
 <ul>
 <li><a href="https://arxiv.org/pdf/2011.12948.pdf" target="_blank" rel="noopener">Deformable Neural Radiance Fields</a></li>
 <li><a href="https://arxiv.org/pdf/2011.12950.pdf" target="_blank" rel="noopener">Space-time Neural Irradiance Fields for Free-Viewpoint Video</a></li>
+<li><a href="https://arxiv.org/pdf/2012.09790.pdf" target="_blank" rel="noopener">Neural Radiance Flow for 4D View Synthesis and Video Processing</a></li>
 </ul>
 </li>
 <li>NSVF uses Hyper networks to encode every network encode for each time step. <a href="https://arxiv.org/pdf/1906.01618.pdf" target="_blank" rel="noopener">SRN</a></li>
 <li>Like mesh objects, can Bones, rigging and weighting be added for the objects thereby making it configurable <a href="https://www.peachpit.com/articles/article.aspx?p=483793" target="_blank" rel="noopener">Bone structure</a>, <a href="https://blog.machinimatrix.org/avastar/features/rigging-and-weighting/3/" target="_blank" rel="noopener">Blog</a>,</li>
+</ul>
+</li>
+<li>Relighting of models:
+<ul>
+<li><a href="http://xfields.mpi-inf.mpg.de/" target="_blank" rel="noopener">X-Fields: Implicit Neural View-, Light- and Time-Image Interpolation</a>, <a href="http://gvv.mpi-inf.mpg.de/projects/DeepRelightableTextures/" target="_blank" rel="noopener">Deep Relightable Textures</a>, <a href="https://arxiv.org/pdf/1904.12356.pdf" target="_blank" rel="noopener">Deferred Neural Rendering: Image Synthesis using Neural Textures</a></li>
 </ul>
 </li>
 <li>Few Shot Learning:
@@ -972,6 +1021,19 @@ Requirements:
 </li>
 <li>
 <p><a href="https://demuc.de/papers/schoenberger2016sfm.pdf" target="_blank" rel="noopener">SFM - Structure from motion</a></p>
+<ul>
+<li><a href="https://www.cs.unc.edu/~ezheng/resources/mvs_2016/eccv2016.pdf" target="_blank" rel="noopener">Pixelwise View Selection for Unstructured Multi-View Stereo</a></li>
+<li><a href="https://colmap.github.io/tutorial.html" target="_blank" rel="noopener">COLMAP Documentation</a> - <a href="https://colmap.github.io/faq.html#reconstruct-sparse-dense-model-from-known-camera-poses" target="_blank" rel="noopener">Dense Reconstruction - multi-view</a> - <a href="https://colmap.github.io/faq.html#" target="_blank" rel="noopener">FAQ</a></li>
+<li>Structure From Motion - <a href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/FISHER/RANSAC/" target="_blank" rel="noopener">RANSAC</a>, <a href="http://www.cse.yorku.ca/~kosta/CompVis_Notes/ransac.pdf" target="_blank" rel="noopener">RANSAC1</a>, <a href="https://www.rose-hulman.edu/class/cs/csse461/handouts/Day37/SINGLES2.pdf" target="_blank" rel="noopener">five-point relative pose problem</a></li>
+<li><a href="https://colmap.github.io/tutorial.html" target="_blank" rel="noopener">tutorial</a></li>
+<li>undistort images - making lines straight - usually lens causes distortion - <a href="https://stackoverflow.com/questions/39530110/camera-calibration-for-structure-from-motion-with-opencv-python" target="_blank" rel="noopener">camera calibration</a></li>
+<li>patchmatch stereo algorithm - <a href="http://www.bmva.org/bmvc/2011/proceedings/paper14/paper14.pdf" target="_blank" rel="noopener">Stereo Matching</a>, <a href="https://en.wikipedia.org/wiki/PatchMatch" target="_blank" rel="noopener">wiki</a>, <a href="https://github.com/ivanbergonzani/patch-match-stereo" target="_blank" rel="noopener">code</a>,</li>
+<li>stereo_fusion algorithms - <a href="https://www.cs.princeton.edu/courses/archive/fall07/cos429/slides/stereo.pdf" target="_blank" rel="noopener">slide</a></li>
+<li>poisson mesh reconstruction - <a href="http://hhoppe.com/poissonrecon.pdf" target="_blank" rel="noopener">slide</a></li>
+</ul>
+</li>
+<li>
+<p>Computer Vision Course <a href="https://slazebni.cs.illinois.edu/spring19/" target="_blank" rel="noopener">2019</a> - <a href="https://slazebni.cs.illinois.edu/spring19/lec13_alignment.pdf" target="_blank" rel="noopener">13 Alignment</a>, <a href="https://slazebni.cs.illinois.edu/spring19/lec14_calibration.pdf" target="_blank" rel="noopener">14 Calibration</a>, <a href="https://slazebni.cs.illinois.edu/spring19/lec15_single_view.pdf" target="_blank" rel="noopener">15 Single View</a>, <a href="https://slazebni.cs.illinois.edu/spring19/lec16_epipolar.pdf" target="_blank" rel="noopener">16 Epipolar</a>, <a href="https://slazebni.cs.illinois.edu/spring19/lec17_sfm.pdf" target="_blank" rel="noopener">17 SFM</a>, <a href="https://slazebni.cs.illinois.edu/spring19/lec18_stereo.pdf" target="_blank" rel="noopener">18 Stereo</a>, <a href="https://slazebni.cs.illinois.edu/spring19/lec19_multiview_stereo.pdf" target="_blank" rel="noopener">19 Multiview stereo</a></p>
 </li>
 <li>
 <p><a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.pdf" target="_blank" rel="noopener">DeepSDF</a> - <a href="https://github.com/facebookresearch/DeepSDF" target="_blank" rel="noopener">Code</a> - <a href="https://openaccess.thecvf.com/content_CVPR_2019/supplemental/Park_DeepSDF_Learning_Continuous_CVPR_2019_supplemental.pdf" target="_blank" rel="noopener">Supp</a></p>
@@ -992,10 +1054,52 @@ Requirements:
 <p><a href="https://arxiv.org/pdf/2011.13650.pdf" target="_blank" rel="noopener">Deformed Implicit Field: Modeling 3D Shapes with Learned Dense Correspondence</a></p>
 </li>
 <li>
+<p><a href="https://arxiv.org/pdf/2011.07233.pdf" target="_blank" rel="noopener">Stable View Synthesis</a></p>
+<ul>
+<li><a href="http://vladlen.info/papers/FVS.pdf" target="_blank" rel="noopener">Free View Synthesis</a> - <a href="https://github.com/intel-isl/FreeViewSynthesis" target="_blank" rel="noopener">code</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://papers.nips.cc/paper/2020/file/83fa5a432ae55c253d0e60dbfa716723-Paper.pdf" target="_blank" rel="noopener">SDF-SRN: Learning Signed Distance 3D Object Reconstruction from Static Images</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2006.09662.pdf" target="_blank" rel="noopener">MetaSDF: Meta-learning Signed Distance Functions</a></p>
+</li>
+<li>
+<p><a href="http://www.cs.umd.edu/~yuejiang/papers/SDFDiff.pdf" target="_blank" rel="noopener">SDFDiff: Differentiable Rendering of Signed Distance Fields for 3D Shape Optimization</a> - <a href="https://github.com/YueJiang-nj/CVPR2020-SDFDiff" target="_blank" rel="noopener">code</a></p>
+<ul>
+<li><a href="https://www.cs.princeton.edu/courses/archive/spring14/cos426/lectures/09-implicit.pdf" target="_blank" rel="noopener">Implicit function</a></li>
+</ul>
+</li>
+<li>
+<p>Understanding illumination: <a href="https://arxiv.org/pdf/2012.03918.pdf" target="_blank" rel="noopener">NeRD: Neural Reflectance Decomposition from Image Collections</a> - <a href="https://markboss.me/publication/2021-nerd/" target="_blank" rel="noopener">project</a>, Differenctiable renderer idea, <a href="https://arxiv.org/pdf/2004.00403.pdf" target="_blank" rel="noopener">Two-shot Spatially-varying BRDF and Shape Estimation</a> <a href="https://github.com/NVlabs/two-shot-brdf-shape" target="_blank" rel="noopener">code</a>, <a href="https://arxiv.org/pdf/2008.03824.pdf" target="_blank" rel="noopener">Neural Reflectance Fields for Appearance Acquisition</a> - <a href="http://cseweb.ucsd.edu/~bisai/" target="_blank" rel="noopener">author</a></p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Bidirectional_reflectance_distribution_function" target="_blank" rel="noopener">Bidirectional reflectance distribution function - BRDF</a> - <a href="https://en.wikipedia.org/wiki/Phong_reflection_model" target="_blank" rel="noopener">Phong Refelection model</a> - <a href="https://en.wikipedia.org/wiki/Specular_highlight#Cook%E2%80%93Torrance_model" target="_blank" rel="noopener">Cook–Torrance model</a>, <a href="https://inst.eecs.berkeley.edu/~cs294-13/fa09/lectures/cookpaper.pdf" target="_blank" rel="noopener">A Reflectance Model for Computer Graphics</a>, <a href="https://static1.squarespace.com/static/58586fa5ebbd1a60e7d76d3e/t/593a3afa46c3c4a376d779f6/1496988449807/s2012_pbs_disney_brdf_notes_v2.pdf" target="_blank" rel="noopener">Physically-Based Shading at Disney</a></li>
+<li><a href="http://www.cs.cmu.edu/afs/cs/academic/class/16823-s16/www/pdfs/" target="_blank" rel="noopener">Physics based Methods in Vision</a></li>
+<li>Tutorial on Spherical Gaussians - <a href="https://mynameismjp.wordpress.com/2016/10/09/sg-series-part-1-a-brief-and-incomplete-history-of-baked-lighting-representations/" target="_blank" rel="noopener">SG SERIES PART 1-6</a>, <a href="http://www.cse.chalmers.se/~uffe/xjobb/Readings/GlobalIllumination/Spherical%20Harmonic%20Lighting%20-%20the%20gritty%20details.pdfs" target="_blank" rel="noopener">Spherical Harmonic Lighting: The Gritty Details</a></li>
+<li><a href="https://www.alexandre-pestana.com/disney-principled-brdf-implementation/" target="_blank" rel="noopener">Disney BRDF Base color Metallic parametrization</a>, <a href="https://static1.squarespace.com/static/58586fa5ebbd1a60e7d76d3e/t/593a3afa46c3c4a376d779f6/1496988449807/s2012_pbs_disney_brdf_notes_v2.pdf" target="_blank" rel="noopener">Physically-Based Shading at Disney</a>, <a href="https://cseweb.ucsd.edu/~ravir/papers/envmap/" target="_blank" rel="noopener">An Efficient Representation for Irradiance Environment Maps</a>, <a href="https://cseweb.ucsd.edu/~ravir/papers/invlamb/" target="_blank" rel="noopener">On the Relationship between Radiance and Irradiance: Determining the illumination from images of a convex Lambertian object</a></li>
+</ul>
+</li>
+<li>
+<p>Depth Estimation from input image: <a href="https://arxiv.org/pdf/1907.01341v3.pdf" target="_blank" rel="noopener">MiDaS</a>, <a href="https://github.com/intel-isl/MiDaS" target="_blank" rel="noopener">code</a>,<a href="https://pytorch.org/hub/intelisl_midas_v2/" target="_blank" rel="noopener">latest code</a> - Perpetual View Generation - <a href="https://infinite-nature.github.io/" target="_blank" rel="noopener">Infinite Nature</a></p>
+<ul>
+<li><a href="https://facebookresearch.github.io/one_shot_3d_photography/" target="_blank" rel="noopener">One Shot 3D Photography</a>, <a href="https://github.com/facebookresearch/one_shot_3d_photography" target="_blank" rel="noopener">code</a>,</li>
+</ul>
+</li>
+<li>
+<p>Local Deep Implicit Functions for 3D Shape - <a href="https://github.com/google/ldif" target="_blank" rel="noopener">code</a>, <a href="https://arxiv.org/pdf/1912.06126.pdf" target="_blank" rel="noopener">paper</a> - Learning a transformation matrix to approximate a gaussian function to define an implicit function. <a href="https://arxiv.org/pdf/1904.06447.pdf" target="_blank" rel="noopener">Learning Shape Templates with Structured Implicit Functions</a> - Can we use this to approximate shapes</p>
+</li>
+<li>
+<p>Understanding SDF based operations - ray marching and sdf - <a href="http://jamie-wong.com/2016/07/15/ray-marching-signed-distance-functions/" target="_blank" rel="noopener">article1</a>, <a href="https://www.iquilezles.org/www/articles/distfunctions/distfunctions.htm" target="_blank" rel="noopener">article2</a>, <a href="https://www.cl.cam.ac.uk/teaching/1819/FGraphics/1.%20Ray%20Marching%20and%20Signed%20Distance%20Fields.pdf" target="_blank" rel="noopener">SDF renderiing</a>, <a href="http://graphics.stanford.edu/courses/cs348b-20-spring-content/uploads/hart.pdf" target="_blank" rel="noopener">Sphere Tracing</a></p>
+</li>
+<li>
 <p>canonical coordinates 3d model, quaternion representation of rotation</p>
 </li>
 <li>
-<p><a href="http://jamie-wong.com/2016/07/15/ray-marching-signed-distance-functions/" target="_blank" rel="noopener">ray marching and sdf</a> - <a href="https://www.cl.cam.ac.uk/teaching/1819/FGraphics/1.%20Ray%20Marching%20and%20Signed%20Distance%20Fields.pdf" target="_blank" rel="noopener">SDF renderiing</a></p>
+<p>Adding secondary motion - <a href="https://www.dgp.toronto.edu/projects/complementary-dynamics/" target="_blank" rel="noopener">Complementary Dynamics</a></p>
+</li>
+<li>
+<p>Not read: <a href="https://arxiv.org/pdf/2012.09365.pdf" target="_blank" rel="noopener">Learning to Recover 3D Scene Shape from a Single Image</a>, <a href="https://arxiv.org/pdf/2012.06434.pdf" target="_blank" rel="noopener">Iso-Points: Optimizing Neural Implicit Surfaces with Hybrid Representations</a>, <a href="https://arxiv.org/pdf/2012.08503.pdf" target="_blank" rel="noopener">Object-Centric Neural Scene Rendering</a>, <a href="https://capworkshop.github.io/" target="_blank" rel="noopener">computer assisted prog</a>, <a href="https://github.com/chenhsuanlin/signed-distance-SRN" target="_blank" rel="noopener">signed-distance-SRN</a>, <a href="https://github.com/autonomousvision/differentiable_volumetric_rendering" target="_blank" rel="noopener">differentiable_volumetric_rendering</a>,</p>
 </li>
 </ul>
 <p>AI Sculptor: Assuming the rays as a nail, we like to sculpt a 3D model based on multiple input views. We use the NSVF as our based code. The list of problems we are planning to attack:
@@ -1007,6 +1111,15 @@ Requirements:
 - Physics simulation using NeRF: <a href="https://users.cg.tuwien.ac.at/zsolnai/gfx/fluid_control_msc_thesis/" target="_blank" rel="noopener">Real Time Fluid simulation</a>, <a href="https://arxiv.org/pdf/2002.09405.pdf" target="_blank" rel="noopener">Learning to simulate</a></p>
 <ul>
 <li>A algorithm to solve generic problems: <a href="https://xinyazhang.gitlab.io/puzzletunneldiscovery/" target="_blank" rel="noopener">C-Space Tunnel Discovery for Puzzle Path Planning</a>, <a href="https://gitlab.com/xinyazhang/puzzle-geometry/-/tree/master/" target="_blank" rel="noopener">More Puzzles</a>, <a href="https://xinyazhang.gitlab.io/puzzletunneldiscovery/assets/MainPaper.pdf" target="_blank" rel="noopener">paper</a> - Concentrate on the different planning algorithms. The baisc idea would be to find tunnels (i.e. narrow points which could possibly leead to a solution). Then have a duble tree starting from Start and reversely from goal. This could be done for every tunnel point. This stage is the blooming stage. You could approximate the value of the tree using neural networks. Try finding links from the bloomed tree and the successive tunnel paths. IF we find a route find the optimal route from start to end - Probabilistic Roadmap Path Planning <a href="http://www.cs.columbia.edu/~allen/F15/NOTES/Probabilisticpath.pdf" target="_blank" rel="noopener">PRM Planner</a>, <a href="https://people.eecs.berkeley.edu/~pabbeel/cs287-fa11/slides/MotionPlanning-v1.pdf" target="_blank" rel="noopener">PRM1</a>, <a href="http://planning.cs.uiuc.edu/node772.html" target="_blank" rel="noopener">RDT-Based Methods</a> - dual-tree RDT algorithm</li>
+</ul>
+<h6 id="list-of-questions">List of questions</h6>
+<ul>
+<li>multiresolution in signed distance function, how are multiple objects composed using SDF, What is the maximum capacity of NN?, occupancy vs sdf comparison</li>
+<li>a KD-tree - nearest neighbor algorithm -</li>
+<li>distance transform for any watertight shapes</li>
+<li>Weight normalization: A simple reparameterization to accelerate training of deep neural networks. - speed up training instead of batch normalization</li>
+<li>H.P.: Multi-level partition of unity implicits. - Splitting a volume into smaller regions and trying to generate to whole shape based on sum of smaller regions - weighting function is 1 when you are within the region - <a href="https://www.cc.gatech.edu/~turk/my_papers/mpu_implicits.pdf">https://www.cc.gatech.edu/~turk/my_papers/mpu_implicits.pdf</a> - <a href="https://en.wikipedia.org/wiki/Partition_of_unity">https://en.wikipedia.org/wiki/Partition_of_unity</a></li>
+<li>datasets: <a href="https://3dwarehouse.sketchup.com/,">https://3dwarehouse.sketchup.com/,</a> <a href="http://graphics.stanford.edu/data/3Dscanrep/">http://graphics.stanford.edu/data/3Dscanrep/</a></li>
 </ul>
 <h6 id="significant-areas">Significant Areas</h6>
 <ul>
@@ -1283,7 +1396,7 @@ Requirements:
     
     
     Published with
-    <a href="https://wowchemy.com" target="_blank" rel="noopener">Wowchemy</a>  —
+    <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>  —
     the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
     open source</a> website builder that empowers creators.
     
@@ -1355,42 +1468,18 @@ Requirements:
 
     
     
-    <script>const code_highlighting = true;</script>
-    
-
-    
-    
-    
-    
-    
-    
-    <script>
-      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
-      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
-      const content_type = {
-        'post': "Posts",
-        'project': "Projects",
-        'publication' : "Publications",
-        'talk' : "Talks",
-        'slides' : "Slides"
-        };
-    </script>
-    
-
-    
-    
 
     
     
     <script id="search-hit-fuse-template" type="text/x-template">
       <div class="search-hit" id="summary-{{key}}">
-      <div class="search-hit-content">
-        <div class="search-hit-name">
-          <a href="{{relpermalink}}">{{title}}</a>
-          <div class="article-metadata search-hit-type">{{type}}</div>
-          <p class="search-hit-description">{{snippet}}</p>
+        <div class="search-hit-content">
+          <div class="search-hit-name">
+            <a href="{{relpermalink}}">{{title}}</a>
+            <div class="article-metadata search-hit-type">{{type}}</div>
+            <p class="search-hit-description">{{snippet}}</p>
+          </div>
         </div>
-      </div>
       </div>
     </script>
     
@@ -1403,17 +1492,30 @@ Requirements:
 
     
     
-
-    
-    
     
 
     
     
+    
 
     
     
 
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
     
     
     
@@ -1424,11 +1526,10 @@ Requirements:
     
     
       
+      
     
     
-    
-    
-    <script src="/js/wowchemy.min.785b8decc0fa99f3915e0b8acf8158f9.js"></script>
+    <script src="/en/js/wowchemy.min.23ee25cd4c1e6fa19f12af7ca1424c64.js"></script>
 
     
 
