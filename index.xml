@@ -333,6 +333,9 @@ Requirements:
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Rd0nBO6--bM&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vladlen Koltun: Towards Photorealism&lt;/a&gt;, &lt;a href=&#34;http://vladlen.info/contact/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;contact&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
 &lt;p&gt;Understanding illumination: &lt;a href=&#34;https://arxiv.org/pdf/2012.03918.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NeRD: Neural Reflectance Decomposition from Image Collections&lt;/a&gt; - &lt;a href=&#34;https://markboss.me/publication/2021-nerd/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;project&lt;/a&gt;, Differenctiable renderer idea, &lt;a href=&#34;https://arxiv.org/pdf/2004.00403.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Two-shot Spatially-varying BRDF and Shape Estimation&lt;/a&gt; &lt;a href=&#34;https://github.com/NVlabs/two-shot-brdf-shape&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/pdf/2008.03824.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Neural Reflectance Fields for Appearance Acquisition&lt;/a&gt; - &lt;a href=&#34;http://cseweb.ucsd.edu/~bisai/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;author&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Bidirectional_reflectance_distribution_function&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bidirectional reflectance distribution function - BRDF&lt;/a&gt; - &lt;a href=&#34;https://en.wikipedia.org/wiki/Phong_reflection_model&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Phong Refelection model&lt;/a&gt; - &lt;a href=&#34;https://en.wikipedia.org/wiki/Specular_highlight#Cook%E2%80%93Torrance_model&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cook–Torrance model&lt;/a&gt;, &lt;a href=&#34;https://inst.eecs.berkeley.edu/~cs294-13/fa09/lectures/cookpaper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;A Reflectance Model for Computer Graphics&lt;/a&gt;, &lt;a href=&#34;https://static1.squarespace.com/static/58586fa5ebbd1a60e7d76d3e/t/593a3afa46c3c4a376d779f6/1496988449807/s2012_pbs_disney_brdf_notes_v2.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Physically-Based Shading at Disney&lt;/a&gt;&lt;/li&gt;
@@ -381,6 +384,15 @@ Requirements:
 &lt;li&gt;Weight normalization: A simple reparameterization to accelerate training of deep neural networks. - speed up training instead of batch normalization&lt;/li&gt;
 &lt;li&gt;H.P.: Multi-level partition of unity implicits. - Splitting a volume into smaller regions and trying to generate to whole shape based on sum of smaller regions - weighting function is 1 when you are within the region - &lt;a href=&#34;https://www.cc.gatech.edu/~turk/my_papers/mpu_implicits.pdf&#34;&gt;https://www.cc.gatech.edu/~turk/my_papers/mpu_implicits.pdf&lt;/a&gt; - &lt;a href=&#34;https://en.wikipedia.org/wiki/Partition_of_unity&#34;&gt;https://en.wikipedia.org/wiki/Partition_of_unity&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;datasets: &lt;a href=&#34;https://3dwarehouse.sketchup.com/,&#34;&gt;https://3dwarehouse.sketchup.com/,&lt;/a&gt; &lt;a href=&#34;http://graphics.stanford.edu/data/3Dscanrep/&#34;&gt;http://graphics.stanford.edu/data/3Dscanrep/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;other-queries&#34;&gt;Other queries&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.einstein.ai/the-ai-economist/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AI Economist&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://openai.com/blog/dall-e/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DALL·E: Creating Images from Text&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thegradient.pub/transformers-are-graph-neural-networks/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Transformers are Graph Neural Networks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://storage.googleapis.com/immersive-lf-video-siggraph2020/ImmersiveLightFieldVideoWithALayeredMeshRepresentation.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Immersive Light Field Video with a Layered Mesh Representation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/pdf/2012.12631.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;EFFICIENT CONTINUAL LEARNING WITH MODULAR NETWORKS AND TASK-DRIVEN PRIORS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/pdf/2012.12477.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;IIRC: Incremental Implicitly-Refined Classification&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h6 id=&#34;significant-areas&#34;&gt;Significant Areas&lt;/h6&gt;
 &lt;ul&gt;
@@ -626,6 +638,11 @@ Requirements:
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=aM_wiQFia2M&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paneer masala&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=eDOmZPQns8M&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mattar paneer - looks better. besan&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=_Um-jLO7_bM&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paneer tikka masala&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=1mVP2TkjafI&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paneer butter masala&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://delightfulvegetarianrecipes.com/category/healthy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Prashant recipes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h6 id=&#34;dishes-to-try&#34;&gt;Dishes to try&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;Namma puli kuzhambu, Enna kathirikka kuzhambu, kerela ulli theyal, nadan mutta roast, Vadacurry, maharastrian misal thala, that is spiciest for dunking in pav bun&lt;/li&gt;
+&lt;li&gt;Biriyani water-rice ratio - 1:1.25, or 1:1.50 - Hyderabadi style &amp;amp; Seeraga samba version. hyderabadi with salan &amp;amp; burani raitha. thalapakatti with salna &amp;amp; onion raitha. ambur with kathirikka &amp;amp; raitha. malabar biriyani they have it with oorga. Kolkata style &amp;amp; lucknowi.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h5 id=&#34;writing&#34;&gt;Writing:&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;English speaking &lt;a href=&#34;https://www.youtube.com/watch?v=r_5K7cs24-8&amp;amp;list=PL4IJAxR6Bqq8vP0kEeQRgU6lUe4s4u2DW&amp;amp;index=4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link1&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=QTJ02h7uiXs&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Learn English in 3 Hours - ALL You Need to Master English Conversation&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=6DiQ95hUUfI&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;American accent&lt;/a&gt;, &lt;a href=&#34;http://dl.ueb.edu.vn/bitstream/1247/2927/1/American%20Accent%20Training.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;American Accent1&lt;/a&gt;&lt;/li&gt;
@@ -653,10 +670,44 @@ My phone vibrated, breaking my thought process. &amp;ldquo;Hey Anju, where are y
       <link>https://nitthilan.github.io/mental_health/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://nitthilan.github.io/mental_health/</guid>
-      <description>&lt;h1 id=&#34;list-of-tasks&#34;&gt;List of tasks:&lt;/h1&gt;
+      <description>&lt;h2 id=&#34;intention-of-this-page&#34;&gt;Intention of this page:&lt;/h2&gt;
+&lt;p&gt;w my intention is to document the ways to handle so that it would be helpful for others. I feel everyone would have had it in some form or other at some level or other.
+there are lot of myths and taboo which make people hesitant to share this.
+I too have not visited one yet..but just for the experience plan to do so sometime. It would be useful to know
+The more we understand the better it could be. Though my father warned to not go very deep in this pursuit since it may be counterproductive. I will anyway take it with a pinch of salt anyway&lt;/p&gt;
+&lt;h2 id=&#34;hindrance-to-take-help-or-how-to-handle-it&#34;&gt;Hindrance to take help or How to handle it:&lt;/h2&gt;
+&lt;p&gt;taboo in general to see a psychologist
+we happy go to doctor for cold and fever. That is how much importance we give to mental health
+if people are exposed to scientific literature at least in the popular sense, the stigma maybe less.
+It&amp;rsquo;s more manageable. But I could handle it because I knew it was prevelant in my family. But it is still hard to discuss this in public. Like you say many hide this condition and until they come out and say it, you would not know.
+if you say you have visited a Psychologist they assume you have been to a mental asylum.&lt;/p&gt;
+&lt;h2 id=&#34;types-of-depression&#34;&gt;Types of depression:&lt;/h2&gt;
+&lt;p&gt;Clinic anxiety and depression are not tough to quantity. They base it on by how long you go into the bad state or how severe when you go through the bad patch
+Since my first experiences and experiences of other friends at that time, I think it is a continuum. It is not like normal people exist and those with mental health issues. It is an entire spectrum with varying colors, severity and meaning. Yup it&amp;rsquo;s a spectrum. Everyone has it in some level and it gets triggered based on environment and events&amp;hellip;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Types of: Clinical depression, DSM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;how-does-it-manifest-how-long-does-it-last-what-happens-myths-and-misconceptions-can-you-explain-if-this-bad-phase-is-lasts-just-a-day-or-two&#34;&gt;How does it manifest? How long does it last? What happens? Myths and Misconceptions? can you explain if this bad phase is lasts just a day or two?&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;How to identify that one has depression? What are the signs of depression?&lt;/li&gt;
 &lt;li&gt;How to identify that one of your friends have depression?&lt;/li&gt;
+&lt;li&gt;withdrawal from communication, withdrawal from light, withdrawl from daylight - harbinger symptoms&lt;/li&gt;
+&lt;li&gt;How it is different from laziness and procrastination??&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Further, it is not like Jaundice where it comes ones and you never get it. It&amp;rsquo;s more like seasonal cold. You get it in cycles and phases.
+when you are depressed you do things very weirdly like being very violent, you could hurt people etc.&lt;/p&gt;
+&lt;p&gt;Nope, at least for me you feel you do not want to do anything &amp;hellip;just lay idle and stare. You would not realize the passage of time. Usually it takes few days but some extreme cases it may go on for weeks or months.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s the inability to do stuff which irritates you rather than doing things 😂&lt;/p&gt;
+&lt;p&gt;Very true. The very fact that I knew something like this is possible helped me handle it better. Just that it is a passing phase and it&amp;rsquo;s not unique and permanent. Like cold it would just go away. You have to wait it out&lt;/p&gt;
+&lt;p&gt;Nitt, how does the depression start? Is it an event, or a prolonged disappointment about something, is it a feeling of failure/not meeting your own expectations, personal relationship issues? Can you throw some light? I am curious to know.
+This is an awesome question. Frankly, I have never spent time analysing how it started. Usually I get to know when I am into it say for few days or after it goes away where you mind feels cleared. It would be periods where you keep questioning all your actions. Your mind will go into endless arguments with yourself and eventually decide it&amp;rsquo;s better to do nothing than to take an action. You feel exhausted. But I have never been able to pinpoint and say when it starts. 🤔🤔 Let me think and if I find a reply will let you know.&lt;/p&gt;
+&lt;p&gt;It depends. It&amp;rsquo;s usually any problem at hand at that point. There were periods where I felt bad that I couldn&amp;rsquo;t gain courage to go and purchase a Pillaiyar statue from a shop during Pillaiyar chathurthi. You get a feeling that the shop keeper would cheat you. What happens if you do not get the right statue? Will everyone like it? What happens if I pay more for a normal one? What size should I get? If it is too big what should we do? If it is small will it not be useful? Then you start questioning why am I thinking so much even for a small thing like this. And then it would exhaust you and drain your mind so much you may go ahead and then make the most silliest mistakes possible and then it would haunt you again. It&amp;rsquo;s weird but it happens. On a normal day this would not even be in your thought. You go get something and forget the whole issue. I may have exaggerated this a bit but roughly this is what happens&lt;/p&gt;
+&lt;p&gt;Friend 1: From my personal evening experience, I see that any one nagging issue can seep into everything by playing in our mind and creating anxiety in us
+Taking that nagging issue headlong usually solves it. But fear stops us .&lt;/p&gt;
+&lt;p&gt;in general, i am less prone to frustration, depression etc since my nature has always been to not give too much importance to what others will think about me. also, i don&amp;rsquo;t delve much in the past , nor think too much about future. these help me in being able to attack present problems with assurance and certainty.&lt;/p&gt;
+&lt;p&gt;what i am saying are for people for whom their biology is sound enough to be able to recognize these things properly. There can be medical conditions preventing us from thinking with clarity, making us more prone to anger, anxiety etc. Then it becomes difficult to just to self observations and bring things under control. and this issue has multiple layers and it maybe quite difficult to draw a line as to when to seek professional medical help&lt;/p&gt;
+&lt;h2 id=&#34;how-to-cope-with-depression-tips-and-practices&#34;&gt;How to cope with Depression? Tips and Practices:&lt;/h2&gt;
+&lt;ul&gt;
 &lt;li&gt;How to handle depression?
 &lt;ul&gt;
 &lt;li&gt;how to get out of depression?&lt;/li&gt;
@@ -667,16 +718,41 @@ My phone vibrated, breaking my thought process. &amp;ldquo;Hey Anju, where are y
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;How to treat a friend who is in depression?&lt;/li&gt;
+&lt;li&gt;How to prevent it from happening or is that really a possibility?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Do you do Pranayama on your non-depressed days?
+Not suggesting meditation by the way. It is contraindicated in most mental health situations. Some amount of regular, gentle asana/vinyasa practice followed by a regimen that elongates the breath and makes it rhythmic (4:8, 6:12 are readily achievable with daily practice for healthy bodies) and could help manage overall wellbeing.&lt;/p&gt;
+&lt;p&gt;Talking to someone usually helps &amp;hellip; Even if it is a stone statue in God&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Thala, you need to write a journal. Just before sleeping, just write down bullet points of what you went through. Do this for two week. You can find some root reason.&lt;/p&gt;
+&lt;p&gt;If the bad mood starts because you have some work to be completed but its not getting completed. You have some pointers here.&lt;/p&gt;
+&lt;p&gt;check if you go through clinical depression or anxiety.&lt;/p&gt;
+&lt;p&gt;So this bad patch of days - how long does it last until you bounce back?&lt;/p&gt;
+&lt;p&gt;What makes you feel better after that? These are something, you can learn if you write journal.&lt;/p&gt;
+&lt;p&gt;but we also need to understand that human mind is very much capable to creating problems on its own. So, while medical help will be needed in a subset , there will be many for whom understanding their own mind helps a lot. A good psychiatrist has to tread both worlds and give guidance&lt;/p&gt;
+&lt;p&gt;Generally I have seen loneliness, boredom will automatically affect mental health easily.&lt;/p&gt;
+&lt;p&gt;its considered very normal to keep thinking about past and future. we live in a mind-created world
+we don&amp;rsquo;t realise that at all. Issues getting magnified by mind.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;adults generally put in a lot of energy to maintain their self-image. lots of time, effort goes into it. And also lot of fear, anxiety about loss of self-image. and this is also considered normal by families/socities. the self-image we have is mind-created&lt;/p&gt;
+&lt;p&gt;lets say we have a button to stop thinking for a day. what a relief it will be for us - no need to keep up any identity. no need to think about future problems. just eat when hungry and sleep if needed. a button to kill ourselves and live free&lt;/p&gt;
+&lt;p&gt;yes - what is considered valuable by society/family largely decides our intentions/actions&lt;/p&gt;
+&lt;p&gt;this truth is staring at me for the last year or so.. the role mind plays.. i have become more observant i have had few minutes here and there of thoughtless observation and its changing my perspective of what i want to do in life&#39; i have seen issues there in mind just disappear once i observe it..&lt;/p&gt;
+&lt;p&gt;the few minutes of thoughtlessness are generally filled with compassion/gratitude i can get a tiny peek at why great spiritual teachers have been obsessed with the mind and its behaviour&lt;/p&gt;
+&lt;p&gt;Well, mind works with effort-reward. Life mostly doesn&amp;rsquo;t work like that. So if a jnani puts in all that effort (or perceives having done so) maybe their jnanam gets to be deficient. The reward in spiritual practice may not always look like what we expect.&lt;/p&gt;
+&lt;p&gt;but for me personally, its generally been a change in perspective which has happened. And i am happy for it. actually i don&amp;rsquo;t have much expectations to  be honest, and i donno what to expect. the esoteric things that we hear about are as good as fairy tales&lt;/p&gt;
+&lt;h2 id=&#34;good-demo-of-how-depression-looks-like&#34;&gt;Good demo of how depression looks like:&lt;/h2&gt;
+&lt;p&gt;Episode 3 of Modern Love. It depicts a woman with bipolar. Anne Hathaway is brilliant in this character of course, she&amp;rsquo;s a natural especially in such roles.
+Wrong demos - Movie three (tamil)
+&lt;a href=&#34;https://www.youtube.com/watch?v=4IkTLiU5Q0k&#34;&gt;https://www.youtube.com/watch?v=4IkTLiU5Q0k&lt;/a&gt; - Daniel Fernandes&lt;/p&gt;
+&lt;h1 id=&#34;list-of-tasks&#34;&gt;List of tasks:&lt;/h1&gt;
+&lt;ul&gt;
 &lt;li&gt;What is the science behind depression? What happens in the brain for a depressed person?
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=mbbMLOZjUYI&amp;amp;ab_channel=TED&#34;&gt;https://www.youtube.com/watch?v=mbbMLOZjUYI&amp;amp;ab_channel=TED&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;youtube.com/watch?v=drv3BP0Fdi8&amp;amp;ab_channel=TEDxTalks&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;How to prevent it from happening or is that really a possibility?&lt;/li&gt;
-&lt;li&gt;How it is different from laziness and procrastination??&lt;/li&gt;
-&lt;li&gt;Types of: Clinical depression, DSM&lt;/li&gt;
-&lt;li&gt;withdrawal from communication, withdrawal from light, withdrawl from daylight - harbinger symptoms&lt;/li&gt;
 &lt;li&gt;Playlist of depression related videos: &lt;a href=&#34;https://www.youtube.com/playlist?list=PL4mtHuMZdZjyeGP7SCP6s75_Ic9CN3s3y&#34;&gt;https://www.youtube.com/playlist?list=PL4mtHuMZdZjyeGP7SCP6s75_Ic9CN3s3y&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;quotes:&lt;/p&gt;
@@ -700,8 +776,6 @@ My phone vibrated, breaking my thought process. &amp;ldquo;Hey Anju, where are y
 &lt;p&gt;How to&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Modern Love episode 3 -
-&lt;a href=&#34;https://www.youtube.com/watch?v=4IkTLiU5Q0k&#34;&gt;https://www.youtube.com/watch?v=4IkTLiU5Q0k&lt;/a&gt; - Daniel Fernandes&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.healthline.com/health/depression/best-videos-of-the-year#Youre-Not-Alone:-The-Truth-About-Depression&#34;&gt;https://www.healthline.com/health/depression/best-videos-of-the-year#Youre-Not-Alone:-The-Truth-About-Depression&lt;/a&gt; - A very good resource
 &lt;a href=&#34;https://www.verywellmind.com/signs-you-may-be-a-perfectionist-3145233&#34;&gt;https://www.verywellmind.com/signs-you-may-be-a-perfectionist-3145233&lt;/a&gt; -&lt;/p&gt;
 &lt;p&gt;chatter in the brain - J K - how to overcome chatterbox syndrome? - should never resist that and ignore ittune ur mind into something else. breathe in and breathe out and think about it. concentrate between eyes&lt;/p&gt;
@@ -710,59 +784,16 @@ My phone vibrated, breaking my thought process. &amp;ldquo;Hey Anju, where are y
 &lt;a href=&#34;https://www.facebook.com/RealDepressionProject&#34;&gt;https://www.facebook.com/RealDepressionProject&lt;/a&gt;
 &lt;a href=&#34;https://www.facebook.com/PoetDavidWhyte/&#34;&gt;https://www.facebook.com/PoetDavidWhyte/&lt;/a&gt;
 &lt;a href=&#34;https://onbeing.org/programs/david-whyte-the-conversational-nature-of-reality/&#34;&gt;https://onbeing.org/programs/david-whyte-the-conversational-nature-of-reality/&lt;/a&gt;
-&lt;a href=&#34;https://www.verywellmind.com/signs-you-may-be-a-perfectionist-3145233&#34;&gt;https://www.verywellmind.com/signs-you-may-be-a-perfectionist-3145233&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Ekhart Toulle. J K&lt;/p&gt;
-&lt;p&gt;Campus Chaplin, Campus psycologist, Campus therapist&lt;/p&gt;
-&lt;p&gt;Psycologist/ psychiatrics - latter is a doctor who can prescribe medicines&lt;/p&gt;
-&lt;p&gt;Please find someone who will listen to you when you go through a bad phase.&lt;/p&gt;
-&lt;p&gt;Clinic anxiety and depression are not tough to quantity. They base it on by how long you go into the bad state or how severe when you go through the bad patch&lt;/p&gt;
-&lt;p&gt;taboo in general to see a psychologist
-we happy go to doctor for cold and fever. That is how much importance we give to mental health&lt;/p&gt;
-&lt;p&gt;can you explain if this bad phase is lasts just a day or two?&lt;/p&gt;
-&lt;p&gt;if people are exposed to scientific literature at least in the popular sense, the stigma maybe less.&lt;/p&gt;
-&lt;p&gt;It&amp;rsquo;s more manageable. But I could handle it because I knew it was prevelant in my family. But it is still hard to discuss this in public. Like you say many hide this condition and until they come out and say it, you would not know.&lt;/p&gt;
-&lt;p&gt;Further, it is not like Jaundice where it comes ones and you never get it. It&amp;rsquo;s more like seasonal cold. You get it in cycles and phases.&lt;/p&gt;
-&lt;p&gt;w my intention is to document the ways to handle so that it would be helpful for others. I feel everyone would have had it in some form or other at some level or other.&lt;/p&gt;
-&lt;p&gt;there are lot of myths and taboo which make people hesitant to share this.&lt;/p&gt;
-&lt;p&gt;if you say you have visited a Psychologist they assume you have been to a mental asylum.&lt;/p&gt;
-&lt;p&gt;I too have not visited one yet..but just for the experience plan to do so sometime. It would be useful to know&lt;/p&gt;
-&lt;p&gt;when you are depressed you do things very weirdly like being very violent, you could hurt people etc.&lt;/p&gt;
-&lt;p&gt;Nope, at least for me you feel you do not want to do anything &amp;hellip;just lay idle and stare. You would not realize the passage of time. Usually it takes few days but some extreme cases it may go on for weeks or months.&lt;/p&gt;
-&lt;p&gt;It&amp;rsquo;s the inability to do stuff which irritates you rather than doing things 😂&lt;/p&gt;
-&lt;p&gt;Very true. The very fact that I knew something like this is possible helped me handle it better. Just that it is a passing phase and it&amp;rsquo;s not unique and permanent. Like cold it would just go away. You have to wait it out&lt;/p&gt;
-&lt;p&gt;Since my first experiences and experiences of other friends at that time, I think it is a continuum. It is not like normal people exist and those with mental health issues. It is an entire spectrum with varying colors, severity and meaning. Yup it&amp;rsquo;s a spectrum. Everyone has it in some level and it gets triggered based on environment and events&amp;hellip;&lt;/p&gt;
-&lt;p&gt;Do you do Pranayama on your non-depressed days?&lt;/p&gt;
-&lt;p&gt;Episode 3 of Modern Love. It depicts a woman with bipolar. Anne Hathaway is brilliant in this character of course, she&amp;rsquo;s a natural especially in such roles.&lt;/p&gt;
-&lt;p&gt;Nitt, how does the depression start? Is it an event, or a prolonged disappointment about something, is it a feeling of failure/not meeting your own expectations, personal relationship issues? Can you throw some light? I am curious to know.&lt;/p&gt;
-&lt;p&gt;This is an awesome question. Frankly, I have never spent time analysing how it started. Usually I get to know when I am into it say for few days or after it goes away where you mind feels cleared. It would be periods where you keep questioning all your actions. Your mind will go into endless arguments with yourself and eventually decide it&amp;rsquo;s better to do nothing than to take an action. You feel exhausted. But I have never been able to pinpoint and say when it starts. 🤔🤔 Let me think and if I find a reply will let you know.&lt;/p&gt;
-&lt;p&gt;It depends. It&amp;rsquo;s usually any problem at hand at that point. There were periods where I felt bad that I couldn&amp;rsquo;t gain courage to go and purchase a Pillaiyar statue from a shop during Pillaiyar chathurthi. You get a feeling that the shop keeper would cheat you. What happens if you do not get the right statue? Will everyone like it? What happens if I pay more for a normal one? What size should I get? If it is too big what should we do? If it is small will it not be useful? Then you start questioning why am I thinking so much even for a small thing like this. And then it would exhaust you and drain your mind so much you may go ahead and then make the most silliest mistakes possible and then it would haunt you again. It&amp;rsquo;s weird but it happens. On a normal day this would not even be in your thought. You go get something and forget the whole issue. I may have exaggerated this a bit but roughly this is what happens&lt;/p&gt;
+&lt;a href=&#34;https://www.verywellmind.com/signs-you-may-be-a-perfectionist-3145233&#34;&gt;https://www.verywellmind.com/signs-you-may-be-a-perfectionist-3145233&lt;/a&gt;
+tenpercent.com, &lt;a href=&#34;https://www.amazon.com/10-Happier-Self-Help-Actually-Works/dp/0062265431&#34;&gt;https://www.amazon.com/10-Happier-Self-Help-Actually-Works/dp/0062265431&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Philosophers: Ekhart Toulle. J K&lt;/p&gt;
+&lt;h2 id=&#34;people-to-reach-out-for&#34;&gt;People to reach out for:&lt;/h2&gt;
+&lt;p&gt;Campus Chaplin, Campus psycologist, Campus therapist
+Psycologist/ psychiatrics - latter is a doctor who can prescribe medicines
+Please find someone who will listen to you when you go through a bad phase.&lt;/p&gt;
 &lt;p&gt;Also, when I say it runs in my family I have seen some of my relatives talk and take advice from my father and so know that there is something like this . My parents were very vocal about it and always encouraged me to not worry about it and have made me very comfortable. Amma is the more daring and cool of the two while appa would be precautious. Sister is like another Appa. So I had a very good system to deal with it&lt;/p&gt;
-&lt;p&gt;The more we understand the better it could be. Though my father warned to not go very deep in this pursuit since it may be counterproductive. I will anyway take it with a pinch of salt anyway&lt;/p&gt;
-&lt;p&gt;Not suggesting meditation by the way. It is contraindicated in most mental health situations. Some amount of regular, gentle asana/vinyasa practice followed by a regimen that elongates the breath and makes it rhythmic (4:8, 6:12 are readily achievable with daily practice for healthy bodies) and could help manage overall wellbeing.&lt;/p&gt;
-&lt;p&gt;Talking to someone usually helps &amp;hellip; Even if it is a stone statue in God&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Thala, you need to write a journal. Just before sleeping, just write down bullet points of what you went through. Do this for two week. You can find some root reason.&lt;/p&gt;
-&lt;p&gt;If the bad mood starts because you have some work to be completed but its not getting completed. You have some pointers here.&lt;/p&gt;
-&lt;p&gt;check if you go through clinical depression or anxiety.&lt;/p&gt;
-&lt;p&gt;So this bad patch of days - how long does it last until you bounce back?&lt;/p&gt;
-&lt;p&gt;What makes you feel better after that? These are something, you can learn if you write journal.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;From my personal evening experience, I see that any one nagging issue can seep into everything by playing in our mind and creating anxiety in us
-Taking that nagging issue headlong usually solves it. But fear stops us .&lt;/p&gt;
-&lt;p&gt;in general, i am less prone to frustration, depression etc since my nature has always been to not give too much importance to what others will think about me. also, i don&amp;rsquo;t delve much in the past , nor think too much about future. these help me in being able to attack present problems with assurance and certainty.&lt;/p&gt;
-&lt;p&gt;what i am saying are for people for whom their biology is sound enough to be able to recognize these things properly. There can be medical conditions preventing us from thinking with clarity, making us more prone to anger, anxiety etc. Then it becomes difficult to just to self observations and bring things under control. and this issue has multiple layers and it maybe quite difficult to draw a line as to when to seek professional medical help
-but we also need to understand that human mind is very much capable to creating problems on its own. So, while medical help will be needed in a subset , there will be many for whom understanding their own mind helps a lot. A good psychiatrist has to tread both worlds and give guidance&lt;/p&gt;
-&lt;p&gt;Generally I have seen loneliness, boredom will automatically affect mental health easily.&lt;/p&gt;
-&lt;p&gt;its considered very normal to keep thinking about past and future. we live in a mind-created world
-we don&amp;rsquo;t realise that at all. Issues getting magnified by mind.&lt;/p&gt;
 &lt;p&gt;I am in othe opposite end of the spectrum. I struggled a lot to learn the reality of the world. My parents somehow even now do not talk about stuff happening around them.Somehow they convey that to my wife, as she is keen to listen&lt;/p&gt;
-&lt;p&gt;adults generally put in a lot of energy to maintain their self-image. lots of time, effort goes into it. And also lot of fear, anxiety about loss of self-image. and this is also considered normal by families/socities. the self-image we have is mind-created&lt;/p&gt;
-&lt;p&gt;lets say we have a button to stop thinking for a day. what a relief it will be for us - no need to keep up any identity. no need to think about future problems. just eat when hungry and sleep if needed. a button to kill ourselves and live free&lt;/p&gt;
-&lt;p&gt;yes - what is considered valuable by society/family largely decides our intentions/actions&lt;/p&gt;
-&lt;p&gt;this truth is staring at me for the last year or so.. the role mind plays.. i have become more observant i have had few minutes here and there of thoughtless observation and its changing my perspective of what i want to do in life&#39; i have seen issues there in mind just disappear once i observe it..&lt;/p&gt;
-&lt;p&gt;the few minutes of thoughtlessness are generally filled with compassion/gratitude i can get a tiny peek at why great spiritual teachers have been obsessed with the mind and its behaviour&lt;/p&gt;
-&lt;p&gt;Well, mind works with effort-reward. Life mostly doesn&amp;rsquo;t work like that. So if a jnani puts in all that effort (or perceives having done so) maybe their jnanam gets to be deficient. The reward in spiritual practice may not always look like what we expect.&lt;/p&gt;
-&lt;p&gt;but for me personally, its generally been a change in perspective which has happened. And i am happy for it. actually i don&amp;rsquo;t have much expectations to  be honest, and i donno what to expect. the esoteric things that we hear about are as good as fairy tales&lt;/p&gt;
 </description>
     </item>
     
