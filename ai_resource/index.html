@@ -242,7 +242,7 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.33319bbe33e1b9feff835521b777a249.css">
+  <link rel="stylesheet" href="/css/wowchemy.0203e3baebed09d80d70af1a2ad31805.css">
 
   
 
@@ -301,8 +301,8 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
   <link rel="manifest" href="/index.webmanifest">
   
 
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="https://nitthilan.github.io/ai_resource/">
 
@@ -326,8 +326,8 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
   <meta property="og:url" content="https://nitthilan.github.io/ai_resource/">
   <meta property="og:title" content="AI Resources (Under Development) | Nitthilan">
   <meta property="og:description" content="Sections About - Significant Areas-Current Task List - Tutorials - Applications - Prominent Papers
-About Inspired from Pixar, Dreamworks, Sony and other animation studios. The general time required to produce an animated feature from conception to final rendered version has a long production time."><meta property="og:image" content="https://nitthilan.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
-  <meta property="twitter:image" content="https://nitthilan.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+About Inspired from Pixar, Dreamworks, Sony and other animation studios. The general time required to produce an animated feature from conception to final rendered version has a long production time."><meta property="og:image" content="https://nitthilan.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+  <meta property="twitter:image" content="https://nitthilan.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
   
     
     
@@ -364,7 +364,7 @@ About Inspired from Pixar, Dreamworks, Sony and other animation studios. The gen
   
   
   
-  <script src="/js/wowchemy-init.min.bec2e1ad7b3205ec57a2139637c728a0.js"></script>
+  <script src="/js/wowchemy-init.min.8446300de3057dfecd2dbb1103d0e171.js"></script>
 
   
 
@@ -871,25 +871,33 @@ Requirements:
 </ul>
 <h5 id="list-of-ideas">List of ideas:</h5>
 <ul>
-<li>SDF helps in physics based simulations i.e. they help in contact detection between objects and hence in object object touching etc - so may help in hair, cloth simulations
+<li>
+<p>SDF helps in physics based simulations i.e. they help in contact detection between objects and hence in object object touching etc - so may help in hair, cloth simulations</p>
 <ul>
 <li>Experiment with Occupancy and SDF variations</li>
 </ul>
 </li>
-<li>Can we split objects into separate objects which and then join them together later [Graffe paper]. Create a system which can align objects as different poses and translation and camera pose</li>
-<li>Use Nerf++ to encode forground and background object</li>
-<li>NeRF for Human shapes: Fashion related human modeling design and animation.
+<li>
+<p>Can we split objects into separate objects which and then join them together later [Graffe paper]. Create a system which can align objects as different poses and translation and camera pose</p>
+</li>
+<li>
+<p>Use Nerf++ to encode forground and background object</p>
+</li>
+<li>
+<p>NeRF for Human shapes: Fashion related human modeling design and animation.</p>
 <ul>
 <li>Garment Hair 3D geometry and charater animation.</li>
 <li>Nerf setup for hair and cloth simulation. Interpreenetation of hair strands into head and sholder</li>
 </ul>
 </li>
-<li>Learn a prior using NeRF and learn embeddings using a single input image [PiFU].
+<li>
+<p>Learn a prior using NeRF and learn embeddings using a single input image [PiFU].</p>
 <ul>
 <li>Used trained NN and extract embeddings based on input image. Heirarchical NerF -&gt; NSVF</li>
 </ul>
 </li>
-<li>Can Embedding be learnt for different parts like face, hands clothers. Can we use Pose as input - CPIGAN
+<li>
+<p>Can Embedding be learnt for different parts like face, hands clothers. Can we use Pose as input - CPIGAN</p>
 <ul>
 <li>Using PSNR or SSIM to identify areas in the learnt model which are not properly learnt and using this guide the rays to be used for learning.
 <ul>
@@ -916,25 +924,39 @@ Requirements:
 </ul>
 </li>
 <li></li>
-<li>NeRF in Motion: Encoding motion for objects in a neural scene. There are diffferent ideas for it.
+<li>
+<p>NeRF in Motion: Encoding motion for objects in a neural scene. There are diffferent ideas for it.</p>
 <ul>
+<li>Datasets: <a href="https://arxiv.org/pdf/2011.13961.pdf" target="_blank" rel="noopener">D-NeRF: Neural Radiance Fields for Dynamic Scenes</a> - Extends the dataset of NERF to dynamics, <a href="https://zhan-xu.github.io/rig-net/" target="_blank" rel="noopener">RigNET</a>, <a href="https://graphics.tu-bs.de/people-snapshot" target="_blank" rel="noopener">People Snapshot Dataset</a> - <a href="http://gvv.mpi-inf.mpg.de/projects/wxu/VideoAvatar/content/video_shapes.pdf" target="_blank" rel="noopener">Video Based Reconstruction of 3D People Models</a>, <a href="http://buff.is.tue.mpg.de/" target="_blank" rel="noopener">BUFF: Bodies Under Flowing Fashion</a> - <a href="https://ps.is.tuebingen.mpg.de/publications/shape_under_cloth-cvpr17" target="_blank" rel="noopener">Detailed, accurate, human shape estimation from clothed {3D} scan sequences</a>, <a href="https://arxiv.org/pdf/2004.00452.pdf" target="_blank" rel="noopener">PiFuHD</a> - <a href="https://renderpeople.com/free-3d-people/" target="_blank" rel="noopener">renderpeople</a>, <a href="https://hdrihaven.com/" target="_blank" rel="noopener">HDRI Haven</a>, <a href="https://cape.is.tue.mpg.de/downloads" target="_blank" rel="noopener">cape</a>, <a href="https://github.com/QianliM/CAPE" target="_blank" rel="noopener">code</a>, <a href="https://github.com/QianliM/cape_utils/" target="_blank" rel="noopener">utils</a></li>
 <li>Using normalized coordinate system i.e. map actual values to normalised value to then learn a warping function which adds on to it and then render it f(X(x), Y(y), Z(z)). Maps (x,y,z) for each time step. Learn how bones are mapped to mesh pixels. Find the transformation function) - Motion Capture based rendering system
 <ul>
 <li><a href="https://arxiv.org/pdf/2011.12948.pdf" target="_blank" rel="noopener">Deformable Neural Radiance Fields</a></li>
 <li><a href="https://arxiv.org/pdf/2011.12950.pdf" target="_blank" rel="noopener">Space-time Neural Irradiance Fields for Free-Viewpoint Video</a></li>
 <li><a href="https://arxiv.org/pdf/2012.09790.pdf" target="_blank" rel="noopener">Neural Radiance Flow for 4D View Synthesis and Video Processing</a></li>
+<li><a href="https://storage.googleapis.com/nerfies-public/videos/nerfies_paper.pdf" target="_blank" rel="noopener">Deformable Neural Radiance Fields</a> - <a href="https://nerfies.github.io/" target="_blank" rel="noopener">project</a></li>
+<li><a href="https://arxiv.org/pdf/2011.13961.pdf" target="_blank" rel="noopener">D-NeRF: Neural Radiance Fields for Dynamic Scenes</a></li>
+<li><a href="https://arxiv.org/pdf/2011.12490.pdf" target="_blank" rel="noopener">DeRF: Decomposed Radiance Fields</a></li>
 </ul>
 </li>
 <li>NSVF uses Hyper networks to encode every network encode for each time step. <a href="https://arxiv.org/pdf/1906.01618.pdf" target="_blank" rel="noopener">SRN</a></li>
 <li>Like mesh objects, can Bones, rigging and weighting be added for the objects thereby making it configurable <a href="https://www.peachpit.com/articles/article.aspx?p=483793" target="_blank" rel="noopener">Bone structure</a>, <a href="https://blog.machinimatrix.org/avastar/features/rigging-and-weighting/3/" target="_blank" rel="noopener">Blog</a>,</li>
 </ul>
 </li>
-<li>Relighting of models:
+<li>
+<p>Embedding or Latent variable to control different aspects of a 3D generation</p>
+<ul>
+<li>Shape is encoded as a latent vector and then a shape with the (xyz) is used for predicting shape - <a href="https://arxiv.org/pdf/2102.08860.pdf" target="_blank" rel="noopener">ShaRF: Shape-conditioned Radiance Fields from a Single View</a>,</li>
+<li>Conditioned on the image the generate embedding for each voxel which could be used as input along with xyz - <a href="https://arxiv.org/pdf/2012.02190.pdf" target="_blank" rel="noopener">pixelNeRF: Neural Radiance Fields from One or Few Images</a> - <a href="https://github.com/sxyu/pixel-nerf" target="_blank" rel="noopener">Code</a></li>
+</ul>
+</li>
+<li>
+<p>Relighting of models:</p>
 <ul>
 <li><a href="http://xfields.mpi-inf.mpg.de/" target="_blank" rel="noopener">X-Fields: Implicit Neural View-, Light- and Time-Image Interpolation</a>, <a href="http://gvv.mpi-inf.mpg.de/projects/DeepRelightableTextures/" target="_blank" rel="noopener">Deep Relightable Textures</a>, <a href="https://arxiv.org/pdf/1904.12356.pdf" target="_blank" rel="noopener">Deferred Neural Rendering: Image Synthesis using Neural Textures</a></li>
 </ul>
 </li>
-<li>Few Shot Learning:
+<li>
+<p>Few Shot Learning:</p>
 <ul>
 <li>Learning priors using bayesian neural networks: <a href="https://en.wikipedia.org/wiki/Uncertainty_quantification" target="_blank" rel="noopener">Uncertainity Quantification</a>, <a href="https://arxiv.org/abs/1505.05424" target="_blank" rel="noopener">Weight Uncertainity in NN</a>, <a href="http://krasserm.github.io/2019/03/14/bayesian-neural-networks/" target="_blank" rel="noopener">Variational Inference in Bayesian NN</a> - The idea is to train priors of shapes using neural networks and then try to learn the representation using a single image input. The prior stores range of uncertainity in the variance of the weights and tries to find the right instance value using a single image input. We try to replace a NN in NeRF to a Baysian NN and try to model the uncertainity in shape as the weights of the bayesian-neural-networks</li>
 <li>Understanding GPT3: <a href="https://arxiv.org/pdf/2005.14165.pdf" target="_blank" rel="noopener">Paper</a>, <a href="https://openai.com/blog/better-language-models/" target="_blank" rel="noopener">GPT2 Blog</a>, <a href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf" target="_blank" rel="noopener">GPT2 Paper</a>, <a href="https://www.youtube.com/watch?v=_8yVOC4ciXc&amp;ab_channel=Computerphile" target="_blank" rel="noopener">Youtube</a>, <a href="https://www.youtube.com/watch?v=SY5PvZrJhLE&amp;ab_channel=YannicKilcher" target="_blank" rel="noopener">Youtube2</a>,</li>
@@ -942,20 +964,73 @@ Requirements:
 <li><a href="https://leggedrobotics.github.io/rl-blindloco/" target="_blank" rel="noopener">Possible continous learning</a></li>
 </ul>
 </li>
-<li>Active learning for 3d object reconstruction</li>
-<li>Structure from motion using deep learning: <a href="https://www.robots.ox.ac.uk/~vgg/publications/1998/Fitzgibbon98a/fitzgibbon98a.pdf" target="_blank" rel="noopener">Turntable</a>
+<li>
+<p>Active learning for 3d object reconstruction</p>
+</li>
+<li>
+<p>Structure from motion using deep learning: <a href="https://www.robots.ox.ac.uk/~vgg/publications/1998/Fitzgibbon98a/fitzgibbon98a.pdf" target="_blank" rel="noopener">Turntable</a></p>
 <ul>
 <li>Can NeRF be modeled to run without the camera parameters? Since we are modelling the neural network as a funtioin of x,y,z can we learn using SGD the model without the camera parameters?</li>
 <li>Fix one camera position. Model the 3D model as function of relative camera parrameter. Try minimising the error of images while we learn the error from different projections.</li>
 </ul>
 </li>
-</ul>
-<p>Code list:</p>
+<li>
+<p>Splitting light, view and time and directly rendering 2D images - X-field - <a href="https://arxiv.org/pdf/2010.00450.pdf" target="_blank" rel="noopener">paper</a>, <a href="https://github.com/m-bemana/xfields" target="_blank" rel="noopener">code</a></p>
+</li>
+<li>
+<p>Compress 3D shape representation by using entries from a codebook like the idea in VQVAE - <a href="https://arxiv.org/pdf/1711.00937.pdf," target="_blank" rel="noopener">https://arxiv.org/pdf/1711.00937.pdf,</a></p>
+</li>
+<li>
+<p>Depth/Height map as implicit functions :</p>
 <ul>
-<li><a href="https://github.com/shunsukesaito/PIFu">https://github.com/shunsukesaito/PIFu</a></li>
-<li><a href="https://github.com/facebookresearch/pifuhd">https://github.com/facebookresearch/pifuhd</a></li>
-<li><a href="https://github.com/kwea123/nerf_pl">https://github.com/kwea123/nerf_pl</a></li>
-<li><a href="https://github.com/facebookresearch/NSVF">https://github.com/facebookresearch/NSVF</a></li>
+<li>Using a base template and encoding the shape as a structure over the template - <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Genova_Learning_Shape_Templates_With_Structured_Implicit_Functions_ICCV_2019_paper.pdf" target="_blank" rel="noopener">Learning Shape Templates with Structured Implicit Functions</a>, <a href="https://github.com/google/ldif" target="_blank" rel="noopener">code</a></li>
+<li>Human models: Converting 3d model to 2d surface plane - developable surface SMPL
+<ul>
+<li><a href="https://github.com/facebookresearch/DensePose/issues/116" target="_blank" rel="noopener">SMPL to UV mapping</a>, <a href="https://github.com/Lotayou/densebody_pytorch/issues/41" target="_blank" rel="noopener">UV map to SMPL model</a>, <a href="https://github.com/CalciferZh/SMPL/issues/5" target="_blank" rel="noopener">How to get UV coordinates for the template</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/vchoutas/smplify-x/blob/master/smplifyx/fitting.py" target="_blank" rel="noopener">Fitting code</a>
+<ul>
+<li><a href="https://medium.com/@apofeniaco/p3d-body-detection-with-smplify-x-ced6c38871df" target="_blank" rel="noopener">Tutorial</a>, <a href="https://github.com/ortegatron/playing_smplifyx/tree/master/smplifyx" target="_blank" rel="noopener">code sample</a></li>
+<li><a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose" target="_blank" rel="noopener">OpenPose</a></li>
+<li><a href="https://www.dropbox.com/scl/fi/zkatuv5shs8d4tlwr8ecc/Change-parameters-to-new-coordinate-system.paper?dl=0&amp;rlkey=lotq1sh6wzkmyttisc05h0in0" target="_blank" rel="noopener">Converting from local to global</a></li>
+</ul>
+</li>
+<li><a href="https://khanhha.github.io/posts/SMPL-model-introduction/" target="_blank" rel="noopener">Understanding SMPL</a>, <a href="https://github.com/vchoutas/smplx" target="_blank" rel="noopener">SMPLX</a></li>
+<li><a href="https://github.com/vchoutas/smplx/tree/master/transfer_model" target="_blank" rel="noopener">Transfering between SMPL-SMPLX-SMPLH-FLAME-MANO</a></li>
+<li>SMPL - <a href="http://files.is.tue.mpg.de/black/papers/SMPL2015.pdf" target="_blank" rel="noopener">Papers</a>, <a href="https://smpl.is.tue.mpg.de/" target="_blank" rel="noopener">project</a> - SMPLX - <a href="https://ps.is.tuebingen.mpg.de/uploads_file/attachment/attachment/497/SMPL-X.pdf" target="_blank" rel="noopener">paper</a>, <a href="https://ps.is.tuebingen.mpg.de/uploads_file/attachment/attachment/498/SMPL-X-supp.pdf" target="_blank" rel="noopener">supp</a>, <a href="https://smpl-x.is.tue.mpg.de/" target="_blank" rel="noopener">project</a></li>
+<li>Face Fitting - <a href="https://github.com/Rubikplayer/flame-fitting" target="_blank" rel="noopener">Flame fitting</a>, <a href="https://flame.is.tue.mpg.de/" target="_blank" rel="noopener">FLAME</a></li>
+<li>Approximating 3d shapes with blobs/ellipsoids - <a href="https://github.com/google/ldif" target="_blank" rel="noopener">project</a>, <a href="https://arxiv.org/pdf/1912.06126.pdf" target="_blank" rel="noopener">Local Deep Implicit Functions for 3D Shape</a>, <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Genova_Learning_Shape_Templates_With_Structured_Implicit_Functions_ICCV_2019_paper.pdf" target="_blank" rel="noopener">Learning Shape Templates with Structured Implicit Functions</a></li>
+</ul>
+</li>
+<li>
+<p>Online 3d models - Dataset - <a href="https://www.turbosquid.com/3d-model/chair" target="_blank" rel="noopener">Turbosquid</a>, <a href="https://sketchfab.com/tags/freemodel" target="_blank" rel="noopener">sketchfab</a>, <a href="http://pixologic.com/turntable/?page=2" target="_blank" rel="noopener">Pixologic, Zbrush</a></p>
+</li>
+<li>
+<p>Synching two cameras - <a href="https://github.com/google-research/libsoftwaresync" target="_blank" rel="noopener">libsoftwaresync</a> -
+Code list:</p>
+</li>
+<li>
+<p><a href="https://github.com/shunsukesaito/PIFu" target="_blank" rel="noopener">https://github.com/shunsukesaito/PIFu</a></p>
+</li>
+<li>
+<p><a href="https://github.com/facebookresearch/pifuhd" target="_blank" rel="noopener">https://github.com/facebookresearch/pifuhd</a></p>
+</li>
+<li>
+<p><a href="https://github.com/kwea123/nerf_pl" target="_blank" rel="noopener">https://github.com/kwea123/nerf_pl</a></p>
+</li>
+<li>
+<p><a href="https://github.com/facebookresearch/NSVF" target="_blank" rel="noopener">https://github.com/facebookresearch/NSVF</a></p>
+</li>
+</ul>
+<p>Nerf Universe:</p>
+<ul>
+<li>
+<p>Basic Nerf</p>
+</li>
+<li>
+<p>Ability to choose appropriate texture and material properties based on BRDF</p>
+</li>
 </ul>
 <h6 id="prominent-papers">Prominent Papers</h6>
 <ul>
@@ -967,6 +1042,12 @@ Requirements:
 </li>
 <li>
 <p><a href="https://scholar.google.com/scholar?cites=8122086353742917335&amp;as_sdt=5,48&amp;sciodt=0,48&amp;hl=en" target="_blank" rel="noopener">NSVF - citations</a></p>
+</li>
+<li>
+<p><a href="https://dellaert.github.io/NeRF/" target="_blank" rel="noopener">NeRF Explosion 2020</a></p>
+</li>
+<li>
+<p><a href="https://github.com/yenchenlin/awesome-NeRF" target="_blank" rel="noopener">Awesome NeRF</a></p>
 </li>
 <li>
 <p>NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis: <a href="https://arxiv.org/pdf/2003.08934.pdf" target="_blank" rel="noopener">paper</a>, <a href="https://github.com/kwea123/nerf_pl" target="_blank" rel="noopener">code</a>, <a href="https://github.com/kwea123/nerf_pl/blob/master/README_mesh.md" target="_blank" rel="noopener">mesh reconstruction</a>, <a href="https://github.com/bmild/nerf/issues/44" target="_blank" rel="noopener">color reproduction</a>, <a href="https://github.com/pmneila/PyMCubes" target="_blank" rel="noopener">PyMcubes</a></p>
@@ -990,6 +1071,9 @@ Requirements:
 <p><a href="https://github.com/Kai-46/nerfplusplus" target="_blank" rel="noopener">Nerf++</a> - <a href="https://arxiv.org/pdf/2010.07492.pdf" target="_blank" rel="noopener">paper</a></p>
 </li>
 <li>
+<p><a href="https://arxiv.org/pdf/2102.07064.pdf" target="_blank" rel="noopener">iNerf</a>, <a href="https://arxiv.org/pdf/2102.07064.pdf" target="_blank" rel="noopener">Nerf&ndash;</a></p>
+</li>
+<li>
 <p><a href="https://research.fb.com/wp-content/uploads/2020/05/FroDO-From-Detections-to-3D-Objects.pdf" target="_blank" rel="noopener">FroDo</a></p>
 </li>
 <li>
@@ -999,25 +1083,13 @@ Requirements:
 <p><a href="https://arxiv.org/pdf/1905.05172.pdf" target="_blank" rel="noopener">PIFu</a></p>
 </li>
 <li>
-<p><a href="https://storage.googleapis.com/nerfies-public/videos/nerfies_paper.pdf" target="_blank" rel="noopener">Deformable Neural Radiance Fields</a> - <a href="https://nerfies.github.io/" target="_blank" rel="noopener">project</a></p>
-<ul>
-<li><a href="http://proceedings.mlr.press/v80/bojanowski18a/bojanowski18a.pdf" target="_blank" rel="noopener">Optimizing the Latent Space of Generative Networks</a></li>
-</ul>
-</li>
-<li>
-<p><a href="https://arxiv.org/pdf/2011.12950.pdf" target="_blank" rel="noopener">Space-time Neural Irradiance Fields for Free-Viewpoint Video</a></p>
-</li>
-<li>
-<p><a href="https://arxiv.org/pdf/2011.13961.pdf" target="_blank" rel="noopener">D-NeRF: Neural Radiance Fields for Dynamic Scenes</a></p>
-</li>
-<li>
 <p><a href="https://arxiv.org/pdf/2011.12100.pdf" target="_blank" rel="noopener">GIRAFFE: Representing Scenes as Compositional Generative Neural Feature Fields</a></p>
 <ul>
 <li><a href="http://www.cvlibs.net/publications/Schwarz2020NEURIPS.pdf" target="_blank" rel="noopener">GRAF</a> - <a href="https://avg.is.tuebingen.mpg.de/publications/schwarz2020neurips" target="_blank" rel="noopener">project</a> - <a href="https://github.com/autonomousvision/graf" target="_blank" rel="noopener">code</a></li>
 </ul>
 </li>
 <li>
-<p><a href="https://arxiv.org/pdf/2011.12490.pdf" target="_blank" rel="noopener">DeRF: Decomposed Radiance Fields</a></p>
+<p><a href="http://proceedings.mlr.press/v80/bojanowski18a/bojanowski18a.pdf" target="_blank" rel="noopener">Optimizing the Latent Space of Generative Networks</a></p>
 </li>
 <li>
 <p><a href="https://demuc.de/papers/schoenberger2016sfm.pdf" target="_blank" rel="noopener">SFM - Structure from motion</a></p>
@@ -1075,12 +1147,40 @@ Requirements:
 <p><a href="https://www.youtube.com/watch?v=Rd0nBO6--bM" target="_blank" rel="noopener">Vladlen Koltun: Towards Photorealism</a>, <a href="http://vladlen.info/contact/" target="_blank" rel="noopener">contact</a></p>
 </li>
 <li>
-<p>Understanding illumination: <a href="https://arxiv.org/pdf/2012.03918.pdf" target="_blank" rel="noopener">NeRD: Neural Reflectance Decomposition from Image Collections</a> - <a href="https://markboss.me/publication/2021-nerd/" target="_blank" rel="noopener">project</a>, Differenctiable renderer idea, <a href="https://arxiv.org/pdf/2004.00403.pdf" target="_blank" rel="noopener">Two-shot Spatially-varying BRDF and Shape Estimation</a> <a href="https://github.com/NVlabs/two-shot-brdf-shape" target="_blank" rel="noopener">code</a>, <a href="https://arxiv.org/pdf/2008.03824.pdf" target="_blank" rel="noopener">Neural Reflectance Fields for Appearance Acquisition</a> - <a href="http://cseweb.ucsd.edu/~bisai/" target="_blank" rel="noopener">author</a></p>
+<p>Understanding illumination: Differenctiable renderer idea, <a href="https://arxiv.org/pdf/2004.00403.pdf" target="_blank" rel="noopener">Two-shot Spatially-varying BRDF and Shape Estimation</a> <a href="https://github.com/NVlabs/two-shot-brdf-shape" target="_blank" rel="noopener">code</a></p>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Bidirectional_reflectance_distribution_function" target="_blank" rel="noopener">Bidirectional reflectance distribution function - BRDF</a> - <a href="https://en.wikipedia.org/wiki/Phong_reflection_model" target="_blank" rel="noopener">Phong Refelection model</a> - <a href="https://en.wikipedia.org/wiki/Specular_highlight#Cook%E2%80%93Torrance_model" target="_blank" rel="noopener">Cook–Torrance model</a>, <a href="https://inst.eecs.berkeley.edu/~cs294-13/fa09/lectures/cookpaper.pdf" target="_blank" rel="noopener">A Reflectance Model for Computer Graphics</a>, <a href="https://static1.squarespace.com/static/58586fa5ebbd1a60e7d76d3e/t/593a3afa46c3c4a376d779f6/1496988449807/s2012_pbs_disney_brdf_notes_v2.pdf" target="_blank" rel="noopener">Physically-Based Shading at Disney</a></li>
-<li><a href="http://www.cs.cmu.edu/afs/cs/academic/class/16823-s16/www/pdfs/" target="_blank" rel="noopener">Physics based Methods in Vision</a></li>
-<li>Tutorial on Spherical Gaussians - <a href="https://mynameismjp.wordpress.com/2016/10/09/sg-series-part-1-a-brief-and-incomplete-history-of-baked-lighting-representations/" target="_blank" rel="noopener">SG SERIES PART 1-6</a>, <a href="http://www.cse.chalmers.se/~uffe/xjobb/Readings/GlobalIllumination/Spherical%20Harmonic%20Lighting%20-%20the%20gritty%20details.pdfs" target="_blank" rel="noopener">Spherical Harmonic Lighting: The Gritty Details</a></li>
-<li><a href="https://www.alexandre-pestana.com/disney-principled-brdf-implementation/" target="_blank" rel="noopener">Disney BRDF Base color Metallic parametrization</a>, <a href="https://static1.squarespace.com/static/58586fa5ebbd1a60e7d76d3e/t/593a3afa46c3c4a376d779f6/1496988449807/s2012_pbs_disney_brdf_notes_v2.pdf" target="_blank" rel="noopener">Physically-Based Shading at Disney</a>, <a href="https://cseweb.ucsd.edu/~ravir/papers/envmap/" target="_blank" rel="noopener">An Efficient Representation for Irradiance Environment Maps</a>, <a href="https://cseweb.ucsd.edu/~ravir/papers/invlamb/" target="_blank" rel="noopener">On the Relationship between Radiance and Irradiance: Determining the illumination from images of a convex Lambertian object</a></li>
+<li>
+<p>Deep Learning Papers: <a href="https://arxiv.org/pdf/2012.03918.pdf" target="_blank" rel="noopener">NeRD: Neural Reflectance Decomposition from Image Collections</a> - <a href="https://markboss.me/publication/2021-nerd/" target="_blank" rel="noopener">project</a>, <a href="https://arxiv.org/pdf/2012.03927.pdf" target="_blank" rel="noopener">NeRV: Neural Reflectance and Visibility Fields for Relighting and View Synthesis</a> - <a href="https://pratulsrinivasan.github.io/nerv/" target="_blank" rel="noopener">project</a></p>
+</li>
+<li>
+<p>Tutorial on Spherical Gaussians - <a href="https://mynameismjp.wordpress.com/2016/10/09/sg-series-part-1-a-brief-and-incomplete-history-of-baked-lighting-representations/" target="_blank" rel="noopener">SG SERIES PART 1-6</a>, <a href="http://www.cse.chalmers.se/~uffe/xjobb/Readings/GlobalIllumination/Spherical%20Harmonic%20Lighting%20-%20the%20gritty%20details.pdfs" target="_blank" rel="noopener">Spherical Harmonic Lighting: The Gritty Details</a>, <a href="http://www.codinglabs.net/article_physically_based_rendering_cook_torrance.aspx" target="_blank" rel="noopener">Cook Torrence Model</a>, <a href="https://cseweb.ucsd.edu/classes/wi18/cse167-a/lec13.pdf" target="_blank" rel="noopener">Environment mapping Slides</a></p>
+</li>
+<li>
+<p><a href="https://inst.eecs.berkeley.edu/~cs294-13/fa09/lectures/cookpaper.pdf" target="_blank" rel="noopener">A Reflectance Model for Computer Graphics</a>, <a href="https://en.wikipedia.org/wiki/Bidirectional_reflectance_distribution_function" target="_blank" rel="noopener">Bidirectional reflectance distribution function - BRDF</a> - <a href="https://en.wikipedia.org/wiki/Phong_reflection_model" target="_blank" rel="noopener">Phong Refelection model</a> - <a href="https://en.wikipedia.org/wiki/Specular_highlight#Cook%E2%80%93Torrance_model" target="_blank" rel="noopener">Cook–Torrance model</a>, <a href="https://static1.squarespace.com/static/58586fa5ebbd1a60e7d76d3e/t/593a3afa46c3c4a376d779f6/1496988449807/s2012_pbs_disney_brdf_notes_v2.pdf" target="_blank" rel="noopener">Physically-Based Shading at Disney</a>, <a href="https://www.alexandre-pestana.com/disney-principled-brdf-implementation/" target="_blank" rel="noopener">Disney BRDF Base color Metallic parametrization</a>, <a href="https://cseweb.ucsd.edu/~ravir/papers/envmap/" target="_blank" rel="noopener">An Efficient Representation for Irradiance Environment Maps</a>, <a href="https://cseweb.ucsd.edu/~ravir/papers/invlamb/" target="_blank" rel="noopener">On the Relationship between Radiance and Irradiance: Determining the illumination from images of a convex Lambertian object</a>, <a href="http://www.codinglabs.net/article_physically_based_rendering.aspx" target="_blank" rel="noopener">Physically based rendering (PBR)</a>, <a href="https://learnopengl.com/PBR/Theory" target="_blank" rel="noopener">OpenGL PBR</a>,</p>
+</li>
+<li>
+<p>Material Editing - <a href="https://users.cg.tuwien.ac.at/~zsolnai/wp/wp-content/uploads/2019/09/pme.pdf" target="_blank" rel="noopener">Photorealistic Material Editing Through Direct Image Manipulation</a>, <a href="https://users.cg.tuwien.ac.at/zsolnai/gfx/gaussian-material-synthesis/" target="_blank" rel="noopener">Gaussian Material Synthesis</a></p>
+</li>
+<li>
+<p>Not Read, Probably good:</p>
+<ul>
+<li><a href="https://arxiv.org/pdf/2008.03824.pdf" target="_blank" rel="noopener">Neural Reflectance Fields for Appearance Acquisition</a> - <a href="http://cseweb.ucsd.edu/~bisai/" target="_blank" rel="noopener">author</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2009/12/sg.pdf" target="_blank" rel="noopener">All-Frequency Rendering of Dynamic, Spatially-Varying Reflectance</a>, <a href="https://www.slideserve.com/calder/all-frequency-rendering-of-dynamic-spatially-varying-reflectance" target="_blank" rel="noopener">tutorial slide</a> - tutorials on using Spherical Gaussians for BRDF and Environment illumination - <a href="https://arxiv.org/pdf/2012.05903.pdf" target="_blank" rel="noopener">Portrait Neural Radiance Fields from a Single Image</a></li>
+</ul>
+</li>
+<li>
+<p><a href="http://www.cs.cmu.edu/afs/cs/academic/class/16823-s16/www/pdfs/" target="_blank" rel="noopener">Physics based Methods in Vision</a></p>
+</li>
+<li>
+<p><a href="https://dreamfarmstudios.com/blog/the-ultimate-guide-to-lighting-fundamentals-for-3d/" target="_blank" rel="noopener">Ligting basics</a>, <a href="https://www.facebook.com/BusinessInsiderIndia/videos/366771777864939" target="_blank" rel="noopener">Video</a>, <a href="https://dreamfarmstudios.com/blog/getting-to-know-3d-texturing-in-animation-production/" target="_blank" rel="noopener">3D Texturing</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Online 3D model assets:</p>
+<ul>
+<li><a href="https://www.turbosquid.com/" target="_blank" rel="noopener">TurboSquid</a> - Using professional models. This is a good reference</li>
+<li>Environmental Maps - <a href="https://hdrihaven.com/hdris/" target="_blank" rel="noopener">HDRI Haven</a></li>
 </ul>
 </li>
 <li>
@@ -1104,6 +1204,18 @@ Requirements:
 <li>
 <p>Not read: <a href="https://arxiv.org/pdf/2012.09365.pdf" target="_blank" rel="noopener">Learning to Recover 3D Scene Shape from a Single Image</a>, <a href="https://arxiv.org/pdf/2012.06434.pdf" target="_blank" rel="noopener">Iso-Points: Optimizing Neural Implicit Surfaces with Hybrid Representations</a>, <a href="https://arxiv.org/pdf/2012.08503.pdf" target="_blank" rel="noopener">Object-Centric Neural Scene Rendering</a>, <a href="https://capworkshop.github.io/" target="_blank" rel="noopener">computer assisted prog</a>, <a href="https://github.com/chenhsuanlin/signed-distance-SRN" target="_blank" rel="noopener">signed-distance-SRN</a>, <a href="https://github.com/autonomousvision/differentiable_volumetric_rendering" target="_blank" rel="noopener">differentiable_volumetric_rendering</a>,</p>
 </li>
+<li>
+<p>Quaternions - <a href="https://jinyongjeong.github.io/Download/SE3/jlblanco2010geometry3d_techrep.pdf" target="_blank" rel="noopener">ref1</a>, <a href="https://maxime-tournier.github.io/notes/quaternions.html" target="_blank" rel="noopener">ref2</a>, <a href="https://www.seas.upenn.edu/~meam620/slides/kinematicsI.pdf" target="_blank" rel="noopener">SE(3) transform</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1812.04948" target="_blank" rel="noopener">StyleGAN</a>, <a href="https://rameenabdal.github.io/StyleFlow/" target="_blank" rel="noopener">StyleFlow</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2102.07064.pdf" target="_blank" rel="noopener">NeRF−−: Neural Radiance Fields Without Known Camera Parameters</a></p>
+</li>
+<li>
+<p>Companies - <a href="https://www.teriflix.com/" target="_blank" rel="noopener">Teriflix</a>, <a href="https://www.artella.com/" target="_blank" rel="noopener">Searching for artist</a>, <a href="https://paperboatstudios.co/index" target="_blank" rel="noopener">paperboatstudios</a>, <a href="https://www.studiodurga.com/" target="_blank" rel="noopener">studiodurga</a></p>
+</li>
 </ul>
 <p>AI Sculptor: Assuming the rays as a nail, we like to sculpt a 3D model based on multiple input views. We use the NSVF as our based code. The list of problems we are planning to attack:
 - Marching cubes would fail to recover the surface since the function learns only the boundary and does not learn inside the object. So a different learning algorithm is required for learning the 3D mesh object. We need to find a better algorithm to extract the 3D mesh and surface information.
@@ -1112,17 +1224,14 @@ Requirements:
 - Heirarchical representation: Nerf/DeepSDF use NN to represent the whole scene. NSVF/DeepLS use local embedding information to represent shapes in voxels. Can a heirarchchical representation of latent variables be used to represnet the whole shape to get consistent representation.
 - Can the shape information used as code in DeepSDF be used in NERF/NSVF kind of setup to reduce the number of images to encode a scene directly from a siingle image
 - Physics simulation using NeRF: <a href="https://users.cg.tuwien.ac.at/zsolnai/gfx/fluid_control_msc_thesis/" target="_blank" rel="noopener">Real Time Fluid simulation</a>, <a href="https://arxiv.org/pdf/2002.09405.pdf" target="_blank" rel="noopener">Learning to simulate</a></p>
-<ul>
-<li>A algorithm to solve generic problems: <a href="https://xinyazhang.gitlab.io/puzzletunneldiscovery/" target="_blank" rel="noopener">C-Space Tunnel Discovery for Puzzle Path Planning</a>, <a href="https://gitlab.com/xinyazhang/puzzle-geometry/-/tree/master/" target="_blank" rel="noopener">More Puzzles</a>, <a href="https://xinyazhang.gitlab.io/puzzletunneldiscovery/assets/MainPaper.pdf" target="_blank" rel="noopener">paper</a> - Concentrate on the different planning algorithms. The baisc idea would be to find tunnels (i.e. narrow points which could possibly leead to a solution). Then have a duble tree starting from Start and reversely from goal. This could be done for every tunnel point. This stage is the blooming stage. You could approximate the value of the tree using neural networks. Try finding links from the bloomed tree and the successive tunnel paths. IF we find a route find the optimal route from start to end - Probabilistic Roadmap Path Planning <a href="http://www.cs.columbia.edu/~allen/F15/NOTES/Probabilisticpath.pdf" target="_blank" rel="noopener">PRM Planner</a>, <a href="https://people.eecs.berkeley.edu/~pabbeel/cs287-fa11/slides/MotionPlanning-v1.pdf" target="_blank" rel="noopener">PRM1</a>, <a href="http://planning.cs.uiuc.edu/node772.html" target="_blank" rel="noopener">RDT-Based Methods</a> - dual-tree RDT algorithm</li>
-</ul>
 <h6 id="list-of-questions">List of questions</h6>
 <ul>
 <li>multiresolution in signed distance function, how are multiple objects composed using SDF, What is the maximum capacity of NN?, occupancy vs sdf comparison</li>
 <li>a KD-tree - nearest neighbor algorithm -</li>
 <li>distance transform for any watertight shapes</li>
 <li>Weight normalization: A simple reparameterization to accelerate training of deep neural networks. - speed up training instead of batch normalization</li>
-<li>H.P.: Multi-level partition of unity implicits. - Splitting a volume into smaller regions and trying to generate to whole shape based on sum of smaller regions - weighting function is 1 when you are within the region - <a href="https://www.cc.gatech.edu/~turk/my_papers/mpu_implicits.pdf">https://www.cc.gatech.edu/~turk/my_papers/mpu_implicits.pdf</a> - <a href="https://en.wikipedia.org/wiki/Partition_of_unity">https://en.wikipedia.org/wiki/Partition_of_unity</a></li>
-<li>datasets: <a href="https://3dwarehouse.sketchup.com/,">https://3dwarehouse.sketchup.com/,</a> <a href="http://graphics.stanford.edu/data/3Dscanrep/">http://graphics.stanford.edu/data/3Dscanrep/</a></li>
+<li>H.P.: Multi-level partition of unity implicits. - Splitting a volume into smaller regions and trying to generate to whole shape based on sum of smaller regions - weighting function is 1 when you are within the region - <a href="https://www.cc.gatech.edu/~turk/my_papers/mpu_implicits.pdf" target="_blank" rel="noopener">https://www.cc.gatech.edu/~turk/my_papers/mpu_implicits.pdf</a> - <a href="https://en.wikipedia.org/wiki/Partition_of_unity" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Partition_of_unity</a></li>
+<li>datasets: <a href="https://3dwarehouse.sketchup.com/," target="_blank" rel="noopener">https://3dwarehouse.sketchup.com/,</a> <a href="http://graphics.stanford.edu/data/3Dscanrep/" target="_blank" rel="noopener">http://graphics.stanford.edu/data/3Dscanrep/</a></li>
 </ul>
 <h5 id="other-queries">Other queries</h5>
 <ul>
@@ -1132,6 +1241,8 @@ Requirements:
 <li><a href="https://storage.googleapis.com/immersive-lf-video-siggraph2020/ImmersiveLightFieldVideoWithALayeredMeshRepresentation.pdf" target="_blank" rel="noopener">Immersive Light Field Video with a Layered Mesh Representation</a></li>
 <li><a href="https://arxiv.org/pdf/2012.12631.pdf" target="_blank" rel="noopener">EFFICIENT CONTINUAL LEARNING WITH MODULAR NETWORKS AND TASK-DRIVEN PRIORS</a></li>
 <li><a href="https://arxiv.org/pdf/2012.12477.pdf" target="_blank" rel="noopener">IIRC: Incremental Implicitly-Refined Classification</a></li>
+<li>A algorithm to solve generic problems: <a href="https://xinyazhang.gitlab.io/puzzletunneldiscovery/" target="_blank" rel="noopener">C-Space Tunnel Discovery for Puzzle Path Planning</a>, <a href="https://gitlab.com/xinyazhang/puzzle-geometry/-/tree/master/" target="_blank" rel="noopener">More Puzzles</a>, <a href="https://xinyazhang.gitlab.io/puzzletunneldiscovery/assets/MainPaper.pdf" target="_blank" rel="noopener">paper</a> - Concentrate on the different planning algorithms. The baisc idea would be to find tunnels (i.e. narrow points which could possibly leead to a solution). Then have a duble tree starting from Start and reversely from goal. This could be done for every tunnel point. This stage is the blooming stage. You could approximate the value of the tree using neural networks. Try finding links from the bloomed tree and the successive tunnel paths. IF we find a route find the optimal route from start to end - Probabilistic Roadmap Path Planning <a href="http://www.cs.columbia.edu/~allen/F15/NOTES/Probabilisticpath.pdf" target="_blank" rel="noopener">PRM Planner</a>, <a href="https://people.eecs.berkeley.edu/~pabbeel/cs287-fa11/slides/MotionPlanning-v1.pdf" target="_blank" rel="noopener">PRM1</a>, <a href="http://planning.cs.uiuc.edu/node772.html" target="_blank" rel="noopener">RDT-Based Methods</a> - dual-tree RDT algorithm</li>
+<li><a href="https://cg.informatik.uni-freiburg.de/publications/2019_TOG_strongCoupling.pdf" target="_blank" rel="noopener">Interlinked SPH Pressure Solvers for Strong Fluid-Rigid Coupling</a>,</li>
 </ul>
 <h6 id="significant-areas">Significant Areas</h6>
 <ul>
@@ -1201,7 +1312,7 @@ Requirements:
 <h6 id="good-resources">Good resources</h6>
 <ul>
 <li><a href="http://incompleteideas.net/sutton/book/the-book-2nd.html" target="_blank" rel="noopener">Sutton Book</a>: <a href="http://incompleteideas.net/sutton/book/bookdraft2016sep.pdf" target="_blank" rel="noopener">Book Draft</a>, <a href="https://github.com/ShangtongZhang/reinforcement-learning-an-introduction" target="_blank" rel="noopener">Code And Examples</a></li>
-<li><a href="https://www.youtube.com/watch?v=2pWv7GOvuf0" target="_blank" rel="noopener">Deep Mind: RL Course by David Silver</a> - First of a 10 lecture series - <a href="http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html">http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html</a></li>
+<li><a href="https://www.youtube.com/watch?v=2pWv7GOvuf0" target="_blank" rel="noopener">Deep Mind: RL Course by David Silver</a> - First of a 10 lecture series - <a href="http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html" target="_blank" rel="noopener">http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html</a></li>
 </ul>
 <h6 id="accelerators">Accelerators</h6>
 <ul>
@@ -1541,7 +1652,7 @@ Requirements:
       
     
     
-    <script src="/en/js/wowchemy.min.f86e156683bbca3bda26f0b0b2c58597.js"></script>
+    <script src="/en/js/wowchemy.min.840ff069a6d25db681d120b4f843b863.js"></script>
 
     
 
