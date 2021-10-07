@@ -39,3 +39,6 @@ Daily projects:
 	- MeshTransformer
 - video_pose_estimation
 - videoavatars, VideoPose3D, White-Box-Cartoonization - Cartoon Generation, Dress extractor, Vtuber
+
+
+https://docs.google.com/document/d/1ScHjG-twtRYww3FXmStcN10Fytn6Ncr-P51zx5xwEoc/edit - Problems worked on

@@ -86,9 +86,10 @@
     <loc>https://nitthilan.github.io/publication/jayakodi-2018-trading/</loc>
     <lastmod>2020-10-20T19:56:08-07:00</lastmod>
   </url><url>
-    <loc>https://nitthilan.github.io/ai_resource/</loc>
+    <loc>https://nitthilan.github.io/project_details/</loc>
+    <priority>0</priority>
   </url><url>
-    <loc>https://nitthilan.github.io/to_infinity_and_beyond/</loc>
+    <loc>https://nitthilan.github.io/ai_resource/</loc>
   </url><url>
     <loc>https://nitthilan.github.io/categories/</loc>
   </url><url>
@@ -100,10 +101,14 @@
   </url><url>
     <loc>https://nitthilan.github.io/post/</loc>
   </url><url>
+    <loc>https://nitthilan.github.io/projects/</loc>
+  </url><url>
     <loc>https://nitthilan.github.io/talk/</loc>
   </url><url>
     <loc>https://nitthilan.github.io/recognition/</loc>
   </url><url>
     <loc>https://nitthilan.github.io/tags/</loc>
+  </url><url>
+    <loc>https://nitthilan.github.io/to_infinity_and_beyond/</loc>
   </url>
 </urlset>
