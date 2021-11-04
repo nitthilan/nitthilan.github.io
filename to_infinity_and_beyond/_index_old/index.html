@@ -34,10 +34,11 @@
   
     
   
-  <meta name="description" content="PhD in Artificial Intelligence / Machine Learning">
+  <meta name="description" content="About - MoCap SMPL-X priors - NeRF Rendering System - Problems - References
+About With more and more AR and VR devices becoming ubiquitous and advancement in animation the animation, the difference between virtual and reality are getting blurred.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://nitthilan.github.io/to_infinity_and_beyond/">
+  <link rel="alternate" hreflang="en-us" href="https://nitthilan.github.io/to_infinity_and_beyond/_index_old/">
 
   
 
@@ -295,8 +296,6 @@
   
 
   
-  <link rel="alternate" href="/to_infinity_and_beyond/index.xml" type="application/rss+xml" title="Nitthilan">
-  
 
   
   <link rel="manifest" href="/index.webmanifest">
@@ -305,7 +304,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu794274cdbfab6a2e083ce074675524a2_29983_32x32_fill_lanczos_center_3.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu794274cdbfab6a2e083ce074675524a2_29983_180x180_fill_lanczos_center_3.png">
 
-  <link rel="canonical" href="https://nitthilan.github.io/to_infinity_and_beyond/">
+  <link rel="canonical" href="https://nitthilan.github.io/to_infinity_and_beyond/_index_old/">
 
   
   
@@ -315,25 +314,30 @@
   
   
     
+    
   
   
-  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:card" content="summary">
   
   <meta property="twitter:site" content="@nitthilan">
   <meta property="twitter:creator" content="@nitthilan">
   
   <meta property="og:site_name" content="Nitthilan">
-  <meta property="og:url" content="https://nitthilan.github.io/to_infinity_and_beyond/">
+  <meta property="og:url" content="https://nitthilan.github.io/to_infinity_and_beyond/_index_old/">
   <meta property="og:title" content="To Infinity And Beyond | Nitthilan">
-  <meta property="og:description" content="PhD in Artificial Intelligence / Machine Learning"><meta property="og:image" content="https://nitthilan.github.io/to_infinity_and_beyond/featured_1.jpeg">
-  <meta property="twitter:image" content="https://nitthilan.github.io/to_infinity_and_beyond/featured_1.jpeg"><meta property="og:locale" content="en-us">
+  <meta property="og:description" content="About - MoCap SMPL-X priors - NeRF Rendering System - Problems - References
+About With more and more AR and VR devices becoming ubiquitous and advancement in animation the animation, the difference between virtual and reality are getting blurred."><meta property="og:image" content="https://nitthilan.github.io/images/icon_hu794274cdbfab6a2e083ce074675524a2_29983_512x512_fill_lanczos_center_3.png">
+  <meta property="twitter:image" content="https://nitthilan.github.io/images/icon_hu794274cdbfab6a2e083ce074675524a2_29983_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
   
+    
     
   
 
   
 
 
+
+  
 
 
   
@@ -729,15 +733,9 @@
   </div>
 
   <div class="page-body">
-    
+    <article class="article">
 
-
-
-
-
-
-
-
+  
 
 
 
@@ -751,17 +749,17 @@
 
 
   
-  
-    
-  
 
-
+  
+  
+  
 <div class="article-container pt-3">
   <h1>To Infinity And Beyond</h1>
 
   
 
   
+    
 
 
 <div class="article-metadata">
@@ -794,90 +792,403 @@
 
 </div>
 
-  
-
-
-
-
-
-</div>
-
-
-<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 257px;">
-  <div style="position: relative">
-    <img src="/to_infinity_and_beyond/featured_1_hua927e83a2037412038b78d684943f534_156694_720x0_resize_q90_lanczos.jpeg" alt="" class="featured-image">
     
-  </div>
+
+
+
+
+
+  
 </div>
 
 
 
-<div class="universal-wrapper">
-  
-  <div class="article-style"><p><a href="#about">About</a> - <a href="#Deep-Neural-Radiance-Field-based-3D-Volumetric-Video-Capture-Rendering-and-Streaming">3D Volumetric Video System</a> - <a href="#drawbacks">Drawbacks</a> - <a href="#problems-working-on">Problems</a> - <a href="#references">References</a></p>
+  <div class="article-container">
+
+    <div class="article-style">
+      <p><a href="#about">About</a> - <a href="#motion-capture-using-smpl-x-priors">MoCap SMPL-X priors</a> - <a href="#neural-radiance-field-rendering-systems">NeRF Rendering System</a> - <a href="#problems-working-on">Problems</a> - <a href="#references">References</a></p>
 <h5 id="about">About</h5>
-<p>More and more AR and VR devices becoming ubiquitous and advancement in animation, we see a shift in the way people consume content. Instead of using mobile, tablet and TV screens, more and more immersive 3D volumetric displays using AR/VR devices like Oculus, Holo Lens, Vive are getting used. This inturn increases the demand for generation and consumption of immersive content for various applications like live action sports, music concerts, performances or virtual worlds where consumers can interact and hang out with their favorites artists, sportsman or teleport themselves to exotic locations</p>
-<p>Being interested in application of AI/ML in the area of 3D graphics and animation and having a background in video encoding for conferencing, transmission and storage am proposing a low cost consumer grade volumetric video capture, storage, renderer and streaming solution for AR/VR end devices</p>
-<h5 id="deep-neural-radiance-field-based-3d-volumetric-video-capture-rendering-and-streaming">Deep Neural Radiance Field based 3D Volumetric Video Capture, Rendering and Streaming</h5>
-<p><img src="volumetric_video.png" alt="screen reader text" title="Neural Body"></p>
-<p>To provide a user with a immersive experience, the whole media pipeline from capture, storage, rendering and streaming should be capable of handling 3D volumetric data. First, to capture 3D volumetric data, we would require a multi-camera system, which capture the action from different views. Further, we breakdown the scene into a less important background region, a center stage foreground area where the actual action happens. This helps in encoding the background with less detail and forground with higher precision. Further, to enhance the quality, we separate objects into rigid and non-rigid human bodies. In effect, we split the scene into three prominent regions (a) Foreground Rigid Bodies (b) Foreground Non-Rigid (Human) Bodies (c) Background Region. Unlike, other solutions which encode these objects as meshes and textures, we propose a Deep learning based neural radiance field solution for each of these regions. Further, the immersive visualization is provided to the user by compositing the three regions into a stereo 360 degree panoromic image for each time instant and stream it to a Unity VR app running on a VR headset. Based on these features, we breakdown our system into the following components:</p>
-<h6 id="a-multi-view-capture-system">(a) Multi-view capture system</h6>
-<p>We design a capture system which ranges from 1 to N monocular RGB cameras. This could be as simple as multiple mobile cameras capturing a performance or scene from different angles. This setup enables general users to create content that could be immersively consumed. The capture is synchronized so that multiple captures can be correlated for a particular time instance across different cameras. These different video streams are then uploaded to the cloud server.</p>
-<h6 id="b-split-neural-encoder-renderer-and-compositor">(b) Split neural encoder, renderer and compositor</h6>
-<p>The next stage, involves splitting the data into foreground and background, rigid and non-rigid (human) bodies. Each of these components are then encoded seprately into a deep neural network as neural radiance fields. Background region is encoded using Nerf++ based network. The foreground requires optimized rendering (or inference) and many solution options are to be investigated. Some of the options are KiloNerf, PlenOctrees. Finally, the non-rigid body is encoded using Neural body based network solutions. The scene is composited by rendering the individual neural networks encoded for the three separate regions based on the position and viewing angle feedback from the user. This composited stereo 360 degree panoroma image is then possed on to the next stage to be compressed and streamed</p>
-<h6 id="c-360-stereo-video-encoder">(c) 360 Stereo video encoder</h6>
-<p>The final stage, encodes the composited stereo image and compresses it into a video stream (H264, MPEG, MJPEG) and streamed to the VR headset. A Unity based VR app, displays the compressed stream on the skybox shader to provide a immersive visualization of the captured sequence to the end user</p>
-<h5 id="current-status">Current status</h5>
+<p>With more and more AR and VR devices becoming ubiquitous and advancement in animation the animation, the difference between virtual and reality are getting blurred. This makes perception of reality and rendering it along with virtual scenes as the core problems. Being interested application of AI/ML in the area of 3D graphics and animation and having a background in video encoding for conferencing, transmission am working on two problems (a) Motion Capture from monocular videos dealing in perception and (b) Neural rendering of rigid and non-rigid bodies dealing in rendering.</p>
+<p>Further, the current advancements in deep learning in the area of GAN, Implicit representations, Transformers, GCN make them a invaluble tool that aid in solving these core problems. Anyone interested in the following problems can reach me <a href="mailto:nitthilan@gmail.com">nitthilan@gmail.com</a></p>
+<h6 id="motion-capture-using-smpl-x-priors-detailsproblems-working-on">Motion Capture using SMPL-X priors <a href="#problems-working-on">(details)</a></h6>
 <ul>
-<li>Individual modules are available for each module</li>
-<li>In the process of creating a MVP to demo the end-to-end solution</li>
-<li>Anyone interested in the following problems can reach me <a href="mailto:nitthilan@gmail.com">nitthilan@gmail.com</a></li>
+<li>Using monocular video information
+<img src="mocap_parkor.gif" alt="screen reader text" title="VIBE"></li>
+<li>Facial, finger and full Body pose extraction
+<img src="mocap_smplx.jpeg" alt="screen reader text" title="SMPLify-X"></li>
 </ul>
-<h5 id="drawbacks">Drawbacks</h5>
+<!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-a-caption">
+
+
+  <a data-fancybox="" href="mocap_smplx.jpeg" data-caption="A caption">
+
+
+  <img src="mocap_smplx.jpeg" alt=""  >
+</a>
+
+
+  
+  
+  <figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+    A caption
+  </figcaption>
+
+
+</figure>
+ -->
+<h6 id="neural-radiance-field-rendering-systems-detailsproblems-working-on">Neural radiance field rendering systems <a href="#problems-working-on">(details)</a></h6>
 <ul>
-<li>The encoding (or storage) is time consuming since it depends on the training time which is at present in the order of hours</li>
-<li>The streaming delay would still be significant since it is done through the cloud</li>
+<li>Fast training for rigid bodies
+<img src="NSVF.png" alt="screen reader text" title="NSVF">
+<img src="neural_body.gif" alt="screen reader text" title="Neural Body"></li>
+<li>Non-rigid (human models) pose, cloth and hair feature transfer
+<img src="nerf_controllable_features.gif" alt="screen reader text" title="ADGAN"> <img src="nerf_pose_transfer.gif" alt="screen reader text" title="ADGAN"></li>
 </ul>
-<h5 id="reference">Reference</h5>
+<h5 id="problems-working-on">Problems Working On</h5>
 <ul>
-<li><a href="https://github.com/bmild/nerf" target="_blank" rel="noopener">NeRF: Neural Radiance Fields</a></li>
-<li><a href="https://github.com/zju3dv/neuralbody" target="_blank" rel="noopener">Neural Body: Implicit Neural Representations with Structured Latent Codes for Novel View Synthesis of Dynamic Humans</a></li>
-<li><a href="https://github.com/facebookresearch/NSVF" target="_blank" rel="noopener">Neural Sparse Voxel Fields (NSVF)</a></li>
-<li><a href="https://github.com/Kai-46/nerfplusplus" target="_blank" rel="noopener">NeRF++: Analyzing and Improving Neural Radiance Fields</a></li>
-<li><a href="https://alexyu.net/plenoctrees/" target="_blank" rel="noopener">PlenOctrees: For Real-time Rendering of Neural Radiance Fields</a></li>
-<li><a href="https://github.com/creiser/kilonerf" target="_blank" rel="noopener">KiloNeRF: Speeding up Neural Radiance Fields with Thousands of Tiny MLPs</a></li>
+<li>Shape and pose iteration for refinement of image based pose for the original dimension <a href="https://github.com/nitthilan/video_pose_estimation" target="_blank" rel="noopener">link</a>
+<ul>
+<li>HMR (Human mesh recovery) use CNNs and so the images are resized thus losing its prediction precision.</li>
+<li>SMPLify-X based approches are iterative and do not reach global minima faster</li>
+<li>A hybrid approach which merges the both to get higher precision prediction while maintaining consistency across frames</li>
+</ul>
+</li>
+<li>Multiresolution video pose estimation
+<ul>
+<li>A video has a large number of images and estimating pose for all frames would be huge</li>
+<li>Pose interpolation using transformers to reduce computation</li>
+<li>Transformer based approaches to use temporal consistency to get better prediction for occluded parts</li>
+<li>Identify non occluded frames and interpolate intermediate frames to estimate pose</li>
+</ul>
+</li>
+<li>Learning pose using videos in the wild
+<ul>
+<li>Use 2D keypoint markers and temporal shape consistency to learn mocap information</li>
+<li>Estimate facial and finger pose estimation</li>
+<li>Estimate initial prediction using resized input images using neural network based approaches</li>
+<li>Apply SMPLify-X based iterative approaches to refine pose using full resolution images to get precise prediction</li>
+</ul>
+</li>
+<li>Facial, hand and full pose control of deformable human neural avatars
+<ul>
+<li>Extract mocap information from driver video</li>
+<li>Learn neural body based avatars using SMPL-X</li>
+<li>Deform SMPL-X model using the driver video</li>
+</ul>
+</li>
+<li>Deformable neural cloth and hair styles extraction from video in wild
+<ul>
+<li>Use human parser to extract different clothing types and hair</li>
+<li>Learn neural models for each segment extracted earlier</li>
+<li>This helps in transfering information across different avatars</li>
+</ul>
+</li>
+<li>Multi-resolution neural training for both rigid and non-rigid objects
+<ul>
+<li>Active learing based appraches to identify subset of images which maximize learning</li>
+<li>Start with low resolution images and downsampled video</li>
+<li>Choose the training subset based on the rendered quality across different view</li>
+</ul>
+</li>
+<li>Voxel based latent learning <a href="https://github.com/nitthilan/kilonerf_modified" target="_blank" rel="noopener">link</a>
+<ul>
+<li>Learn a pre-trained network which approximates simpler shapes ata voxel level</li>
+<li>Reduce training iteration time</li>
+</ul>
+</li>
+<li>Neural sub-problems
+<ul>
+<li>Predicting occluded regions from known regions</li>
+<li>GAN based generator for neural body</li>
+</ul>
+</li>
+</ul>
+<h5 id="references">References:</h5>
+<ul>
 <li><a href="https://github.com/mkocabas/VIBE" target="_blank" rel="noopener">VIBE: Video Inference for Human Body Pose and Shape Estimation</a></li>
 <li><a href="https://github.com/vchoutas/smplify-x" target="_blank" rel="noopener">SMPLify-X</a>, <a href="https://smpl-x.is.tue.mpg.de/" target="_blank" rel="noopener">SMPL-X</a>, <a href="https://smpl.is.tue.mpg.de/" target="_blank" rel="noopener">SMPL</a></li>
 <li><a href="https://github.com/facebookresearch/frankmocap" target="_blank" rel="noopener">FrankMocap: A Strong and Easy-to-use Single View 3D Hand+Body Pose Estimator</a></li>
 <li><a href="https://github.com/akanazawa/hmr" target="_blank" rel="noopener">End-to-end Recovery of Human Shape and Pose</a>, <a href="https://github.com/nkolot/SPIN" target="_blank" rel="noopener">SPIN: SMPL oPtimization IN the loop</a></li>
 <li><a href="https://jalammar.github.io/illustrated-transformer/" target="_blank" rel="noopener">Illustrated Transformer</a></li>
+<li><a href="https://github.com/bmild/nerf" target="_blank" rel="noopener">NeRF: Neural Radiance Fields</a></li>
+<li><a href="https://github.com/zju3dv/neuralbody" target="_blank" rel="noopener">Neural Body: Implicit Neural Representations with Structured Latent Codes for Novel View Synthesis of Dynamic Humans</a></li>
+<li><a href="https://github.com/creiser/kilonerf" target="_blank" rel="noopener">KiloNeRF: Speeding up Neural Radiance Fields with Thousands of Tiny MLP</a></li>
+<li><a href="https://github.com/facebookresearch/NSVF" target="_blank" rel="noopener">Neural Sparse Voxel Fields (NSVF)</a></li>
 <li><a href="https://github.com/menyifang/ADGAN" target="_blank" rel="noopener">Controllable Person Image Synthesis with Attribute-Decomposed GAN</a></li>
 <li><a href="https://github.com/facebookresearch/pifuhd" target="_blank" rel="noopener">PIFuHD: Multi-Level Pixel-Aligned Implicit Function for High-Resolution 3D Human Digitization (CVPR 2020)</a></li>
 <li><a href="https://jonathan-hui.medium.com/debug-a-deep-learning-network-part-5-1123c20f960d" target="_blank" rel="noopener">Debugging networks</a></li>
 <li><a href="https://arxiv.org/pdf/1812.07035.pdf" target="_blank" rel="noopener">On the Continuity of Rotation Representations in Neural Networks</a>, <a href="https://towardsdatascience.com/better-rotation-representations-for-accurate-pose-estimation-e890a7e1317f" target="_blank" rel="noopener">Tutorial blog</a></li>
 </ul>
-</div>
-  
 
-  
-  
-    
-    
-    
-    <div>
-      <h2><a href="/to_infinity_and_beyond/_index_old/" >To Infinity And Beyond</a></h2>
-      <div class="article-style">
-        
-          About - MoCap SMPL-X priors - NeRF Rendering System - Problems - References
-About With more and more AR and VR devices becoming ubiquitous and advancement in animation the animation, the difference between virtual and reality are getting blurred.
-        
-      </div>
     </div>
-  
 
-  
+    
 
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://nitthilan.github.io/to_infinity_and_beyond/_index_old/&amp;text=To%20Infinity%20And%20Beyond" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://nitthilan.github.io/to_infinity_and_beyond/_index_old/&amp;t=To%20Infinity%20And%20Beyond" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=To%20Infinity%20And%20Beyond&amp;body=https://nitthilan.github.io/to_infinity_and_beyond/_index_old/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://nitthilan.github.io/to_infinity_and_beyond/_index_old/&amp;title=To%20Infinity%20And%20Beyond" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=To%20Infinity%20And%20Beyond%20https://nitthilan.github.io/to_infinity_and_beyond/_index_old/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://nitthilan.github.io/to_infinity_and_beyond/_index_old/&amp;title=To%20Infinity%20And%20Beyond" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://nitthilan.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/nitthilan-kannappan-jayakodi/avatar_hu851017bc20c52d405f70b37f14a9151b_67212_270x270_fill_q90_lanczos_center.jpg" alt="Nitthilan Kannappan Jayakodi"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://nitthilan.github.io/">Nitthilan Kannappan Jayakodi</a></h5>
+      <h6 class="card-subtitle">PhD in Artificial Intelligence / Machine Learning</h6>
+      <p class="card-text">Pursuing PhD in AI/ML. Interested in artificial general intelligence (AGI) and Deep generativemodels (GAN, VQVAE) for Video/Image/3D Graphics (GCN/CNN). 12 years of software product development experience with wide exposure in building end to end systems from embedded to web technologies.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=_CWcMj4AAAAJ&amp;hl=en&amp;authuser=1" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/nitthilan/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:nitthilan@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/nitthilan" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/files/CV_5.0.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.facebook.com/kannappanjayakodi.nitthilan" target="_blank" rel="noopener">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
   </div>
 
   <div class="page-footer">

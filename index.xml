@@ -931,5 +931,144 @@ Please find someone who will listen to you when you go through a bad phase.&lt;/
 </description>
     </item>
     
+    <item>
+      <title>To Infinity And Beyond</title>
+      <link>https://nitthilan.github.io/to_infinity_and_beyond/_index_old/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nitthilan.github.io/to_infinity_and_beyond/_index_old/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;#about&#34;&gt;About&lt;/a&gt; - &lt;a href=&#34;#motion-capture-using-smpl-x-priors&#34;&gt;MoCap SMPL-X priors&lt;/a&gt; - &lt;a href=&#34;#neural-radiance-field-rendering-systems&#34;&gt;NeRF Rendering System&lt;/a&gt; - &lt;a href=&#34;#problems-working-on&#34;&gt;Problems&lt;/a&gt; - &lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;about&#34;&gt;About&lt;/h5&gt;
+&lt;p&gt;With more and more AR and VR devices becoming ubiquitous and advancement in animation the animation, the difference between virtual and reality are getting blurred. This makes perception of reality and rendering it along with virtual scenes as the core problems. Being interested application of AI/ML in the area of 3D graphics and animation and having a background in video encoding for conferencing, transmission am working on two problems (a) Motion Capture from monocular videos dealing in perception and (b) Neural rendering of rigid and non-rigid bodies dealing in rendering.&lt;/p&gt;
+&lt;p&gt;Further, the current advancements in deep learning in the area of GAN, Implicit representations, Transformers, GCN make them a invaluble tool that aid in solving these core problems. Anyone interested in the following problems can reach me &lt;a href=&#34;mailto:nitthilan@gmail.com&#34;&gt;nitthilan@gmail.com&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;motion-capture-using-smpl-x-priors-detailsproblems-working-on&#34;&gt;Motion Capture using SMPL-X priors &lt;a href=&#34;#problems-working-on&#34;&gt;(details)&lt;/a&gt;&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;Using monocular video information
+&lt;img src=&#34;mocap_parkor.gif&#34; alt=&#34;screen reader text&#34; title=&#34;VIBE&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Facial, finger and full Body pose extraction
+&lt;img src=&#34;mocap_smplx.jpeg&#34; alt=&#34;screen reader text&#34; title=&#34;SMPLify-X&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-a-caption&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;mocap_smplx.jpeg&#34; data-caption=&#34;A caption&#34;&gt;
+
+
+  &lt;img src=&#34;mocap_smplx.jpeg&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+    A caption
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+ --&gt;
+&lt;h6 id=&#34;neural-radiance-field-rendering-systems-detailsproblems-working-on&#34;&gt;Neural radiance field rendering systems &lt;a href=&#34;#problems-working-on&#34;&gt;(details)&lt;/a&gt;&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;Fast training for rigid bodies
+&lt;img src=&#34;NSVF.png&#34; alt=&#34;screen reader text&#34; title=&#34;NSVF&#34;&gt;
+&lt;img src=&#34;neural_body.gif&#34; alt=&#34;screen reader text&#34; title=&#34;Neural Body&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Non-rigid (human models) pose, cloth and hair feature transfer
+&lt;img src=&#34;nerf_controllable_features.gif&#34; alt=&#34;screen reader text&#34; title=&#34;ADGAN&#34;&gt; &lt;img src=&#34;nerf_pose_transfer.gif&#34; alt=&#34;screen reader text&#34; title=&#34;ADGAN&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;problems-working-on&#34;&gt;Problems Working On&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;Shape and pose iteration for refinement of image based pose for the original dimension &lt;a href=&#34;https://github.com/nitthilan/video_pose_estimation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;HMR (Human mesh recovery) use CNNs and so the images are resized thus losing its prediction precision.&lt;/li&gt;
+&lt;li&gt;SMPLify-X based approches are iterative and do not reach global minima faster&lt;/li&gt;
+&lt;li&gt;A hybrid approach which merges the both to get higher precision prediction while maintaining consistency across frames&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Multiresolution video pose estimation
+&lt;ul&gt;
+&lt;li&gt;A video has a large number of images and estimating pose for all frames would be huge&lt;/li&gt;
+&lt;li&gt;Pose interpolation using transformers to reduce computation&lt;/li&gt;
+&lt;li&gt;Transformer based approaches to use temporal consistency to get better prediction for occluded parts&lt;/li&gt;
+&lt;li&gt;Identify non occluded frames and interpolate intermediate frames to estimate pose&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Learning pose using videos in the wild
+&lt;ul&gt;
+&lt;li&gt;Use 2D keypoint markers and temporal shape consistency to learn mocap information&lt;/li&gt;
+&lt;li&gt;Estimate facial and finger pose estimation&lt;/li&gt;
+&lt;li&gt;Estimate initial prediction using resized input images using neural network based approaches&lt;/li&gt;
+&lt;li&gt;Apply SMPLify-X based iterative approaches to refine pose using full resolution images to get precise prediction&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Facial, hand and full pose control of deformable human neural avatars
+&lt;ul&gt;
+&lt;li&gt;Extract mocap information from driver video&lt;/li&gt;
+&lt;li&gt;Learn neural body based avatars using SMPL-X&lt;/li&gt;
+&lt;li&gt;Deform SMPL-X model using the driver video&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Deformable neural cloth and hair styles extraction from video in wild
+&lt;ul&gt;
+&lt;li&gt;Use human parser to extract different clothing types and hair&lt;/li&gt;
+&lt;li&gt;Learn neural models for each segment extracted earlier&lt;/li&gt;
+&lt;li&gt;This helps in transfering information across different avatars&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Multi-resolution neural training for both rigid and non-rigid objects
+&lt;ul&gt;
+&lt;li&gt;Active learing based appraches to identify subset of images which maximize learning&lt;/li&gt;
+&lt;li&gt;Start with low resolution images and downsampled video&lt;/li&gt;
+&lt;li&gt;Choose the training subset based on the rendered quality across different view&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Voxel based latent learning &lt;a href=&#34;https://github.com/nitthilan/kilonerf_modified&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Learn a pre-trained network which approximates simpler shapes ata voxel level&lt;/li&gt;
+&lt;li&gt;Reduce training iteration time&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Neural sub-problems
+&lt;ul&gt;
+&lt;li&gt;Predicting occluded regions from known regions&lt;/li&gt;
+&lt;li&gt;GAN based generator for neural body&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;references&#34;&gt;References:&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mkocabas/VIBE&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VIBE: Video Inference for Human Body Pose and Shape Estimation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/vchoutas/smplify-x&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SMPLify-X&lt;/a&gt;, &lt;a href=&#34;https://smpl-x.is.tue.mpg.de/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SMPL-X&lt;/a&gt;, &lt;a href=&#34;https://smpl.is.tue.mpg.de/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SMPL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/facebookresearch/frankmocap&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FrankMocap: A Strong and Easy-to-use Single View 3D Hand+Body Pose Estimator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/akanazawa/hmr&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;End-to-end Recovery of Human Shape and Pose&lt;/a&gt;, &lt;a href=&#34;https://github.com/nkolot/SPIN&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SPIN: SMPL oPtimization IN the loop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jalammar.github.io/illustrated-transformer/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Illustrated Transformer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/bmild/nerf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NeRF: Neural Radiance Fields&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/zju3dv/neuralbody&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Neural Body: Implicit Neural Representations with Structured Latent Codes for Novel View Synthesis of Dynamic Humans&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creiser/kilonerf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;KiloNeRF: Speeding up Neural Radiance Fields with Thousands of Tiny MLP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/facebookresearch/NSVF&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Neural Sparse Voxel Fields (NSVF)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/menyifang/ADGAN&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Controllable Person Image Synthesis with Attribute-Decomposed GAN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/facebookresearch/pifuhd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PIFuHD: Multi-Level Pixel-Aligned Implicit Function for High-Resolution 3D Human Digitization (CVPR 2020)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jonathan-hui.medium.com/debug-a-deep-learning-network-part-5-1123c20f960d&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Debugging networks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/pdf/1812.07035.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;On the Continuity of Rotation Representations in Neural Networks&lt;/a&gt;, &lt;a href=&#34;https://towardsdatascience.com/better-rotation-representations-for-accurate-pose-estimation-e890a7e1317f&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tutorial blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
