@@ -723,6 +723,8 @@
   <h1>To Infinity And Beyond</h1>
 
   
+  <p class="page-subtitle">Capturing the world one voxel at a time</p>
+  
 
   
 
@@ -740,7 +742,7 @@
           Last updated on
       
     
-    Nov 15, 2021
+    Nov 30, 2021
   </span>
   
 
@@ -779,7 +781,7 @@
 
 <div class="universal-wrapper">
   
-  <div class="article-style"><p><a href="#about">[ABOUT]</a> - <a href="#overview">[OVERVIEW]</a> - <a href="#Deep-Neural-Radiance-Field-based-3D-Volumetric-Video-Capture-Rendering-and-Streaming">[ARCHITECTURE]</a> - <a href="#drawbacks">[DRAWBACKS]</a> - <a href="#problems-working-on">[PROBLEMS]</a> - <a href="#references">[REFERENCES]</a> - <a href="https://github.com/nitthilan/volumetric_video" target="_blank" rel="noopener">[CODE (under dev)]</a> - <a href="/other_problems/">[OTHER PROBLEMS]</a></p>
+  <div class="article-style"><p><a href="#about">[ABOUT]</a> - <a href="#overview">[OVERVIEW]</a> - <a href="#Deep-Neural-Radiance-Field-based-3D-Volumetric-Video-Capture-Rendering-and-Streaming">[ARCHITECTURE]</a> - <a href="#neural-encoder-architecture-and-pipeline">[NEURAL RENDERING PIPELINE]</a>- <a href="#progress">[PROGRESS]</a> - <a href="#references">[REFERENCES]</a> - <a href="https://github.com/nitthilan/volumetric_video" target="_blank" rel="noopener">[CODE (under dev)]</a> - <a href="/other_problems/">[OTHER PROBLEMS]</a></p>
 <h1 id="about">About</h1>
 <p>Videos and photos are used to capture our happy and memorable moments we shared with our friends and family. It takes us back to the place and time when the event happened, helping us reminiscence the moment. Instead, how would it be if we could capture these fleeting moments in 3D? Store and share them with your friends and family like you share photos and videos? Invite them to that moment so that we all could relive it? We are building a system to recreate an immersive experience to bring your memories to life in VR. Wanna ride along mail me @ <a href="mailto:nitthilan@gmail.com">nitthilan@gmail.com</a></p>
 <div class="container" style="display: flex;">
@@ -794,25 +796,196 @@
 <h1 id="overview">Overview</h1>
 <p>To give a overview of our solution, a user scans the 3D environment he wants to store, as a video capturing it from different viewing angles. He can use multiple cameras to capture more information about the environment like actions. We use artificial intelligence to reconstruct and encode the 3D environment using the different videos captured by the user. Unlike other methods which use laser or depth sensors to estimate point clouds, we just use the scanned RGB monocular videos to reconstruct the environment. Finally, this captured 3D environment is viewed using a VR headset in a 360-degree stereoscopic panorama. A stereoscopic photo is a pair of images, taken simultaneously with two lenses placed like our eyes, about 65 mm apart and looking in the same direction. When presented to the two eyes by a stereoscope, these images give most people the impression of seeing a 3D space. A stereoscopic panorama is a pair of 360-degree images, which when viewed with synchronized pano viewers (like a VR headset) presents a stereo pair. Further, as the user moves around in the environment, we generate the corresponding stereo pair based on the user position to give the user an immersive 3D experience.</p>
 <p><img src="overview.png" alt="screen reader text" title="Overview"></p>
-<h3 id="deep-neural-radiance-field-based-3d-volumetric-video-capture-rendering-and-streaming">Deep Neural Radiance Field-based 3D Volumetric Video Capture, Rendering, and Streaming</h3>
+<h2 id="deep-neural-radiance-field-based-3d-volumetric-video-capture-rendering-and-streaming">Deep Neural Radiance Field-based 3D Volumetric Video Capture, Rendering, and Streaming</h2>
 <p>Let&rsquo;s deep dive into the details of our solution. To provide a user with an immersive experience, the whole media pipeline from capture, storage, rendering, and streaming should be capable of handling 3D volumetric video data. Volumetric video capture technology is a technique that digitizes a three-dimensional space (i.e., the volume of space), object, or environment. The captured object can be digitized and transferred to the web, mobile, or virtual worlds and viewed in 3D. It does not have a set viewpoint, so the end-user can watch and interact with it from all angles, enhancing their experience and heightening their sense of immersion and engagement. The difference between 360-degree video and volumetric video is the depth provided with volume. In a 360-degree video, users can only view the action from a single, constant depth. With volumetric video, the end-user can play director and control how far in or out they want to explore the scene.</p>
 <p><img src="volumetric_video.png" alt="screen reader text" title="System Architecture"></p>
 <p>First, to capture 3D volumetric data, we would require a multi-camera system, which captures the action from different views. After capturing the data as a set of videos we process the videos such that we break down the scene into a less important background region, a center stage foreground area where the actual action happens. This helps in encoding the background with less detail and the foreground with higher precision. Further, to enhance the quality, we separate the objects in the foreground region into rigid and non-rigid human bodies. In effect, we split the scene into three prominent regions (a) Foreground Rigid Bodies (b) Foreground Non-Rigid (Human) Bodies (c) Background Region. We process them separately as three different pipelines. Unlike, other solutions which encode objects as meshes and textures, we encode each region using a deep neural radiance field-based solution. Next, to provide an immersive visualization, the three regions are rendered separately into a stereo 360-degree panoramic image for each time instant and stream it to a Unity VR app running on a VR headset. Thus we breakdown our system into the following components:</p>
-<h6 id="a-multi-view-capture-system">(a) Multi-view capture system</h6>
+<h3 id="a-multi-view-capture-system">(a) Multi-view capture system</h3>
 <p>We design a capture system that ranges from 1 to N monocular RGB cameras. This could be as simple as one or more mobile cameras capturing a performance or scene from different angles. Since our setup is simple it enables anyone to create content that could be immersively consumed. The capture is timestamped so that multiple captures can be correlated for a particular time instance across different cameras. These different video streams are then uploaded to a cloud server.</p>
-<h6 id="b-split-neural-encoder-renderer-and-compositor">(b) Split neural encoder, renderer and compositor</h6>
+<h3 id="b-split-neural-encoder-renderer-and-compositor">(b) Split neural encoder, renderer and compositor</h3>
 <p>The next stage involves splitting the data into foreground and background, rigid and non-rigid (human) bodies. Each of these components is then encoded separately into a deep neural network. Background region is encoded using Nerf++ based network. The foreground requires optimized rendering (or inference) and many solution options are to be investigated. Some of the options are KiloNerf, PlenOctrees. Finally, the non-rigid body is encoded using Neural body-based network solutions. The scene is composited by rendering the individual neural networks encoded for the three separate regions based on the position and viewing angle feedback from the user. This composited stereo 360-degree panorama image is then passed on to the next stage to be compressed and streamed</p>
-<h6 id="c-360-stereo-video-encoder">(c) 360 Stereo video encoder</h6>
+<h3 id="c-360-stereo-video-encoder">(c) 360 Stereo video encoder</h3>
 <p>The final stage, encodes the composited stereo image and compresses it into a video stream (H264, MPEG, MJPEG) and streamed to the VR headset. A Unity-based VR app displays the compressed stream on the skybox shader to provide an immersive visualization of the captured sequence to the end-user</p>
-<h2 id="current-status">Current status</h2>
+<h1 id="progress">Progress</h1>
+<h2 id="stage-2">Stage 2</h2>
+<ul>
+<li>
+<p>Check the detailed architecture for the current implementation</p>
+</li>
+<li>
+<p>Dataloader and feature extractor module based on depth - 1 day</p>
+</li>
+<li>
+<p>Data generation using iPhone/iPad Pro - 0.5 day</p>
+</li>
+<li>
+<p>Inverse depth space nerf++ renderer - 1 day</p>
+</li>
+<li>
+<p>Training loop for non-rigid neural renderer - 2 days</p>
+<ul>
+<li>3D sparse convolution</li>
+<li>raycasting based rendering using volumetric prediction head</li>
+<li>Dataloader and cost function implementation</li>
+</ul>
+</li>
+<li>
+<p>Testing and Debugging (Completion of basic pipeline) - 2 days</p>
+</li>
+<li>
+<p>Experiment with surface prediction head - 2 day</p>
+</li>
+<li>
+<p>Non-rigid volume renderer - 3 days</p>
+<ul>
+<li>Pose estimation using LiDAR</li>
+<li>Volume feature generator using ray triangle intersection</li>
+<li>Testing and Debugging</li>
+</ul>
+</li>
+<li>
+<p>Unity VR application using hand gestures and locomotion - 3 days</p>
+</li>
+</ul>
+<h2 id="stage-1">Stage 1</h2>
 <ul>
 <li>Individual modules are available for each module</li>
-<li>In the process of creating an MVP to demo the end-to-end solution</li>
+<li>Implemented a end to end pipeline from capturing a video to rendering it and visualizing the output using a VR headset</li>
+<li>Baseline modules used:
+<ul>
+<li>Colmap: To learn camera parameters</li>
+<li>Nerf++: Encoding unbound scenes using an inverted sphere parameterization</li>
+<li>Unity Oculus VR App: Rendering Stereo 360 degree panoroma images at different camera positions</li>
 </ul>
-<h2 id="drawbacks">Drawbacks</h2>
+</li>
+<li>Learnings:
+<ul>
+<li>Colmap takes exponentially more time to identify camera parameters when the number of images to be registered are large. The mapper module spends 17 minutes for 200 odd images and this increases to 1-2 hours with 500 images and larger dimension</li>
+<li>Training time for Nerf++ - Takes 18-24 hours on a 4 GPU system</li>
+<li>Slow inference times - 14 seconds per 4000x4000 dimension image (top bottom stereo)</li>
+</ul>
+</li>
+<li>Using 360 degree panoroma stereo may not work. So initially try just planar stereo like the demo videos</li>
+<li>End to end pipeline with best qualities picked from different NeRF/MVS implementation</li>
+<li>Reduce the time across the whole pipeline. Major bottlenecks:
+<ul>
+<li>Colmap based structure from motion (SfM) estimation</li>
+<li>Overfitting the NeRF module with excessive input views</li>
+<li>Depth estimation for feature mapping and dense voxel processing over the whole volume</li>
+</ul>
+</li>
+<li>The whole pipeline is implemented in Neural radiance field based solution</li>
+</ul>
+<h2 id="stage-0">Stage 0</h2>
 <ul>
 <li>The encoding (or storage) is time-consuming since it depends on the training time which is at present in the order of hours</li>
 <li>The streaming delay would still be significant since it is done through the cloud</li>
+</ul>
+<h1 id="neural-encoder-architecture-and-pipeline">Neural Encoder [Architecture and Pipeline]</h1>
+<p>In this section we explain the proposed neural encoder architecture where we try to take the best aspects of the various proposed solutions in literature and combine them together into a pipeline which address the pitfalls in their individual solutions. The architecture is generic, addressing both rigid and non-rigid body captures in a unbounded environment. Further, it tries to simplify the capture mechanism by a single iPhone video with Lidar depth information. The major pitfalls with the earlier proposed solutions used in Stage 1 was the long training time it takes for representing the 3D volumetric data using neural networks. This long training time was due to (a) estimation of camera intrinsic and extrinsic camera parameters using Structure from Motion approach used in Colmap. We utilize the IMU data availble on iPhones to estimate this (b) estimating the depth information of surfaces for mapping voxel features. We utilize the Lidar depth information to generate a feature point cloud which we can map to a particular voxel (c) overfitting of NeRF based variants using excessing input images to approximate the 3D volume. We utilize the ResNet convolution features extracted from the image to bootstrap the neural rendering process, thus inturn reducing the training time. Further, we use baysian optimization techniques to choose appropriate subset input images to reduce the training time.</p>
+<p><img src="architecture_overview.png" alt="screen reader text" title="Neural Encoder Architecture"></p>
+<h2 id="overview-1">Overview</h2>
+<p>The neural encoder takes as input a series of images captured from different angles, their corresponding camera parameters (intrinsic and extrinsic), the lidar depth information. The pipleine splits the world 3D region into two different spaces (a) Unit depth volume space (b) Inverse depth volume space. The region of interest defined by where the action happens is normalized to lie within a unit cube. This region is called the Unit volume space. Using a unit cube instead of a sphere helps in spliting the region into voxels thereby helping in speeding up inference times of the neural rendering pipeline. We use a voxel based neural encoding approach to learn the 3D volume/surface. The region outside the normalized unit cube is mapped to a inverse depth volume, and we use a single NeRF MLP to encode this region. Finally, when a user request a output image from a new camera position, we render the values from both the regions and combine them together to display it to the user.</p>
+<h2 id="pipeline">Pipeline</h2>
+<h3 id="inverse-depth-volume-space">Inverse Depth Volume Space</h3>
+<p><img src="inv_dpth_vol_enc.png" alt="screen reader text" title="Inverse Depth Volume Encoder">
+In the inverse depth space, as proposed by NeRF++, we convert every 3D point to their inverses and parameterize the NeRF MLP with (x', y', z' and r') as shown in the figure. This maps all the values from 1 to infinity to values within 1 to 0.</p>
+<h3 id="depth-volume-space">Depth Volume Space</h3>
+<p><img src="dpth_vol_spc_enc.png" alt="screen reader text" title="Depth Volume Space Encoder">
+Depth volume space is more complex, since we capture both rigid and non-rigid (human actions) sequences using this pipeline. We split it into two stages (a) Volume Feature Generator (b) Neural Voxel Renderer.</p>
+<h2 id="volume-feature-generator">Volume Feature Generator</h2>
+<p>The volume feature generator module takes images captured in multiple camera directions, passes it through a ResNet based convolution feature generator and then using the Lidar depth information maps it to a voxel inside the unit cube. The features mapped from different images to a same voxel are then averaged to estimate the voxel feature.</p>
+<h3 id="rigid-body-volume-feature-depth-voxel-feature-mapper">Rigid body volume feature [Depth Voxel Feature Mapper]</h3>
+<p>For rigid bodies we do not do anything special since it does not have any deformations.</p>
+<h3 id="non-rigid-body-volume-feature-smplx-feature-mapper">Non-Rigid body volume feature [SmplX Feature Mapper]</h3>
+<p>However, in case of non-rigid bodies, based on the motion, the 3D geometry is defomrmed and also gets mapped to different regions of the 3D voxel due to the changes in pose. We adapt the ideas from the Neural body paper, where we first estimate the 3D pose from images for the SMPL mesh. Then map the convolution features to the SMPL vertices which is then mapped to the corresponding voxel.</p>
+<h2 id="neural-voxel-renderer">Neural Voxel Renderer</h2>
+<p>The feature volume generated from the previous stage is taken as input for the Neural Voxel Renderer. The voxel features is passed through a sparse 3D UNet architecture to spread the features along the surface of the 3D objects in scene. These features are used as input for the ray casting module which uses a MLP as its head. Based on what the MLP predicts we can differentiate the kind of renderer we plan to learn.</p>
+<h3 id="volumetric-prediction-head">Volumetric Prediction Head</h3>
+<p>If the MLP head just predicts the transmittance and RGB values alone then it acts as a volumetric prediction head.</p>
+<h3 id="surface-prediction-head">Surface Prediction Head</h3>
+<p>However if it predicts surface normals along with the transmittance and RGB, then it tries to approximate the smooth surface prior there by acting as a Surface prediction head.</p>
+<!-- #### BO for training -->
+<h2 id="reference">Reference</h2>
+<ul>
+<li>
+<p><a href="https://github.com/bmild/nerf" target="_blank" rel="noopener">NeRF: Neural Radiance Fields</a></p>
+</li>
+<li>
+<p><a href="https://github.com/zju3dv/neuralbody" target="_blank" rel="noopener">Neural Body: Implicit Neural Representations with Structured Latent Codes for Novel View Synthesis of Dynamic Humans</a></p>
+</li>
+<li>
+<p><a href="https://github.com/facebookresearch/NSVF" target="_blank" rel="noopener">Neural Sparse Voxel Fields (NSVF)</a></p>
+</li>
+<li>
+<p><a href="https://github.com/Kai-46/nerfplusplus" target="_blank" rel="noopener">NeRF++: Analyzing and Improving Neural Radiance Fields</a></p>
+</li>
+<li>
+<p><a href="https://github.com/creiser/kilonerf" target="_blank" rel="noopener">KiloNeRF: Speeding up Neural Radiance Fields with Thousands of Tiny MLPs</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2103.15595.pdf" target="_blank" rel="noopener">MVSNeRF</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2103.05606.pdf" target="_blank" rel="noopener">NeX: Real-time View Synthesis with Neural Basis Expansion</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2103.14645.pdf" target="_blank" rel="noopener">Baking Neural Radiance Fields for Real-Time View Synthesis</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2103.10380.pdf" target="_blank" rel="noopener">FastNerf</a></p>
+</li>
+<li>
+<p><a href="https://alexyu.net/plenoctrees/" target="_blank" rel="noopener">PlenOctrees: For Real-time Rendering of Neural Radiance Fields</a></p>
+</li>
+<li>
+<p><a href="https://moechsle.github.io/unisurf/" target="_blank" rel="noopener">UNISURF: Unifying Neural Implicit Surfaces and Radiance Fields for Multi-View Reconstruction</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2003.09852.pdf" target="_blank" rel="noopener">Multiview Neural Surface Reconstruction by Disentangling Geometry and Appearance, Universal Differentiable Renderer for Implicit Neural Representations, UDR</a></p>
+</li>
+<li>
+<p><a href="https://pythonrepo.com/repo/ventusff-neurecon-python-imagery" target="_blank" rel="noopener">Multi-view 3D reconstruction using neural rendering. Unofficial implementation of UNISURF, VolSDF, NeuS and more.</a></p>
+</li>
+<li>
+<p><a href="https://github.com/kekeblom/StrayVisualizer" target="_blank" rel="noopener">StrayVisualizer</a></p>
+</li>
+<li>
+<p><a href="http://www.open3d.org/docs/release/tutorial/pipelines/index.html" target="_blank" rel="noopener">open3d tutorial</a></p>
+</li>
+<li>
+<p><a href="https://apps.apple.com/ci/app/stray-scanner/id1557051662?l=en" target="_blank" rel="noopener">StrayScanner Data capture</a></p>
+</li>
+<li>
+<p><a href="https://www.it-jim.com/blog/iphones-12-pro-lidar-how-to-get-and-interpret-data/" target="_blank" rel="noopener">iPhone 12 Pro Lidar Sensitivity</a></p>
+</li>
+<li>
+<p><a href="https://github.com/mkocabas/VIBE" target="_blank" rel="noopener">VIBE: Video Inference for Human Body Pose and Shape Estimation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/vchoutas/smplify-x" target="_blank" rel="noopener">SMPLify-X</a>, <a href="https://smpl-x.is.tue.mpg.de/" target="_blank" rel="noopener">SMPL-X</a>, <a href="https://smpl.is.tue.mpg.de/" target="_blank" rel="noopener">SMPL</a></p>
+</li>
+<li>
+<p><a href="https://github.com/facebookresearch/frankmocap" target="_blank" rel="noopener">FrankMocap: A Strong and Easy-to-use Single View 3D Hand+Body Pose Estimator</a></p>
+</li>
+<li>
+<p><a href="https://github.com/akanazawa/hmr" target="_blank" rel="noopener">End-to-end Recovery of Human Shape and Pose</a>, <a href="https://github.com/nkolot/SPIN" target="_blank" rel="noopener">SPIN: SMPL oPtimization IN the loop</a></p>
+</li>
+<li>
+<p><a href="https://jalammar.github.io/illustrated-transformer/" target="_blank" rel="noopener">Illustrated Transformer</a></p>
+</li>
+<li>
+<p><a href="https://github.com/menyifang/ADGAN" target="_blank" rel="noopener">Controllable Person Image Synthesis with Attribute-Decomposed GAN</a></p>
+</li>
+<li>
+<p><a href="https://github.com/facebookresearch/pifuhd" target="_blank" rel="noopener">PIFuHD: Multi-Level Pixel-Aligned Implicit Function for High-Resolution 3D Human Digitization (CVPR 2020)</a></p>
+</li>
+<li>
+<p><a href="https://jonathan-hui.medium.com/debug-a-deep-learning-network-part-5-1123c20f960d" target="_blank" rel="noopener">Debugging networks</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/1812.07035.pdf" target="_blank" rel="noopener">On the Continuity of Rotation Representations in Neural Networks</a>, <a href="https://towardsdatascience.com/better-rotation-representations-for-accurate-pose-estimation-e890a7e1317f" target="_blank" rel="noopener">Tutorial blog</a></p>
+</li>
 </ul>
 <!-- https://www.360cities.net/help/stereo_panos
 
@@ -830,25 +1003,8 @@ More and more AR and VR devices becoming ubiquitous and advancement in animation
 
 Being interested in application of AI/ML in the area of 3D graphics and animation and having a background in video encoding for conferencing, transmission and storage am proposing a low cost consumer grade volumetric video capture, storage, renderer and streaming solution for AR/VR end devices
 
- -->
-<h2 id="reference">Reference</h2>
-<ul>
-<li><a href="https://github.com/bmild/nerf" target="_blank" rel="noopener">NeRF: Neural Radiance Fields</a></li>
-<li><a href="https://github.com/zju3dv/neuralbody" target="_blank" rel="noopener">Neural Body: Implicit Neural Representations with Structured Latent Codes for Novel View Synthesis of Dynamic Humans</a></li>
-<li><a href="https://github.com/facebookresearch/NSVF" target="_blank" rel="noopener">Neural Sparse Voxel Fields (NSVF)</a></li>
-<li><a href="https://github.com/Kai-46/nerfplusplus" target="_blank" rel="noopener">NeRF++: Analyzing and Improving Neural Radiance Fields</a></li>
-<li><a href="https://alexyu.net/plenoctrees/" target="_blank" rel="noopener">PlenOctrees: For Real-time Rendering of Neural Radiance Fields</a></li>
-<li><a href="https://github.com/creiser/kilonerf" target="_blank" rel="noopener">KiloNeRF: Speeding up Neural Radiance Fields with Thousands of Tiny MLPs</a></li>
-<li><a href="https://github.com/mkocabas/VIBE" target="_blank" rel="noopener">VIBE: Video Inference for Human Body Pose and Shape Estimation</a></li>
-<li><a href="https://github.com/vchoutas/smplify-x" target="_blank" rel="noopener">SMPLify-X</a>, <a href="https://smpl-x.is.tue.mpg.de/" target="_blank" rel="noopener">SMPL-X</a>, <a href="https://smpl.is.tue.mpg.de/" target="_blank" rel="noopener">SMPL</a></li>
-<li><a href="https://github.com/facebookresearch/frankmocap" target="_blank" rel="noopener">FrankMocap: A Strong and Easy-to-use Single View 3D Hand+Body Pose Estimator</a></li>
-<li><a href="https://github.com/akanazawa/hmr" target="_blank" rel="noopener">End-to-end Recovery of Human Shape and Pose</a>, <a href="https://github.com/nkolot/SPIN" target="_blank" rel="noopener">SPIN: SMPL oPtimization IN the loop</a></li>
-<li><a href="https://jalammar.github.io/illustrated-transformer/" target="_blank" rel="noopener">Illustrated Transformer</a></li>
-<li><a href="https://github.com/menyifang/ADGAN" target="_blank" rel="noopener">Controllable Person Image Synthesis with Attribute-Decomposed GAN</a></li>
-<li><a href="https://github.com/facebookresearch/pifuhd" target="_blank" rel="noopener">PIFuHD: Multi-Level Pixel-Aligned Implicit Function for High-Resolution 3D Human Digitization (CVPR 2020)</a></li>
-<li><a href="https://jonathan-hui.medium.com/debug-a-deep-learning-network-part-5-1123c20f960d" target="_blank" rel="noopener">Debugging networks</a></li>
-<li><a href="https://arxiv.org/pdf/1812.07035.pdf" target="_blank" rel="noopener">On the Continuity of Rotation Representations in Neural Networks</a>, <a href="https://towardsdatascience.com/better-rotation-representations-for-accurate-pose-estimation-e890a7e1317f" target="_blank" rel="noopener">Tutorial blog</a></li>
-</ul>
+ --><blockquote>
+</blockquote>
 </div>
   
 
