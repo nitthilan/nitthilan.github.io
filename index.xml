@@ -7,7 +7,7 @@
     <description>Nitthilan</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>nitthilan@gmail.com</copyright><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://nitthilan.github.io/images/icon_hu794274cdbfab6a2e083ce074675524a2_29983_512x512_fill_lanczos_center_3.png</url>
+      <url>https://nitthilan.github.io/images/icon_hu794274cdbfab6a2e083ce074675524a2_29983_512x512_fill_lanczos_center_2.png</url>
       <title>Nitthilan</title>
       <link>https://nitthilan.github.io/</link>
     </image>
@@ -242,7 +242,7 @@ Requirements:
 &lt;p&gt;Splitting light, view and time and directly rendering 2D images - X-field - &lt;a href=&#34;https://arxiv.org/pdf/2010.00450.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;, &lt;a href=&#34;https://github.com/m-bemana/xfields&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Compress 3D shape representation by using entries from a codebook like the idea in VQVAE - &lt;a href=&#34;https://arxiv.org/pdf/1711.00937.pdf,&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://arxiv.org/pdf/1711.00937.pdf,&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Compress 3D shape representation by using entries from a codebook like the idea in VQVAE - &lt;a href=&#34;https://arxiv.org/pdf/1711.00937.pdf,&#34;&gt;https://arxiv.org/pdf/1711.00937.pdf,&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Depth/Height map as implicit functions :&lt;/p&gt;
@@ -275,16 +275,16 @@ Requirements:
 Code list:&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/shunsukesaito/PIFu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/shunsukesaito/PIFu&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/shunsukesaito/PIFu&#34;&gt;https://github.com/shunsukesaito/PIFu&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/facebookresearch/pifuhd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/facebookresearch/pifuhd&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/facebookresearch/pifuhd&#34;&gt;https://github.com/facebookresearch/pifuhd&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kwea123/nerf_pl&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/kwea123/nerf_pl&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kwea123/nerf_pl&#34;&gt;https://github.com/kwea123/nerf_pl&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/facebookresearch/NSVF&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/facebookresearch/NSVF&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/facebookresearch/NSVF&#34;&gt;https://github.com/facebookresearch/NSVF&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Nerf Universe:&lt;/p&gt;
@@ -494,8 +494,8 @@ Code list:&lt;/p&gt;
 &lt;li&gt;a KD-tree - nearest neighbor algorithm -&lt;/li&gt;
 &lt;li&gt;distance transform for any watertight shapes&lt;/li&gt;
 &lt;li&gt;Weight normalization: A simple reparameterization to accelerate training of deep neural networks. - speed up training instead of batch normalization&lt;/li&gt;
-&lt;li&gt;H.P.: Multi-level partition of unity implicits. - Splitting a volume into smaller regions and trying to generate to whole shape based on sum of smaller regions - weighting function is 1 when you are within the region - &lt;a href=&#34;https://www.cc.gatech.edu/~turk/my_papers/mpu_implicits.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.cc.gatech.edu/~turk/my_papers/mpu_implicits.pdf&lt;/a&gt; - &lt;a href=&#34;https://en.wikipedia.org/wiki/Partition_of_unity&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://en.wikipedia.org/wiki/Partition_of_unity&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;datasets: &lt;a href=&#34;https://3dwarehouse.sketchup.com/,&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://3dwarehouse.sketchup.com/,&lt;/a&gt; &lt;a href=&#34;http://graphics.stanford.edu/data/3Dscanrep/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://graphics.stanford.edu/data/3Dscanrep/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;H.P.: Multi-level partition of unity implicits. - Splitting a volume into smaller regions and trying to generate to whole shape based on sum of smaller regions - weighting function is 1 when you are within the region - &lt;a href=&#34;https://www.cc.gatech.edu/~turk/my_papers/mpu_implicits.pdf&#34;&gt;https://www.cc.gatech.edu/~turk/my_papers/mpu_implicits.pdf&lt;/a&gt; - &lt;a href=&#34;https://en.wikipedia.org/wiki/Partition_of_unity&#34;&gt;https://en.wikipedia.org/wiki/Partition_of_unity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;datasets: &lt;a href=&#34;https://3dwarehouse.sketchup.com/,&#34;&gt;https://3dwarehouse.sketchup.com/,&lt;/a&gt; &lt;a href=&#34;http://graphics.stanford.edu/data/3Dscanrep/&#34;&gt;http://graphics.stanford.edu/data/3Dscanrep/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h5 id=&#34;other-queries&#34;&gt;Other queries&lt;/h5&gt;
 &lt;ul&gt;
@@ -576,7 +576,7 @@ Code list:&lt;/p&gt;
 &lt;h6 id=&#34;good-resources&#34;&gt;Good resources&lt;/h6&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://incompleteideas.net/sutton/book/the-book-2nd.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sutton Book&lt;/a&gt;: &lt;a href=&#34;http://incompleteideas.net/sutton/book/bookdraft2016sep.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Book Draft&lt;/a&gt;, &lt;a href=&#34;https://github.com/ShangtongZhang/reinforcement-learning-an-introduction&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code And Examples&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=2pWv7GOvuf0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Deep Mind: RL Course by David Silver&lt;/a&gt; - First of a 10 lecture series - &lt;a href=&#34;http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=2pWv7GOvuf0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Deep Mind: RL Course by David Silver&lt;/a&gt; - First of a 10 lecture series - &lt;a href=&#34;http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html&#34;&gt;http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h6 id=&#34;accelerators&#34;&gt;Accelerators&lt;/h6&gt;
 &lt;ul&gt;
@@ -759,16 +759,16 @@ Code list:&lt;/p&gt;
 &lt;li&gt;Namma puli kuzhambu, Enna kathirikka kuzhambu, kerela ulli theyal, nadan mutta roast, Vadacurry, maharastrian misal thala, that is spiciest for dunking in pav bun&lt;/li&gt;
 &lt;li&gt;Biriyani water-rice ratio - 1:1.25, or 1:1.50 - Hyderabadi style &amp;amp; Seeraga samba version. hyderabadi with salan &amp;amp; burani raitha. thalapakatti with salna &amp;amp; onion raitha. ambur with kathirikka &amp;amp; raitha. malabar biriyani they have it with oorga. Kolkata style &amp;amp; lucknowi.&lt;/li&gt;
 &lt;li&gt;For chef, I like Jacques Pepin, Ottolenghi, Kenji López-Alt (he is science nerd turned chef).&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=sn9SqUkSFg4&amp;amp;list=PL_PgxS3FkP7ATPveBQ1yah7LDqysyzDCG&amp;amp;index=3&amp;amp;ab_channel=KQED&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.youtube.com/watch?v=sn9SqUkSFg4&amp;list=PL_PgxS3FkP7ATPveBQ1yah7LDqysyzDCG&amp;index=3&amp;ab_channel=KQED&lt;/a&gt; - Jacques Pepin Cooking&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLDFUoU1r0lJNMPfDNsBa3Z2vqacomOGx3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.youtube.com/playlist?list=PLDFUoU1r0lJNMPfDNsBa3Z2vqacomOGx3&lt;/a&gt; - Native receipies&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/c/CookingshookingIn&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.youtube.com/c/CookingshookingIn&lt;/a&gt; - Thorough in his approach. His parathas are good and skills to make one&lt;/li&gt;
-&lt;li&gt;Masala lab : Why cooking is done the way it is done? : &lt;a href=&#34;https://lifestyle.livemint.com/author/krish-ashok&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://lifestyle.livemint.com/author/krish-ashok&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=sn9SqUkSFg4&amp;amp;list=PL_PgxS3FkP7ATPveBQ1yah7LDqysyzDCG&amp;amp;index=3&amp;amp;ab_channel=KQED&#34;&gt;https://www.youtube.com/watch?v=sn9SqUkSFg4&amp;amp;list=PL_PgxS3FkP7ATPveBQ1yah7LDqysyzDCG&amp;amp;index=3&amp;amp;ab_channel=KQED&lt;/a&gt; - Jacques Pepin Cooking&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLDFUoU1r0lJNMPfDNsBa3Z2vqacomOGx3&#34;&gt;https://www.youtube.com/playlist?list=PLDFUoU1r0lJNMPfDNsBa3Z2vqacomOGx3&lt;/a&gt; - Native receipies&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/c/CookingshookingIn&#34;&gt;https://www.youtube.com/c/CookingshookingIn&lt;/a&gt; - Thorough in his approach. His parathas are good and skills to make one&lt;/li&gt;
+&lt;li&gt;Masala lab : Why cooking is done the way it is done? : &lt;a href=&#34;https://lifestyle.livemint.com/author/krish-ashok&#34;&gt;https://lifestyle.livemint.com/author/krish-ashok&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;Book: &lt;a href=&#34;https://www.amazon.com/Family-Partition-Urvashi-Butalia-ebook/dp/B0756WQVKR&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.amazon.com/Family-Partition-Urvashi-Butalia-ebook/dp/B0756WQVKR&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Book: &lt;a href=&#34;https://www.amazon.com/Family-Partition-Urvashi-Butalia-ebook/dp/B0756WQVKR&#34;&gt;https://www.amazon.com/Family-Partition-Urvashi-Butalia-ebook/dp/B0756WQVKR&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCuMwOS-oxshrp6CxaaBBKWg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.youtube.com/channel/UCuMwOS-oxshrp6CxaaBBKWg&lt;/a&gt; - marwari kitchen&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCWWUTc35N_j_bsC-gFWD0Hg/videos&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.youtube.com/channel/UCWWUTc35N_j_bsC-gFWD0Hg/videos&lt;/a&gt; - IWC The Indian Wildlife Channel&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCuMwOS-oxshrp6CxaaBBKWg&#34;&gt;https://www.youtube.com/channel/UCuMwOS-oxshrp6CxaaBBKWg&lt;/a&gt; - marwari kitchen&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCWWUTc35N_j_bsC-gFWD0Hg/videos&#34;&gt;https://www.youtube.com/channel/UCWWUTc35N_j_bsC-gFWD0Hg/videos&lt;/a&gt; - IWC The Indian Wildlife Channel&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h6 id=&#34;quotes&#34;&gt;Quotes&lt;/h6&gt;
 &lt;ul&gt;
@@ -845,8 +845,8 @@ Taking that nagging issue headlong usually solves it. But fear stops us .&lt;/p&
 &lt;li&gt;how to get out of depression?&lt;/li&gt;
 &lt;li&gt;how to document depression?&lt;/li&gt;
 &lt;li&gt;how to get things done during depression?&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=njESlZa2b10&amp;amp;list=PL4mtHuMZdZjyeGP7SCP6s75_Ic9CN3s3y&amp;amp;index=8&amp;amp;t=21s&amp;amp;ab_channel=TEDxTalks&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.youtube.com/watch?v=njESlZa2b10&amp;list=PL4mtHuMZdZjyeGP7SCP6s75_Ic9CN3s3y&amp;index=8&amp;t=21s&amp;ab_channel=TEDxTalks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;second half of this: &lt;a href=&#34;https://www.youtube.com/watch?v=drv3BP0Fdi8&amp;amp;ab_channel=TEDxTalks&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.youtube.com/watch?v=drv3BP0Fdi8&amp;ab_channel=TEDxTalks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=njESlZa2b10&amp;amp;list=PL4mtHuMZdZjyeGP7SCP6s75_Ic9CN3s3y&amp;amp;index=8&amp;amp;t=21s&amp;amp;ab_channel=TEDxTalks&#34;&gt;https://www.youtube.com/watch?v=njESlZa2b10&amp;amp;list=PL4mtHuMZdZjyeGP7SCP6s75_Ic9CN3s3y&amp;amp;index=8&amp;amp;t=21s&amp;amp;ab_channel=TEDxTalks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;second half of this: &lt;a href=&#34;https://www.youtube.com/watch?v=drv3BP0Fdi8&amp;amp;ab_channel=TEDxTalks&#34;&gt;https://www.youtube.com/watch?v=drv3BP0Fdi8&amp;amp;ab_channel=TEDxTalks&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;How to treat a friend who is in depression?&lt;/li&gt;
@@ -876,16 +876,16 @@ we don&amp;rsquo;t realise that at all. Issues getting magnified by mind.&lt;/p&
 &lt;h2 id=&#34;good-demo-of-how-depression-looks-like&#34;&gt;Good demo of how depression looks like:&lt;/h2&gt;
 &lt;p&gt;Episode 3 of Modern Love. It depicts a woman with bipolar. Anne Hathaway is brilliant in this character of course, she&amp;rsquo;s a natural especially in such roles.
 Wrong demos - Movie three (tamil)
-&lt;a href=&#34;https://www.youtube.com/watch?v=4IkTLiU5Q0k&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.youtube.com/watch?v=4IkTLiU5Q0k&lt;/a&gt; - Daniel Fernandes&lt;/p&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=4IkTLiU5Q0k&#34;&gt;https://www.youtube.com/watch?v=4IkTLiU5Q0k&lt;/a&gt; - Daniel Fernandes&lt;/p&gt;
 &lt;h1 id=&#34;list-of-tasks&#34;&gt;List of tasks:&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;What is the science behind depression? What happens in the brain for a depressed person?
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=mbbMLOZjUYI&amp;amp;ab_channel=TED&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.youtube.com/watch?v=mbbMLOZjUYI&amp;ab_channel=TED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=mbbMLOZjUYI&amp;amp;ab_channel=TED&#34;&gt;https://www.youtube.com/watch?v=mbbMLOZjUYI&amp;amp;ab_channel=TED&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;youtube.com/watch?v=drv3BP0Fdi8&amp;amp;ab_channel=TEDxTalks&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Playlist of depression related videos: &lt;a href=&#34;https://www.youtube.com/playlist?list=PL4mtHuMZdZjyeGP7SCP6s75_Ic9CN3s3y&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.youtube.com/playlist?list=PL4mtHuMZdZjyeGP7SCP6s75_Ic9CN3s3y&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Playlist of depression related videos: &lt;a href=&#34;https://www.youtube.com/playlist?list=PL4mtHuMZdZjyeGP7SCP6s75_Ic9CN3s3y&#34;&gt;https://www.youtube.com/playlist?list=PL4mtHuMZdZjyeGP7SCP6s75_Ic9CN3s3y&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;quotes:&lt;/p&gt;
 &lt;ul&gt;
@@ -908,16 +908,16 @@ Wrong demos - Movie three (tamil)
 &lt;p&gt;How to&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.healthline.com/health/depression/best-videos-of-the-year#Youre-Not-Alone:-The-Truth-About-Depression&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.healthline.com/health/depression/best-videos-of-the-year#Youre-Not-Alone:-The-Truth-About-Depression&lt;/a&gt; - A very good resource
-&lt;a href=&#34;https://www.verywellmind.com/signs-you-may-be-a-perfectionist-3145233&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.verywellmind.com/signs-you-may-be-a-perfectionist-3145233&lt;/a&gt; -&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.healthline.com/health/depression/best-videos-of-the-year#Youre-Not-Alone:-The-Truth-About-Depression&#34;&gt;https://www.healthline.com/health/depression/best-videos-of-the-year#Youre-Not-Alone:-The-Truth-About-Depression&lt;/a&gt; - A very good resource
+&lt;a href=&#34;https://www.verywellmind.com/signs-you-may-be-a-perfectionist-3145233&#34;&gt;https://www.verywellmind.com/signs-you-may-be-a-perfectionist-3145233&lt;/a&gt; -&lt;/p&gt;
 &lt;p&gt;chatter in the brain - J K - how to overcome chatterbox syndrome? - should never resist that and ignore ittune ur mind into something else. breathe in and breathe out and think about it. concentrate between eyes&lt;/p&gt;
 &lt;p&gt;Discussion with friends:&lt;/p&gt;
 &lt;p&gt;Links:
-&lt;a href=&#34;https://www.facebook.com/RealDepressionProject&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.facebook.com/RealDepressionProject&lt;/a&gt;
-&lt;a href=&#34;https://www.facebook.com/PoetDavidWhyte/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.facebook.com/PoetDavidWhyte/&lt;/a&gt;
-&lt;a href=&#34;https://onbeing.org/programs/david-whyte-the-conversational-nature-of-reality/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://onbeing.org/programs/david-whyte-the-conversational-nature-of-reality/&lt;/a&gt;
-&lt;a href=&#34;https://www.verywellmind.com/signs-you-may-be-a-perfectionist-3145233&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.verywellmind.com/signs-you-may-be-a-perfectionist-3145233&lt;/a&gt;
-tenpercent.com, &lt;a href=&#34;https://www.amazon.com/10-Happier-Self-Help-Actually-Works/dp/0062265431&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.amazon.com/10-Happier-Self-Help-Actually-Works/dp/0062265431&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://www.facebook.com/RealDepressionProject&#34;&gt;https://www.facebook.com/RealDepressionProject&lt;/a&gt;
+&lt;a href=&#34;https://www.facebook.com/PoetDavidWhyte/&#34;&gt;https://www.facebook.com/PoetDavidWhyte/&lt;/a&gt;
+&lt;a href=&#34;https://onbeing.org/programs/david-whyte-the-conversational-nature-of-reality/&#34;&gt;https://onbeing.org/programs/david-whyte-the-conversational-nature-of-reality/&lt;/a&gt;
+&lt;a href=&#34;https://www.verywellmind.com/signs-you-may-be-a-perfectionist-3145233&#34;&gt;https://www.verywellmind.com/signs-you-may-be-a-perfectionist-3145233&lt;/a&gt;
+tenpercent.com, &lt;a href=&#34;https://www.amazon.com/10-Happier-Self-Help-Actually-Works/dp/0062265431&#34;&gt;https://www.amazon.com/10-Happier-Self-Help-Actually-Works/dp/0062265431&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Philosophers: Ekhart Toulle. J K&lt;/p&gt;
 &lt;h2 id=&#34;people-to-reach-out-for&#34;&gt;People to reach out for:&lt;/h2&gt;
 &lt;p&gt;Campus Chaplin, Campus psycologist, Campus therapist
