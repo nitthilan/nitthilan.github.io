@@ -791,9 +791,20 @@ As mentioned in the previous stages there are three stages. The first stage invo
 <h1 id="volumetric-performance-capture">Volumetric Performance Capture</h1>
 <p>Lets dive a littel deep into the individual stages and understand the process in detail.</p>
 <h2 id="full-body-capture">Full Body Capture</h2>
-<!-- Scanning Process           |  Full body scan
-:-------------------------:|:-------------------------: -->
-<p><img src="scanbody.gif" alt="" title="Scanning Process">  <img src="fullbodyscan.jpeg" alt="" title="Full body scan"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Scanning Process</th>
+<th style="text-align:center">Full body scan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="scanbody.gif" alt="" title="Scanning Process"></td>
+<td style="text-align:center"><img src="fullbodyscan.jpeg" alt="" title="Full body scan"></td>
+</tr>
+</tbody>
+</table>
 <p>For a fullbody scan involves a person standing in &lsquo;A&rsquo; pose while another person goes around the person capturing the person using LiDAR based iPhone scans. Using the RGB image along with the depth information we using a hybrid intrinsic-extrinsic representation (namely DMTet) and a differentiable renderer (namely Nvdiffrast) to capture the model geometry and textures (Diffusion and specular albedos and surface normals). Unlike the whole body the deformations on facial expressions are complex. To enable this we do a high resoltuion canonical pose for the face seprately.</p>
 <h2 id="performance-animation-capture">Performance Animation Capture</h2>
 <table>
@@ -812,15 +823,45 @@ As mentioned in the previous stages there are three stages. The first stage invo
 </table>
 <p>Having captured the canonical mesh representation, the next step is to capture the actual performance. In this stage we utilize the state of the art pose estimation algorithms to capture the 3D pose of the performance (namely OpenPose along with the depth information). With the target performance and the estimated pose we learn the blending weights for the different poses by minimising the reconstrution error on the rendered images. Here too we run a separate stage to capture the facial performance and learn the blending weights anchored on the facial keypoints. With the help of the blending weights and the estimated pose we should be able to build the rig for our replica models enbling them to be animated for any performance.</p>
 <h2 id="religtable-environment-renders">Religtable Environment Renders</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Faces in different environment</th>
+<th style="text-align:center">HDRI Environment map</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="relightable_faces.png" alt="" title="Faces in different environment"></td>
+<td style="text-align:center"><img src="hdri.jpeg" alt="" title="HDRI Environment map"></td>
+</tr>
+</tbody>
+</table>
+<p>The final stage involves rendering the performance in the specified environment. For this stage, we create 3D rigid body models of the world. We then extract a HDRI environment map of the scanned 3D environment. Using this environment map, we place our animated 3D object in the environment and render them to match with the encoded 3D world. With this setup in place we would be able to</p>
 <h1 id="references">References</h1>
-<p>Create 3D environments where you could transfer models</p>
-<p>Creating 3D animated movies
-Creating tikTok captures</p>
-<p>Narrative: How would you like to star in a Marvel movie? Create a virtual character which you could animate
+<ul>
+<li><a href="https://nv-tlabs.github.io/DMTet/assets/dmtet.pdf" target="_blank" rel="noopener">Deep Marching Tetrahedra: a Hybrid Representation for High-Resolution 3D Shape Synthesis </a></li>
+<li><a href="https://github.com/NVlabs/nvdiffrec" target="_blank" rel="noopener">Extracting Triangular 3D Models, Materials, and Lighting From Images</a></li>
+<li><a href="https://nvlabs.github.io/nvdiffrast/" target="_blank" rel="noopener">Nvdiffrast</a></li>
+<li><a href="https://cseweb.ucsd.edu/classes/wi18/cse167-a/lec13.pdf" target="_blank" rel="noopener">Environment Mapping</a></li>
+<li><a href="https://gist.github.com/d3x0r/5633f0548f4d7b283f8bab19e022acad" target="_blank" rel="noopener">Marching Tetrahedra</a></li>
+<li><a href="https://arxiv.org/pdf/2011.01437.pdf" target="_blank" rel="noopener">DefTet: Learning Deformable Tetrahedral Meshes for 3D Reconstruction</a></li>
+</ul>
+<!-- Create 3D environments where you could transfer models
+
+Creating 3D animated movies
+Creating tikTok captures
+
+Narrative: How would you like to star in a Marvel movie? Create a virtual character which you could animate
 Three stage process: Capturing a avatar (or a better word), Capturing animation (Learning animation weights), Rendering it in different environments
-The different stages:</p>
-<p>Technology used:</p>
-<p>Videos and photos are used to capture our happy and memorable moments we shared with our friends and family. It takes us back to the place and time when the event happened, helping us reminiscence the moment. Instead, how would it be if we could capture these fleeting moments in 3D? Store and share them with your friends and family like you share photos and videos? Invite them to that moment so that we all could relive it? We are building a system to recreate an immersive experience to bring your memories to life in VR. Wanna ride along mail me @ <a href="mailto:nitthilan@gmail.com">nitthilan@gmail.com</a></p>
+The different stages:
+
+Technology used:
+
+
+
+
+Videos and photos are used to capture our happy and memorable moments we shared with our friends and family. It takes us back to the place and time when the event happened, helping us reminiscence the moment. Instead, how would it be if we could capture these fleeting moments in 3D? Store and share them with your friends and family like you share photos and videos? Invite them to that moment so that we all could relive it? We are building a system to recreate an immersive experience to bring your memories to life in VR. Wanna ride along mail me @ nitthilan@gmail.com -->
 </div>
   
 
