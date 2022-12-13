@@ -791,13 +791,40 @@ As mentioned in the previous stages there are three stages. The first stage invo
 <h1 id="volumetric-performance-capture">Volumetric Performance Capture</h1>
 <p>Lets dive a littel deep into the individual stages and understand the process in detail.</p>
 <h2 id="full-body-capture">Full Body Capture</h2>
-<p><img src="scanbody.gif" alt="screen reader text" title="Scanning Process">
-<img src="fullbodyscan.jpeg" alt="screen reader text" title="Full body scan">
-For a fullbody scan involves a person standing in &lsquo;A&rsquo; pose while another person goes around the person capturing the person using LiDAR based iPhone scans. Using the RGB image along with the depth information we using a hybrid intrinsic-extrinsic representation (namely DMTet) and a differentiable renderer (namely Nvdiffrast) to capture the model geometry and textures (Diffusion and specular albedos and surface normals). Unlike the whole body the deformations on facial expressions are complex. To enable this we do a high resoltuion canonical pose for the face seprately.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Scanning Process</th>
+<th style="text-align:center">Full body scan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="scanbody.gif" alt=""></td>
+<td style="text-align:center"><img src="fullbodyscan.jpeg" alt=""></td>
+</tr>
+<tr>
+<td style="text-align:center">For a fullbody scan involves a person standing in &lsquo;A&rsquo; pose while another person goes around the person capturing the person using LiDAR based iPhone scans. Using the RGB image along with the depth information we using a hybrid intrinsic-extrinsic representation (namely DMTet) and a differentiable renderer (namely Nvdiffrast) to capture the model geometry and textures (Diffusion and specular albedos and surface normals). Unlike the whole body the deformations on facial expressions are complex. To enable this we do a high resoltuion canonical pose for the face seprately.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="performance-animation-capture">Performance Animation Capture</h2>
-<p><img src="fullbody_rig.webp" alt="screen reader text" title="Fullbody animation rig">
-<img src="face_rigging.gif" alt="screen reader text" title="Face performace capture">
-Having captured the canonical mesh representation, the next step is to capture the actual performance. In this stage we utilize the state of the art pose estimation algorithms to capture the 3D pose of the performance (namely OpenPose along with the depth information). With the target performance and the estimated pose we learn the blending weights for the different poses by minimising the reconstrution error on the rendered images. Here too we run a separate stage to capture the facial performance and learn the blending weights anchored on the facial keypoints. With the help of the blending weights and the estimated pose we should be able to build the rig for our replica models enbling them to be animated for any performance.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Fullbody animation rig</th>
+<th style="text-align:center">Face performace capture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="fullbody_rig.webp" alt=""></td>
+<td style="text-align:center"><img src="face_rigging.gif" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>Having captured the canonical mesh representation, the next step is to capture the actual performance. In this stage we utilize the state of the art pose estimation algorithms to capture the 3D pose of the performance (namely OpenPose along with the depth information). With the target performance and the estimated pose we learn the blending weights for the different poses by minimising the reconstrution error on the rendered images. Here too we run a separate stage to capture the facial performance and learn the blending weights anchored on the facial keypoints. With the help of the blending weights and the estimated pose we should be able to build the rig for our replica models enbling them to be animated for any performance.</p>
 <h2 id="religtable-environment-renders">Religtable Environment Renders</h2>
 <h1 id="references">References</h1>
 <p>Create 3D environments where you could transfer models</p>
