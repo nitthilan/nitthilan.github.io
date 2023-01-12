@@ -772,7 +772,7 @@
           Last updated on
       
     
-    Jan 3, 2023
+    Jan 12, 2023
   </span>
   
 
@@ -887,6 +887,65 @@ As mentioned in the previous section there are four major blocks. The first bloc
 </table>
 <!-- ![](Gold_Caviar_Hoops.webp ) -->
 <p>We can create digital assets either by using available clothing software like clo3d. However, here plan to scan real life fashion assets into digital virtual assets. Like the way we scan full body using A pose, here to we make human models to wear the fashion assets and then scan them and create the virtual assets. Instead of scanning individual assets separately, we plan to capture the human model wearing all the accessories and capturing the person form multi-view RGBD images. We then use human part segmentation to extract individual accessories and generate their 3D virtual assets. This also enables one to generate digital assets from images available on the internet.</p>
+<h1 id="task-breakdown">Task Breakdown</h1>
+<ul>
+<li>Learning pose parameters and generating the static mesh using point cloud [2 Weeks]
+<ul>
+<li>Use OpenPose to estimate Facial parameters</li>
+<li>Capture RGBD images and try to estimate the head rotation
+<ul>
+<li>Key points based RANSAC based algorithm</li>
+</ul>
+</li>
+<li>Preprocessing to identify frames with best match for rotation
+<ul>
+<li>Using proper depth information for not clear regions and</li>
+<li>Best rotation estimates pictures</li>
+<li>Best non blurry images</li>
+<li>Four minimum pictures</li>
+</ul>
+</li>
+<li>Canonical Representation
+<ul>
+<li>Front facing face</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Learning environment lighting and material properties (Texture Learning) [2 weeks]
+<ul>
+<li>PBR Optimize for all the different pictures</li>
+<li>Learn environment lighting</li>
+<li>Learn separate normals for each color to render things better</li>
+</ul>
+</li>
+<li>Refining initial static mesh by refining pose and DMTet [3 weeks less precise]
+<ul>
+<li>Refine by assuming smooth surfaces normal smooth</li>
+<li>Refine environment lightning and material properties using images</li>
+</ul>
+</li>
+<li>Learning Riggable model using Facescape [4 weeks least precise]
+<ul>
+<li>Fit a facescape model to the learnt mesh</li>
+<li>Map the facescape weights as the weights of learnt mesh - chamfer distance
+<ul>
+<li>Gives basic riggable model</li>
+</ul>
+</li>
+<li>Use displacement maps by using actual motions to learn deformations specific to people</li>
+<li>Facescape (3DMM/SMPLX)  based model fitting (Useful for rigging)
+<ul>
+<li>51 expressions controlled by 51 entries. Identify pose using openCV like expressions like happy, sad etc and then transfer that through binary values to rig the facial expression. How to do it seamlessly is something not fully clear though</li>
+<li>FACS Based system</li>
+<li>Identify the mesh weights for deformations based on keypoints</li>
+<li>Mapping new facial expressions to existing facial expressions</li>
+<li>Mapping kep points from another face to this face</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h1 id="references">References</h1>
 <ul>
 <li><a href="https://nv-tlabs.github.io/DMTet/assets/dmtet.pdf" target="_blank" rel="noopener">Deep Marching Tetrahedra: a Hybrid Representation for High-Resolution 3D Shape Synthesis </a></li>
@@ -895,6 +954,63 @@ As mentioned in the previous section there are four major blocks. The first bloc
 <li><a href="https://cseweb.ucsd.edu/classes/wi18/cse167-a/lec13.pdf" target="_blank" rel="noopener">Environment Mapping</a></li>
 <li><a href="https://gist.github.com/d3x0r/5633f0548f4d7b283f8bab19e022acad" target="_blank" rel="noopener">Marching Tetrahedra</a></li>
 <li><a href="https://arxiv.org/pdf/2011.01437.pdf" target="_blank" rel="noopener">DefTet: Learning Deformable Tetrahedral Meshes for 3D Reconstruction</a></li>
+<li>Face model and estimation:
+<ul>
+<li><a href="https://github.com/tencent-ailab/hifi3dface">https://github.com/tencent-ailab/hifi3dface</a> , <a href="https://tencent-ailab.github.io/hifi3dface_projpage/">https://tencent-ailab.github.io/hifi3dface_projpage/</a> , <a href="https://arxiv.org/pdf/2010.05562.pdf">https://arxiv.org/pdf/2010.05562.pdf</a></li>
+</ul>
+</li>
+<li>Face Model:
+<ul>
+<li><a href="https://github.com/zhuhao-nju/facescape">https://github.com/zhuhao-nju/facescape</a></li>
+<li><a href="https://flame.is.tue.mpg.de/">https://flame.is.tue.mpg.de/</a></li>
+<li>SMPLX face model</li>
+</ul>
+</li>
+<li>Learning from pointcloud DMTet:
+<ul>
+<li><a href="https://github.com/NVIDIAGameWorks/kaolin/blob/master/examples/tutorial/dmtet_tutorial.ipynb">https://github.com/NVIDIAGameWorks/kaolin/blob/master/examples/tutorial/dmtet_tutorial.ipynb</a></li>
+</ul>
+</li>
+<li>Hair mesh:
+<ul>
+<li><a href="http://www.hao-li.com/publications/papers/siggraphAsia2017ADFSIFRTR.pdf">http://www.hao-li.com/publications/papers/siggraphAsia2017ADFSIFRTR.pdf</a></li>
+<li>Supplementary material talks about hair model? <a href="https://tencent-ailab.github.io/hifi3dface_projpage/files/tog2021_hifi3dface_supp.pdf">https://tencent-ailab.github.io/hifi3dface_projpage/files/tog2021_hifi3dface_supp.pdf</a></li>
+</ul>
+</li>
+<li>Teeth Model:
+<ul>
+<li>Accurate markerless jaw tracking for facial performance capture., Model-based teeth reconstruction. An empirical rig for jaw animation. ACM Trans. Graph. (P</li>
+<li><a href="https://la.disneyresearch.com/wp-content/uploads/Appearance-Capture-and-Modeling-of-Human-Teeth-Thumbnail.pdf">https://la.disneyresearch.com/wp-content/uploads/Appearance-Capture-and-Modeling-of-Human-Teeth-Thumbnail.pdf</a></li>
+</ul>
+</li>
+<li>Eye Model:
+<ul>
+<li><a href="https://studios.disneyresearch.com/wp-content/uploads/2019/03/Lightweight-Eye-Capture-Using-a-Parametric-Model.pdf">https://studios.disneyresearch.com/wp-content/uploads/2019/03/Lightweight-Eye-Capture-Using-a-Parametric-Model.pdf</a></li>
+<li>Practical PersonSpecific Eye Rigging</li>
+<li><a href="https://cgl.ethz.ch/Downloads/Publications/Papers/2019/Pas19a/Pas19a.pdf">https://cgl.ethz.ch/Downloads/Publications/Papers/2019/Pas19a/Pas19a.pdf</a></li>
+<li>eye model 3d face model</li>
+</ul>
+</li>
+<li>Method for optimizing parameters: RANSAC
+<ul>
+<li><a href="http://www.cse.yorku.ca/~kosta/CompVis_Notes/ransac.pdf">http://www.cse.yorku.ca/~kosta/CompVis_Notes/ransac.pdf</a></li>
+</ul>
+</li>
+<li>Face Rigging: [face mesh from rgbd map]
+<ul>
+<li><a href="https://github.com/zhuhao-nju/facescape">https://github.com/zhuhao-nju/facescape</a></li>
+<li><a href="https://nbviewer.org/github/zhuhao-nju/facescape/blob/master/toolkit/demo_rig.ipynb">https://nbviewer.org/github/zhuhao-nju/facescape/blob/master/toolkit/demo_rig.ipynb</a></li>
+<li><a href="https://github.com/zhuhao-nju/facescape/blob/master/toolkit/src/facescape_fitter.py">https://github.com/zhuhao-nju/facescape/blob/master/toolkit/src/facescape_fitter.py</a></li>
+<li><a href="https://github.com/zhuhao-nju/facescape">https://github.com/zhuhao-nju/facescape</a> ,</li>
+<li>Practical Blendshapes implementation and texturing:
+<ul>
+<li><a href="https://texturing.xyz/pages/vface-tutorials">https://texturing.xyz/pages/vface-tutorials</a></li>
+<li><a href="https://www.russian3dscanner.com/wrap-tutorials/">https://www.russian3dscanner.com/wrap-tutorials/</a></li>
+<li><a href="https://adamspring.co.uk/2020/05/25/facs-rigging-texture-blending-digital-humans/">https://adamspring.co.uk/2020/05/25/facs-rigging-texture-blending-digital-humans/</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <!-- 
 Things to do:
